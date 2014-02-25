@@ -85,6 +85,12 @@ return array(
 			'password' => 'drop',
 			'charset' => 'utf8',
 		),
+
+		'authManager'=>array(
+            'class'=>'CDbAuthManager',
+            'connectionID'=>'db',
+            'defaultRoles' => array('guest'),
+        ),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
