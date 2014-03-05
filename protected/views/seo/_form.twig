@@ -1,0 +1,50 @@
+<div class="form">
+
+{% set form = this.beginWidget('CActiveForm', {
+    'id': 'seo-form',
+    'enableAjaxValidation': false,
+}) %}
+
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
+	<div class="row">
+		{{ form.labelEx(seo, 'alias') | raw }}
+        {{ form.textField(seo, 'alias', {'size': 60, 'maxlength': 128}) | raw }}
+        {{ form.error(seo, 'alias') | raw }}
+	</div>
+
+	<div class="row">
+		{{ form.labelEx(seo, 'title') | raw }}
+        {{ form.textField(seo, 'title', {'size': 60, 'maxlength': 128}) | raw }}
+        {{ form.error(seo, 'title') | raw }}
+	</div>
+
+	<div class="row">
+		{{ form.labelEx(seo, 'redirect_url') | raw }}
+        {{ form.textField(seo, 'redirect_url', {'size': 60, 'maxlength': 255}) | raw }}
+        {{ form.error(seo, 'redirect_url') | raw }}
+	</div>
+
+<hr />
+
+	<div class="row">
+		{{ form.labelEx(seo, 'meta_keywords') | raw }}
+        {{ form.textField(seo, 'meta_keywords', {'size': 60, 'maxlength': 500}) | raw }}
+        {{ form.error(seo, 'meta_keywords') | raw }}
+	</div>
+
+	<div class="row">
+		{{ form.labelEx(seo, 'meta_description') | raw }}
+        {{ form.textField(seo, 'meta_description', {'size': 60, 'maxlength': 500}) | raw }}
+        {{ form.error(seo, 'meta_description') | raw }}
+	</div>
+
+
+	<div class="row buttons">
+		{{ C.Html.submitButton(model.isNewRecord ? 'Создать' : 'Сохранить') | raw }}
+	</div>
+
+
+{% do this.endWidget %}
+
+</div><!-- form -->

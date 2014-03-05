@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ model.seo.title ? model.seo.title : model.label }}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="{{ model.seo.meta_keywords }}">
+    <meta name="description" content="{{ model.seo.meta_description }}">
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href="{{ App.baseUrl }}/css/reset.css" rel="stylesheet" />
+	<link href="{{ App.baseUrl }}/css/style.css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="{{ App.baseUrl }}/scripts/slides.min.jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#slides').slides({
+				preload:false,
+				play: 5000,
+				pause: 2500,
+				effect: 'fade',
+				hoverPause: true
+			});
+		});
+	</script>
+</head>
+
+<body>
+<div class="over">
+<div class="menu">
+	<div class="all">
+		<nav>
+			{{ this.widget('MainMenu', {'rootId':0}, true) | raw }}
+		</nav>
+	</div><!--end all-->
+</div><!--end menu-->
+<div class="all">
+	<header>
+        <a class="logo" href="/"><img alt="" src="{{ App.baseUrl }}/images/logo.png">
+        <span>{{ this.widget('SysRegistry', {'param':'phone'}, true) | raw }}</span></a>
+        <div class="slogan">{{ this.widget('SysRegistry', {'param':'slogan'}, true) | raw }}</div><!--end slogan-->
+        <div class="top-banner"><a href="#"><img alt="" src="{{ App.baseUrl }}/images/zamer.png"></a></div>
+    </header>
+    <div class="slider">
+            <div id="slides">
+                <div class="slides_container">
+                    <a href="#"><img src="{{ App.baseUrl }}/images/slide.png" alt="Slide 1"></a>
+                    <a href="#"><img src="{{ App.baseUrl }}/images/slide.png" alt="Slide 1"></a>
+                    <a href="#"><img src="{{ App.baseUrl }}/images/slide.png" alt="Slide 1"></a>
+                </div>
+                <a href="#" class="prev"></a>
+                <a href="#" class="next"></a>
+                
+            </div>    
+    </div><!--end slider-->
+    <div class="circles">
+        {{ this.widget('SysRegistry', {'param':'sphere_module'}, true) | raw }}
+    </div><!--end circlres-->
+    <div class="b-news">
+        <div class="titl">Новости</div>
+        <div class="news">
+            <span class="lenta"><img alt="" src="{{ App.baseUrl }}/images/lenta.png"></span>
+            <div class="title"><a href="#">Отделка лоджий и балконов 
+в Иркутске</a></div>
+            <div class="img"><img alt="" src="{{ App.baseUrl }}/images/img.png"></div>
+            <div class="right">
+                <div class="txt">
+           Установка пластикового окна подходящего для сохранения тепла; 2. Перенос батареи, ранее ...
+                </div><!--end txt-->
+                <a href="#" class="btn1">Подробнее</a> 
+            </div><!--end right-->
+        </div><!--end news-->
+        <div class="news">
+            <span class="lenta"><img alt="" src="{{ App.baseUrl }}/images/lenta.png"></span>
+            <div class="title"><a href="#">Отделка лоджий и балконов 
+в Иркутске</a></div>
+            <div class="img"><img alt="" src="{{ App.baseUrl }}/images/img.png"></div>
+            <div class="right">
+                <div class="txt">
+           Установка пластикового окна подходящего для сохранения тепла; 2. Перенос батареи, ранее ...
+                </div><!--end txt-->
+                <a href="#" class="btn1">Подробнее</a> 
+            </div><!--end right-->
+        </div><!--end news-->
+        <div class="news">
+            <span class="lenta"><img alt="" src="{{ App.baseUrl }}/images/lenta.png"></span>
+            <div class="title"><a href="#">Отделка лоджий и балконов 
+в Иркутске</a></div>
+            <div class="img"><img alt="" src="{{ App.baseUrl }}/images/img.png"></div>
+            <div class="right">
+                <div class="txt">
+           Установка пластикового окна подходящего для сохранения тепла; 2. Перенос батареи, ранее ...
+                </div><!--end txt-->
+                <a href="#" class="btn1">Подробнее</a> 
+            </div><!--end right-->
+        </div><!--end news-->
+    </div><!--end b-news-->
+    {% block maincontent %}
+
+    {% endblock %}
+</div><!--ed alll-->
+<div class="f-clear"></div>
+</div><!--end over-->
+<div class="all">
+	<footer>
+        <div class="copy">© 2014 ASGroup</div>
+        <div class="tel">{{ this.widget('SysRegistry', {'param':'phone'}, true) | raw }}</div>
+        <div class="mail">{{ this.widget('SysRegistry', {'param':'email', 'maillink':true}, true) | raw }}</div>
+        <div class="addr">{{ this.widget('SysRegistry', {'param':'address'}, true) | raw }}</div>
+        <div class="design">Разработчик:<a href="#">In-Site</a></div>
+    </footer>
+</div><!--end all-->
+</body>
+</html>

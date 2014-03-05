@@ -1,0 +1,7 @@
+{% extends "views/layouts/admin.twig" %}
+
+{% block content %}
+	<h1>Редактирование галереи # {{ model.id }}</h1>
+	 
+	{% include 'views/galleries/_form.twig' with {'model': model} %}
+{% endblock %}

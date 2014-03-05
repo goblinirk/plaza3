@@ -1,0 +1,14 @@
+{% set items = this.getMainMenu() %}
+{% if items %}
+<ul style="padding-bottom: 60px;">
+	{% for item in items %}
+		<li>
+			<a href="/page/{{ item.seo.alias ? item.seo.alias : item.id }}/">
+				{{ item.nav_label ? item.nav_label : item.label }}
+			</a>
+			{% set qwert = this.widget('MainMenu', {'rootId':item.id}, true) %}
+			{{ qwert|raw }}
+		</li>
+	{% endfor %}
+</ul>
+{% endif %}

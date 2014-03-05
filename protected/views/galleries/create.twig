@@ -1,0 +1,7 @@
+{% extends "views/layouts/admin.twig" %}
+
+{% block content %}
+	<h1>Создание галереи</h1>
+	 
+	{% include 'views/galleries/_form.twig' with {'model': model, 'seo': seo} %}
+{% endblock %}

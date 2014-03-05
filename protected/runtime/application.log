@@ -1,859 +1,270 @@
-2014/02/25 15:06:07 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
+2014/03/04 16:24:52 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'Unexpected tag name "endfor" (expecting closing tag for the "if" tag defined near line 3) in "/components/views/gallery.twig" at line 14' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php:174
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
+#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/TokenParser/If.php(41): Twig_Parser->subparse(Array)
+#1 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php(187): Twig_TokenParser_If->parse(Object(Twig_Token))
+#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php(95): Twig_Parser->subparse(NULL, false)
+#3 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(507): Twig_Parser->parse(Object(Twig_TokenStream))
+#4 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(559): Twig_Environment->parse(Object(Twig_TokenStream))
+#5 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->compileSource('{% set items = ...', '/components/vie...')
+#6 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/components/vie...')
+#7 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(Gallery), '/home/goblin/ww...', NULL, false)
+#8 /home/goblin/www/plaza3/public_html/framework/web/widgets/CWidget.php(244): CBaseController->renderFile('/home/goblin/ww...', NULL, false)
+#9 /home/goblin/www/plaza3/public_html/protected/components/Gallery.php(17): CWidget->render('gallery')
+#10 /home/goblin/www/plaza3/public_html/protected/components/Gallery.php(28): Gallery->renderContent()
+#11 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(167): Gallery->run()
+#12 [internal function]: CBaseController->widget('Gallery', Array, true)
+#13 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(460): call_user_func_array(Array, Array)
+#14 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/1f/dc/d208b9b821b8f51f0dcb3245909484057b27847b598e39a03814a15bfcf7.php(23): Twig_Template->getAttribute(Object(GalleriesController), 'widget', Array, 'method')
+#15 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_1fdcd208b9b821b8f51f0dcb3245909484057b27847b598e39a03814a15bfcf7->doDisplay(Array, Array)
+#16 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): Twig_Template->displayWithErrorHandling(Array, Array)
+#17 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(263): Twig_Template->display(Array)
+#18 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Template->render(Array)
+#19 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(GalleriesController), '/home/goblin/ww...', Array, false)
+#20 /home/goblin/www/plaza3/public_html/framework/zii/widgets/CListView.php(291): CBaseController->renderFile('/home/goblin/ww...', Array)
+#21 /home/goblin/www/plaza3/public_html/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#22 [internal function]: CBaseListView->renderSection(Array)
+#23 /home/goblin/www/plaza3/public_html/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#24 /home/goblin/www/plaza3/public_html/framework/zii/widgets/CBaseListView.php(135): CBaseListView->renderContent()
+#25 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(167): CBaseListView->run()
+#26 [internal function]: CBaseController->widget('zii.widgets.CLi...', Array, true)
+#27 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(460): call_user_func_array(Array, Array)
+#28 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/8c/3d/5ec4f0a8c35206f89bc2f4b3efbc660d0d5fcb46a904f128497aec7ff19e.php(36): Twig_Template->getAttribute(Object(GalleriesController), 'widget', Array, 'method')
+#29 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(144): __TwigTemplate_8c3d5ec4f0a8c35206f89bc2f4b3efbc660d0d5fcb46a904f128497aec7ff19e->block_innercontent(Array, Array)
+#30 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/5a/0c/e05ad975bdb11efebfe8dbd27dc229a81aaf2c775655c03a30a961d5da7e.php(96): Twig_Template->displayBlock('innercontent', Array, Array)
+#31 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_5a0ce05ad975bdb11efebfe8dbd27dc229a81aaf2c775655c03a30a961d5da7e->doDisplay(Array, Array)
+#32 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): Twig_Template->displayWithErrorHandling(Array, Array)
+#33 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/8c/3d/5ec4f0a8c35206f89bc2f4b3efbc660d0d5fcb46a904f128497aec7ff19e.php(24): Twig_Template->display(Array, Array)
+#34 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_8c3d5ec4f0a8c35206f89bc2f4b3efbc660d0d5fcb46a904f128497aec7ff19e->doDisplay(Array, Array)
+#35 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): Twig_Template->displayWithErrorHandling(Array, Array)
+#36 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(263): Twig_Template->display(Array)
+#37 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Template->render(Array)
+#38 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(GalleriesController), '/home/goblin/ww...', Array, true)
+#39 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
+#40 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#41 /home/goblin/www/plaza3/public_html/protected/controllers/GalleriesController.php(130): CController->render('index', Array)
+#42 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): GalleriesController->actionIndex()
+#43 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#44 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#45 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#46 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#47 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#48 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#49 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#50 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#51 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#52 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('galleries')
+#53 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#54 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#55 {main}
+REQUEST_URI=/galleries/
 ---
-2014/02/25 15:06:40 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
+2014/03/04 16:31:14 [error] [exception.RuntimeException] exception 'RuntimeException' with message 'Unable to write in the cache directory (/home/goblin/www/plaza3/public_html/protected/runtime/twig_cache//d4/79).' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php:1239
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->writeCacheFile('/home/goblin/ww...', '<?php??/* views...')
+#1 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/f9/a7/d00867dee4dac267497531be8b05471d08012f57ac1c07237bf58cdf09f4.php(10): Twig_Environment->loadTemplate('views/layouts/a...')
+#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(345): __TwigTemplate_f9a7d00867dee4dac267497531be8b05471d08012f57ac1c07237bf58cdf09f4->__construct(Object(Twig_Environment))
+#3 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/views/pages/ad...')
+#4 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(PagesController), '/home/goblin/ww...', Array, true)
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
+#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#7 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(184): CController->render('admin', Array)
+#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionAdmin()
 #9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
+#10 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#16 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#18 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/admin')
+#19 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#21 {main}
+REQUEST_URI=/admin/pages/
+HTTP_REFERER=http://plaza.lch/admin/pages/
 ---
-2014/02/25 15:06:42 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
+2014/03/04 16:31:24 [error] [exception.RuntimeException] exception 'RuntimeException' with message 'Unable to write in the cache directory (/home/goblin/www/plaza3/public_html/protected/runtime/twig_cache//d4/79).' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php:1239
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->writeCacheFile('/home/goblin/ww...', '<?php??/* views...')
+#1 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/f9/a7/d00867dee4dac267497531be8b05471d08012f57ac1c07237bf58cdf09f4.php(10): Twig_Environment->loadTemplate('views/layouts/a...')
+#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(345): __TwigTemplate_f9a7d00867dee4dac267497531be8b05471d08012f57ac1c07237bf58cdf09f4->__construct(Object(Twig_Environment))
+#3 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/views/pages/ad...')
+#4 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(PagesController), '/home/goblin/ww...', Array, true)
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
+#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#7 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(184): CController->render('admin', Array)
+#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionAdmin()
 #9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
+#10 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#16 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#18 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/admin')
+#19 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#21 {main}
+REQUEST_URI=/admin/pages/
+HTTP_REFERER=http://plaza.lch/admin/pages/
 ---
-2014/02/25 15:12:28 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
+2014/03/04 16:31:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
 ---
-2014/02/25 15:12:29 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
+2014/03/04 16:32:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/edit_page/css/content.css".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/edit_page...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/edit_page/css/content.css
 ---
-2014/02/25 15:12:29 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
+2014/03/04 16:32:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/edit_page/css/content.css".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/edit_page...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/edit_page/css/content.css
 ---
-2014/02/25 15:12:29 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
+2014/03/04 16:32:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "admin".' in /home/goblin/www/plaza3/public_html/framework/web/CController.php:483
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
+#0 /home/goblin/www/plaza3/public_html/framework/web/CController.php(270): CController->missingAction('admin')
+#1 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/admin')
+#3 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/modules/
+HTTP_REFERER=http://plaza.lch/admin/pages/
 ---
-2014/02/25 15:12:30 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
+2014/03/04 16:45:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/edit_page/css/content.css".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/edit_page...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/edit_page/css/content.css
 ---
-2014/02/25 15:12:30 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
+2014/03/04 16:45:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/add_page/css/content.css".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/add_page/...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/add_page/css/content.css
 ---
-2014/02/25 15:13:10 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
+2014/03/05 14:32:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php:204
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
----
-2014/02/25 15:13:24 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
----
-2014/02/25 15:14:27 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
----
-2014/02/25 15:14:28 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
----
-2014/02/25 15:19:59 [error] [exception.CException] exception 'CException' with message 'Alias "ext.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.ETwigViewRe...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
----
-2014/02/25 15:20:40 [error] [exception.CException] exception 'CException' with message 'Alias "ext.twig.ETwigViewRenderer" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/goblin/www/plaza3/public_html/framework/YiiBase.php:322
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): YiiBase::import('ext.twig.ETwigV...', true)
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(386): YiiBase::createComponent(Array)
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CModule->getComponent('viewRenderer')
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): CController->resolveViewFile('index', '/home/goblin/ww...', '/home/goblin/ww...', '/home/goblin/ww...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): CController->getViewFile('index')
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): CController->render('index')
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CApplication->run()
-#16 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/login
----
-2014/02/25 15:20:46 [error] [php] is_file(): open_basedir restriction in effect. File(/usr/share/pear/Twig_Loader_Filesystem.php) is not within the allowed path(s): (/home/goblin/www/plaza3/public_html/) (/home/goblin/www/plaza3/public_html/framework/YiiBase.php:414)
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(86): spl_autoload_call()
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(387): ETwigViewRenderer->init()
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CWebApplication->getComponent()
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): SiteController->resolveViewFile()
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): SiteController->getViewFile()
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): SiteController->renderPartial()
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): SiteController->render()
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): SiteController->runAction()
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): SiteController->run()
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CWebApplication->run()
-REQUEST_URI=/index.php?r=site/index
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (86)
-in /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php (32)
-in /home/goblin/www/plaza3/public_html/index.php (13)
-2014/02/25 15:21:37 [error] [php] require(/home/goblin/www/plaza3/public_html/protected/vendor/Twig/Autoloader.php): failed to open stream: No such file or directory (/home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php:70)
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CWebApplication->getComponent()
-#1 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): SiteController->resolveViewFile()
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): SiteController->getViewFile()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): SiteController->renderPartial()
-#5 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): SiteController->render()
-#6 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
-#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): SiteController->runAction()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): SiteController->run()
-#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#0 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(56): PagesController->loadModel()
+#1 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionView()
+#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/view')
 #12 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#13 /home/goblin/www/plaza3/public_html/index.php(13): CWebApplication->run()
-REQUEST_URI=/index.php?r=site/index
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (70)
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (70)
-in /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php (32)
-2014/02/25 15:22:15 [error] [php] require(/home/goblin/www/plaza3/public_html/protected/vendor/Twig/Autoloader.php): failed to open stream: No such file or directory (/home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php:70)
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CWebApplication->getComponent()
-#1 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): SiteController->resolveViewFile()
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): SiteController->getViewFile()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): SiteController->renderPartial()
-#5 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): SiteController->render()
-#6 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
-#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): SiteController->runAction()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): SiteController->run()
-#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#12 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#13 /home/goblin/www/plaza3/public_html/index.php(13): CWebApplication->run()
-REQUEST_URI=/index.php?r=site/index
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (70)
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (70)
-in /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php (32)
-2014/02/25 15:22:49 [error] [php] is_file(): open_basedir restriction in effect. File(/usr/share/pear/Twig_Loader_Filesystem.php) is not within the allowed path(s): (/home/goblin/www/plaza3/public_html/) (/home/goblin/www/plaza3/public_html/framework/YiiBase.php:414)
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(86): spl_autoload_call()
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(387): ETwigViewRenderer->init()
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CWebApplication->getComponent()
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): SiteController->resolveViewFile()
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): SiteController->getViewFile()
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): SiteController->renderPartial()
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): SiteController->render()
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): SiteController->runAction()
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): SiteController->run()
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CWebApplication->run()
-REQUEST_URI=/index.php?r=site/index
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (86)
-in /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php (32)
-in /home/goblin/www/plaza3/public_html/index.php (13)
-2014/02/25 15:30:45 [error] [php] is_file(): open_basedir restriction in effect. File(/usr/share/pear/Twig_Loader_Filesystem.php) is not within the allowed path(s): (/home/goblin/www/plaza3/public_html/) (/home/goblin/www/plaza3/public_html/framework/YiiBase.php:414)
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(86): spl_autoload_call()
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(387): ETwigViewRenderer->init()
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CWebApplication->getComponent()
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): SiteController->resolveViewFile()
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): SiteController->getViewFile()
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): SiteController->renderPartial()
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): SiteController->render()
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): SiteController->runAction()
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): SiteController->run()
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(13): CWebApplication->run()
-REQUEST_URI=/index.php?r=site/index
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (86)
-in /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php (32)
-in /home/goblin/www/plaza3/public_html/index.php (13)
-2014/02/25 15:36:51 [error] [php] include(My_Twig_Extension.php): failed to open stream: No such file or directory (/home/goblin/www/plaza3/public_html/framework/YiiBase.php:427)
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(198): spl_autoload_call()
-#1 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(120): ETwigViewRenderer->addExtensions()
-#2 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(387): ETwigViewRenderer->init()
-#3 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CWebApplication->getComponent()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): SiteController->resolveViewFile()
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): SiteController->getViewFile()
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): SiteController->renderPartial()
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): SiteController->render()
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): SiteController->runAction()
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): SiteController->run()
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CWebApplication->run()
-REQUEST_URI=/index.php?r=site/index
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (198)
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (120)
-in /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php (32)
-2014/02/25 15:36:52 [error] [php] include(My_Twig_Extension.php): failed to open stream: No such file or directory (/home/goblin/www/plaza3/public_html/framework/YiiBase.php:427)
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(198): spl_autoload_call()
-#1 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(120): ETwigViewRenderer->addExtensions()
-#2 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(387): ETwigViewRenderer->init()
-#3 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CWebApplication->getComponent()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): SiteController->resolveViewFile()
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): SiteController->getViewFile()
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): SiteController->renderPartial()
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): SiteController->render()
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): SiteController->runAction()
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): SiteController->run()
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CWebApplication->run()
-REQUEST_URI=/index.php?r=site/index
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (198)
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (120)
-in /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php (32)
-2014/02/25 15:37:32 [error] [php] include(Twig.php): failed to open stream: No such file or directory (/home/goblin/www/plaza3/public_html/framework/YiiBase.php:427)
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(198): spl_autoload_call()
-#1 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(120): ETwigViewRenderer->addExtensions()
-#2 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(387): ETwigViewRenderer->init()
-#3 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CWebApplication->getComponent()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): SiteController->resolveViewFile()
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): SiteController->getViewFile()
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): SiteController->renderPartial()
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): SiteController->render()
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): SiteController->runAction()
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): SiteController->run()
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CWebApplication->run()
-REQUEST_URI=/index.php?r=site/index
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (198)
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (120)
-in /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php (32)
-2014/02/25 15:38:11 [error] [php] Argument 1 passed to Twig_Environment::addExtension() must implement interface Twig_ExtensionInterface, instance of ETwigViewRenderer given, called in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php on line 198 and defined (/home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php:657)
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(387): ETwigViewRenderer->init()
-#1 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CWebApplication->getComponent()
-#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): SiteController->resolveViewFile()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): SiteController->getViewFile()
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): SiteController->renderPartial()
-#6 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): SiteController->render()
-#7 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): SiteController->runAction()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
-#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): SiteController->run()
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#13 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#14 /home/goblin/www/plaza3/public_html/index.php(16): CWebApplication->run()
-REQUEST_URI=/index.php?r=site/index
-in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php (657)
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (198)
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (120)
-2014/02/25 15:39:31 [error] [php] is_file(): open_basedir restriction in effect. File(/usr/share/pear/Twig_Loader_Filesystem.php) is not within the allowed path(s): (/home/goblin/www/plaza3/public_html/) (/home/goblin/www/plaza3/public_html/framework/YiiBase.php:414)
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(86): spl_autoload_call()
-#1 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(387): ETwigViewRenderer->init()
-#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CWebApplication->getComponent()
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): SiteController->resolveViewFile()
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): SiteController->getViewFile()
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): SiteController->renderPartial()
-#7 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): SiteController->render()
-#8 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): SiteController->runAction()
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): SiteController->run()
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#14 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#15 /home/goblin/www/plaza3/public_html/index.php(16): CWebApplication->run()
-REQUEST_URI=/index.php?r=site/index
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (86)
-in /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php (32)
-in /home/goblin/www/plaza3/public_html/index.php (16)
-2014/02/25 15:39:49 [error] [php] Argument 1 passed to Twig_Environment::addExtension() must implement interface Twig_ExtensionInterface, instance of ETwigViewRenderer given, called in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php on line 198 and defined (/home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php:657)
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(387): ETwigViewRenderer->init()
-#1 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(221): CWebApplication->getComponent()
-#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(695): CWebApplication->getViewRenderer()
-#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(591): SiteController->resolveViewFile()
-#4 /home/goblin/www/plaza3/public_html/framework/web/CController.php(867): SiteController->getViewFile()
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): SiteController->renderPartial()
-#6 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(32): SiteController->render()
-#7 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): SiteController->runAction()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
-#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): SiteController->run()
-#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#13 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#14 /home/goblin/www/plaza3/public_html/index.php(16): CWebApplication->run()
-REQUEST_URI=/index.php?r=site/index
-in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php (657)
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (198)
-in /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php (120)
-2014/02/25 15:49:16 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'Unknown tag name "word" in "/views/site/index.twig" at line 9' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php:182
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php(95): Twig_Parser->subparse(NULL, false)
-#1 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(507): Twig_Parser->parse(Object(Twig_TokenStream))
-#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(559): Twig_Environment->parse(Object(Twig_TokenStream))
-#3 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->compileSource('<?php?/* @var $...', '/views/site/ind...')
-#4 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/views/site/ind...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(SiteController), '/home/goblin/ww...', Array, true)
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(33): CController->render('index', Array)
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
-#17 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/contact
+#13 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/page/myadmin
 ---
-2014/02/25 15:57:11 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'A block must start with a tag name in "/views/site/index.twig" at line 9' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php:151
+2014/03/05 14:32:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "myadmin".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php(95): Twig_Parser->subparse(NULL, false)
-#1 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(507): Twig_Parser->parse(Object(Twig_TokenStream))
-#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(559): Twig_Environment->parse(Object(Twig_TokenStream))
-#3 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->compileSource('<?php?/* @var $...', '/views/site/ind...')
-#4 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/views/site/ind...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(SiteController), '/home/goblin/ww...', Array, true)
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(33): CController->render('index', Array)
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
-#17 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/contact
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('myadmin')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/myadmin
 ---
-2014/02/25 15:57:31 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'A block must start with a tag name in "/views/site/index.twig" at line 9' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php:151
+2014/03/05 14:32:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "myadmin".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php(95): Twig_Parser->subparse(NULL, false)
-#1 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(507): Twig_Parser->parse(Object(Twig_TokenStream))
-#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(559): Twig_Environment->parse(Object(Twig_TokenStream))
-#3 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->compileSource('<?php?/* @var $...', '/views/site/ind...')
-#4 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/views/site/ind...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(SiteController), '/home/goblin/ww...', Array, true)
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(33): CController->render('index', Array)
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
-#17 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/contact
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('myadmin')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/myadmin/
 ---
-2014/02/25 16:01:27 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'A block must start with a tag name in "/views/site/index.twig" at line 9' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php:151
+2014/03/05 14:33:37 [error] [exception.Twig_Error_Loader] exception 'Twig_Error_Loader' with message 'Unable to find template "views/layouts/contacts.twig" (looked into: /home/goblin/www/plaza3/public_html/protected) in "/views/pages/view.twig".' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Loader/Filesystem.php:200
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php(95): Twig_Parser->subparse(NULL, false)
-#1 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(507): Twig_Parser->parse(Object(Twig_TokenStream))
-#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(559): Twig_Environment->parse(Object(Twig_TokenStream))
-#3 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->compileSource('<?php?/* @var $...', '/views/site/ind...')
-#4 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/views/site/ind...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(SiteController), '/home/goblin/ww...', Array, true)
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(33): CController->render('index', Array)
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
-#17 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/contact
+#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Loader/Filesystem.php(138): Twig_Loader_Filesystem->findTemplate('views/layouts/c...')
+#1 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(265): Twig_Loader_Filesystem->getCacheKey('views/layouts/c...')
+#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(323): Twig_Environment->getTemplateClass('views/layouts/c...', NULL)
+#3 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(397): Twig_Environment->loadTemplate('views/layouts/c...')
+#4 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/4e/93/87551d05adb0934448a444bee4101dc7d0975753deefb089e7de6443ad80.php(18): Twig_Environment->resolveTemplate('views/layouts/c...')
+#5 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(69): __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de6443ad80->doGetParent(Array)
+#6 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/4e/93/87551d05adb0934448a444bee4101dc7d0975753deefb089e7de6443ad80.php(23): Twig_Template->getParent(Array)
+#7 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de6443ad80->doDisplay(Array, Array)
+#8 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): Twig_Template->displayWithErrorHandling(Array, Array)
+#9 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(263): Twig_Template->display(Array)
+#10 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Template->render(Array)
+#11 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(PagesController), '/home/goblin/ww...', Array, true)
+#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
+#13 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#14 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(64): CController->render('view', Array)
+#15 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionView()
+#16 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#23 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#25 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/view')
+#26 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#28 {main}
+REQUEST_URI=/page/41/
+HTTP_REFERER=http://plaza.lch/page/39/
 ---
-2014/02/25 16:01:39 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'A block must start with a tag name in "/views/site/index.twig" at line 9' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php:151
+2014/03/05 14:51:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/img-c.jpg".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php(95): Twig_Parser->subparse(NULL, false)
-#1 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(507): Twig_Parser->parse(Object(Twig_TokenStream))
-#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(559): Twig_Environment->parse(Object(Twig_TokenStream))
-#3 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->compileSource('<?php?/* @var $...', '/views/site/ind...')
-#4 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/views/site/ind...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(SiteController), '/home/goblin/ww...', Array, true)
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(33): CController->render('index', Array)
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
-#17 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/contact
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('img/img-c.jpg')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/img-c.jpg
+HTTP_REFERER=http://plaza.lch/page/40/
 ---
-2014/02/25 16:01:46 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'A block must start with a tag name in "/views/site/index.twig" at line 9' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php:151
+2014/03/05 17:15:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php(95): Twig_Parser->subparse(NULL, false)
-#1 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(507): Twig_Parser->parse(Object(Twig_TokenStream))
-#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(559): Twig_Environment->parse(Object(Twig_TokenStream))
-#3 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->compileSource('<?php?/* @var $...', '/views/site/ind...')
-#4 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/views/site/ind...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(SiteController), '/home/goblin/ww...', Array, true)
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(33): CController->render('index', Array)
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
-#17 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/contact
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
 ---
-2014/02/25 16:04:03 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'A block must start with a tag name in "/views/site/index.twig" at line 3' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php:151
+2014/03/05 17:16:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/edit_page/css/content.css".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php(95): Twig_Parser->subparse(NULL, false)
-#1 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(507): Twig_Parser->parse(Object(Twig_TokenStream))
-#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(559): Twig_Environment->parse(Object(Twig_TokenStream))
-#3 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->compileSource('<h1>Welcome to ...', '/views/site/ind...')
-#4 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/views/site/ind...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(SiteController), '/home/goblin/ww...', Array, true)
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(33): CController->render('index', Array)
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
-#17 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/contact
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/edit_page...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/edit_page/css/content.css
 ---
-2014/02/25 16:05:36 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'Unknown tag name "word" in "/views/site/index.twig" at line 3' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php:182
+2014/03/05 17:16:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "admin".' in /home/goblin/www/plaza3/public_html/framework/web/CController.php:483
 Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php(95): Twig_Parser->subparse(NULL, false)
-#1 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(507): Twig_Parser->parse(Object(Twig_TokenStream))
-#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(559): Twig_Environment->parse(Object(Twig_TokenStream))
-#3 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->compileSource('<h1>Welcome to ...', '/views/site/ind...')
-#4 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/views/site/ind...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(SiteController), '/home/goblin/ww...', Array, true)
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(33): CController->render('index', Array)
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
-#17 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/contact
----
-2014/02/25 16:06:03 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'Unknown tag name "data" in "/views/site/index.twig" at line 3' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php:182
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php(95): Twig_Parser->subparse(NULL, false)
-#1 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(507): Twig_Parser->parse(Object(Twig_TokenStream))
-#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(559): Twig_Environment->parse(Object(Twig_TokenStream))
-#3 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->compileSource('<h1>Welcome to ...', '/views/site/ind...')
-#4 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/views/site/ind...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(SiteController), '/home/goblin/ww...', Array, true)
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(33): CController->render('index', Array)
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
-#17 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/contact
----
-2014/02/25 16:06:03 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'Unknown tag name "data" in "/views/site/index.twig" at line 3' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php:182
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php(95): Twig_Parser->subparse(NULL, false)
-#1 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(507): Twig_Parser->parse(Object(Twig_TokenStream))
-#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(559): Twig_Environment->parse(Object(Twig_TokenStream))
-#3 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->compileSource('<h1>Welcome to ...', '/views/site/ind...')
-#4 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/views/site/ind...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(SiteController), '/home/goblin/ww...', Array, true)
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(33): CController->render('index', Array)
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
-#17 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/contact
----
-2014/02/25 16:06:50 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'Unknown tag name "word" in "/views/site/index.twig" at line 3' in /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php:182
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Parser.php(95): Twig_Parser->subparse(NULL, false)
-#1 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(507): Twig_Parser->parse(Object(Twig_TokenStream))
-#2 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(559): Twig_Environment->parse(Object(Twig_TokenStream))
-#3 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Environment.php(334): Twig_Environment->compileSource('<h1>Welcome to ...', '/views/site/ind...')
-#4 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): Twig_Environment->loadTemplate('/views/site/ind...')
-#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile(Object(SiteController), '/home/goblin/ww...', Array, true)
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/goblin/ww...', Array, true)
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
-#8 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(33): CController->render('index', Array)
-#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#12 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('index')
-#14 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
-#15 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#16 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
-#17 {main}
-REQUEST_URI=/index.php?r=site/index
-HTTP_REFERER=http://plaza.lch/index.php?r=site/contact
----
-2014/02/25 17:15:17 [error] [php] include(User.php): failed to open stream: No such file or directory (/home/goblin/www/plaza3/public_html/framework/YiiBase.php:427)
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/protected/components/UserIdentity.php(15): spl_autoload_call()
-#1 /home/goblin/www/plaza3/public_html/protected/models/LoginForm.php(52): UserIdentity->authenticate()
-#2 /home/goblin/www/plaza3/public_html/framework/validators/CInlineValidator.php(42): LoginForm->authenticate()
-#3 /home/goblin/www/plaza3/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute()
-#4 /home/goblin/www/plaza3/public_html/framework/base/CModel.php(159): CInlineValidator->validate()
-#5 /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php(95): LoginForm->validate()
-#6 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
-#7 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
-#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(286): SiteController->runAction()
-#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
-#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): SiteController->run()
-#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#12 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#13 /home/goblin/www/plaza3/public_html/index.php(16): CWebApplication->run()
-REQUEST_URI=/index.php?r=site/login
-in /home/goblin/www/plaza3/public_html/protected/components/UserIdentity.php (15)
-in /home/goblin/www/plaza3/public_html/protected/models/LoginForm.php (52)
-in /home/goblin/www/plaza3/public_html/protected/controllers/SiteController.php (95)
-2014/02/25 17:58:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/goblin/www/plaza3/public_html/framework/web/auth/CAccessControlFilter.php:182
-Stack trace:
-#0 /home/goblin/www/plaza3/public_html/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
-#1 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
-#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
-#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
-#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#7 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('create')
-#8 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('users/create')
-#9 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#10 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
-#11 {main}
-REQUEST_URI=/index.php?r=users/create
-HTTP_REFERER=http://plaza.lch/index.php?r=users/index
+#0 /home/goblin/www/plaza3/public_html/framework/web/CController.php(270): CController->missingAction('admin')
+#1 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#2 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/admin')
+#3 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/modules/
+HTTP_REFERER=http://plaza.lch/admin/edit_gallery/1
 ---

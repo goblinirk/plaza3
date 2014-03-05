@@ -1,0 +1,211 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+header, nav, section, article, aside, footer {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+	height: 100%;
+}
+a {
+	color: blue;
+	outline: none;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+p {
+	margin: 0 0 18px
+}
+img {
+	border: none;
+}
+input {
+	vertical-align: middle;
+}
+#wrapper {
+	width: 100%;
+	min-width: 1000px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	background: #ebebeb;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+	height: 60px;
+	background: #383b3d;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#middle {
+	width: 100%;
+	padding: 0 0 50px;
+	height: 1%;
+	position: relative;
+}
+#middle:after {
+	content: '';
+	clear: both;
+	display: table;
+}
+#midwrap {
+	margin: 10px 0px 0px 130px;
+	background: #fff;
+	border-radius: 6px 0px 0px 0px;
+	box-shadow: 2px 2px 8px #A2A2A2;
+	background-color: #fff;
+	background-image: url(/images/midwrap_bg.png);
+	background-repeat: repeat-y;
+}
+#midwrap:after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+#container {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+#content {
+	padding: 0 20px 0 261px;
+}
+#contwrap{
+	background: #fff;
+	margin: 0px;
+	padding: 10px;
+	border-left: 1px solid #ebebeb;
+}
+
+/* Sidebar Left
+-----------------------------------------------------------------------------*/
+#sideLeft {
+	float: left;
+	width: 250px;
+	margin-left: -100%;
+	position: relative;
+}
+.tabbable {
+	height: 100%;
+	margin-left: -100px;
+}
+.tabs-left > .nav-tabs {
+	margin-bottom: 0px;
+	padding: 10px 0px 17px;
+	background: #ebebeb;
+}
+.tabs-left > .nav-tabs > li > a {
+	background: #ebebeb;
+	text-align: center;
+}
+.tabs-left > .nav-tabs > li > a > img{
+	width: 50px;
+	height: 50px;
+}
+.tabs-left > .nav-tabs .active > a, .tabs-left > .nav-tabs .active > a:hover, .tabs-left > .nav-tabs .active > a:focus {
+	background: #e0e0e0;
+	box-shadow: -2px 1px 3px #A2A2A2;
+}
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+	margin: -40px auto 0;
+	min-width: 1000px;
+	height: 40px;
+	position: relative;
+	background: #ebebeb;
+}
+
+h1.mainlabel {
+	float: left;
+	margin-left: 25px;
+	color: #ebebeb;
+	text-shadow: 2px 2px 5px #000;
+}
+#usermnu {
+	float: right;
+	margin: 20px 0px 0px 0px;
+}
+#usermnu a{
+	padding: 10px 30px;
+	color: #fff;
+	font-family: "Trebuchet MS";
+	letter-spacing: 0.5px;
+	border-right: 1px solid #5A5A5A;
+}
+#usermnu a:hover{
+	text-decoration: none;
+	color: #99DDFF;
+}
+
+th#pages-grid_c0 { text-align: left;}
+th#pages-grid_c1 { width: 200px;}
+tr.filters td input { width: 200px !important;}
+#pages-grid table tbody tr td:nth-child(1){ text-align: left; }
+.grid-view .button-column {text-align: center;width: 80px !important;}
+.row {margin-left: 20px !important;}
+.row input[type=text] {width: 520px !important;}
+.row textarea {width: 520px !important;}
+.row select {width: 535px !important;}
+.seoform .row {margin-left: 20px !important;}
+.seoform .row input[type=text] {width: 270px !important;}
+.seoform .row textarea {width: 270px !important;}
+.seoform .row select {width: 285px !important;}
+.seoform {width: 330px !important; display: inline-block;margin-left: 30px;}
+.alert-danger, .alert-error {
+color: #b94a48;
+background-color: #f2dede;
+border-color: #eed3d7;
+padding: 5px 20px;
+border: 2px solid #b94a48 !important;
+margin: 15px;
+}
+
+#LoginForm_rememberMe{
+	display: inline-block;
+	margin: 0;
+}
+label[for=LoginForm_rememberMe]{
+	display: inline-block;
+	vertical-align: top;
+}
+#middle_auth input[type="submit"]{
+	padding: 0px 92px;
+	margin-top: 16px;
+}
+#middle_auth{
+	width: 340px;
+	margin: 40px auto 0;
+	text-align: center;
+}
+#middle_auth>h1{
+	color: rgb(60, 60, 60);
+}
+#middle_auth>div.form{
+	padding: 15px;
+	background: #5E5E5E;
+	border-radius: 8px;
+	box-shadow: 2px 2px 10px #888;
+	color: #DBDBDB;
+}
+#middle_auth div.row{
+	margin-left: 0px !important;
+}
+
+#middle_auth div.row input[type=text]{
+	width: 215px !important;
+}
+

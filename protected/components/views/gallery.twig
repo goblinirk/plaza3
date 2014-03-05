@@ -1,0 +1,15 @@
+{% set items = this.getGalleryBlock() %}
+{% if items %}
+	{% for item in items %}
+		<h2>{{ item.label }}</h2>
+		<p>{{ item.description }}</p>
+		<div class="bs-gallery">
+			{% for img in item.images %}
+				<a class="gall" rel="example_group" href="/{{ img.large }}">
+					<img alt="" src="/{{ img.thumb }}">
+					<span class="txt">{{ img.description }}</span>
+				</a>
+			{% endfor %}
+		</div>
+	{% endfor %}
+{% endif %}

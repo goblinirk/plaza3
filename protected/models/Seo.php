@@ -34,9 +34,8 @@ class Seo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('module, owner_id, alias, title, meta_description, meta_keywords, meta_robots, meta_author, redirect_header, redirect_url', 'required'),
-			array('owner_id', 'numerical', 'integerOnly'=>true),
-			array('module, alias, title', 'length', 'max'=>128),
+			array('alias', 'required'),
+			array('alias, title', 'length', 'max'=>128),
 			array('meta_description, meta_keywords', 'length', 'max'=>500),
 			array('meta_robots', 'length', 'max'=>32),
 			array('meta_author', 'length', 'max'=>64),
@@ -67,14 +66,14 @@ class Seo extends CActiveRecord
 			'id' => 'ID',
 			'module' => 'Module',
 			'owner_id' => 'Owner',
-			'alias' => 'Alias',
-			'title' => 'Title',
+			'alias' => 'Псевдоним (alias)',
+			'title' => 'Заголовок страницы (title)',
 			'meta_description' => 'Meta Description',
 			'meta_keywords' => 'Meta Keywords',
 			'meta_robots' => 'Meta Robots',
 			'meta_author' => 'Meta Author',
 			'redirect_header' => 'Redirect Header',
-			'redirect_url' => 'Redirect Url',
+			'redirect_url' => 'Переадрисация (redirect)',
 		);
 	}
 

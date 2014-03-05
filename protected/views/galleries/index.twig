@@ -1,0 +1,14 @@
+{% extends "views/layouts/inner.twig" %}
+
+{% block innercontent %}
+
+	<h1>Галерея</h1>
+
+	{% set qwe = this.widget('zii.widgets.CListView', {
+		'dataProvider':dataProvider,
+		'itemView':'_view',
+	}, true) %}
+
+	{{ qwe | raw }}
+
+{% endblock %}

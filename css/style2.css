@@ -1,0 +1,185 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+header, nav, section, article, aside, footer {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+	height: 100%;
+	background: #ebebeb !important;
+}
+a {
+	color: blue;
+	outline: none;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+p {
+	margin: 0 0 18px
+}
+img {
+	border: none;
+}
+input {
+	vertical-align: middle;
+}
+#wrapper {
+	width: 1200px;
+	min-width: 1200px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	background: #fff;
+	width: 1000px;
+	margin: 0 auto;
+	box-shadow: 2px 2px 8px #A2A2A2;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+	height: 80px;
+	background: url(/images/kapital/header.png) repeat-x;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#middle {
+	width: 100%;
+	padding: 0 0 50px;
+	height: 1%;
+	position: relative;
+}
+#middle:after {
+	content: '';
+	clear: both;
+	display: table;
+}
+#midwrap {
+	background: #fff;
+	border-radius: 6px 0px 0px 0px;
+	background-color: #fff;
+}
+#midwrap:after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+#container {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+#content {
+	
+}
+#contwrap{
+	background: #fff;
+	margin: 0px;
+	padding: 30px;
+}
+
+/* Sidebar Left
+-----------------------------------------------------------------------------*/
+#sideLeft {
+	float: left;
+	width: 250px;
+	margin-left: -100%;
+	position: relative;
+}
+.tabbable {
+	height: 100%;
+	margin-left: -100px;
+}
+.tabs-left > .nav-tabs {
+	margin-bottom: 0px;
+	padding: 10px 0px 17px;
+	background: #ebebeb;
+}
+.tabs-left > .nav-tabs > li > a {
+	background: #ebebeb;
+	text-align: center;
+}
+.tabs-left > .nav-tabs > li > a > img{
+	width: 50px;
+	height: 50px;
+}
+.tabs-left > .nav-tabs .active > a, .tabs-left > .nav-tabs .active > a:hover, .tabs-left > .nav-tabs .active > a:focus {
+	background: #e0e0e0;
+	box-shadow: -2px 1px 3px #A2A2A2;
+}
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+	margin: -40px auto 0;
+	min-width: 1000px;
+	height: 40px;
+	position: relative;
+	background: #666;
+	width: 1200px;
+}
+
+h1.mainlabel {
+float: left;
+margin-left: 30px;
+color: #4BA9D1;
+font-family: "Times New Roman";
+font-weight: normal;
+font-size: 50px;
+margin-top: 18px;
+}
+#usermnu {
+	float: right;
+	margin: 31px 0px 0px 0px;
+}
+#usermnu a{
+padding: 32px 12px;
+color: #fff;
+font-family: "Trebuchet MS";
+letter-spacing: 0.5px;
+color: #4BA9D1;
+font-family: "Times New Roman";
+font-size: 17px;
+}
+#usermnu a:hover{
+background-color: #1a5c8e;
+color: #FFFFFF !important;
+}
+
+
+#usermnu a:hover{
+	text-decoration: none;
+	color: #99DDFF;
+}
+
+th#pages-grid_c0 { width: 30px;text-align: center;}
+th#pages-grid_c2 { width: 200px;}
+tr.filters td input { width: 200px !important;}
+#pages-grid table tbody tr td:nth-child(1){ text-align: center; }
+.grid-view .button-column {text-align: center;width: 80px !important;}
+.row {margin-left: 20px !important;}
+.row input[type=text] {width: 600px !important;}
+.row textarea {width: 600px !important;}
+.row select {width: 600px !important;}
+.alert-danger, .alert-error {
+color: #b94a48;
+background-color: #f2dede;
+border-color: #eed3d7;
+padding: 5px 20px;
+border: 2px solid #b94a48 !important;
+margin: 15px;
+}
+
+#LoginForm_username{
+	width: 206px !important;
+}

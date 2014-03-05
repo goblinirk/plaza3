@@ -1,0 +1,57 @@
+<div class="form">
+{% set form = this.beginWidget('CActiveForm', {
+    'action': App.createUrl(this.route),
+    'method': 'get',
+    'enableAjaxValidation': false,
+}) %}
+
+	<div class="row">
+        {{ form.label(model, 'id') | raw }}
+        {{ form.textField(model, 'id') | raw }}
+    </div><!-- /.row -->
+	<div class="row">
+        {{ form.label(model, 'owner_id') | raw }}
+        {{ form.dropDownList(model, 'owner_id', model.items) | raw }}
+    </div><!-- /.row -->
+	<div class="row">
+        {{ form.label(model, 'author') | raw }}
+        {{ form.textField(model, 'author', {'size': 160, 'maxlength': 255}) | raw }}
+    </div><!-- /.row -->
+
+    <div class="row">
+        {{ form.label(model, 'label') | raw }}
+        {{ form.textField(model, 'label', {'size': 160, 'maxlength': 255}) | raw }}
+    </div><!-- /.row -->
+
+    <div class="row">
+        {{ form.label(model, 'short_text') | raw }}
+        {{ form.textArea(model, 'short_text', {'rows': 6, 'cols': 50}) | raw }}
+    </div><!-- /.row -->
+
+	<div class="row">
+        {{ form.label(model, 'full_text') | raw }}
+        {{ form.textArea(model, 'full_text', {'rows': 6, 'cols': 50}) | raw }}
+    </div><!-- /.row -->
+
+    <div class="row">
+        {{ form.label(model, 'create_date') | raw }}
+        {{ form.textField(model, 'create_date', {'size': 160, 'maxlength': 255}) | raw }}
+    </div><!-- /.row -->
+
+    <div class="row">
+        {{ form.label(model, 'template') | raw }}
+        {{ form.textField(model, 'template', {'size': 160, 'maxlength': 255}) | raw }}
+    </div><!-- /.row -->
+
+    <div class="row">
+        {{ form.label(model, 'status') | raw }}
+        {{ form.dropDownList(model, 'status', ['Удалена', 'Опубликована', 'В архиве']) | raw }}
+    </div><!-- /.row -->
+
+	<div class="row buttons">
+		{{ C.Html.submitButton('Поиск') | raw }}
+	</div>
+
+{% do this.endWidget %}
+
+</div><!-- form -->

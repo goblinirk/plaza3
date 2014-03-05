@@ -1,0 +1,7 @@
+{% extends "views/layouts/admin.twig" %}
+
+{% block content %}
+	<h1>Редактирование записи # {{ model.id }}</h1>
+	 
+	{% include 'views/pages/_form.twig' with {'model': model, 'seo': seo} %}
+{% endblock %}

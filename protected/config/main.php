@@ -8,6 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'PLAZA CMS 3.0',
+	'language' => 'ru',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -30,6 +31,7 @@ return array(
 		
 	),
 
+	'defaultController'=>'pages',
 	// application components
 	'components'=>array(
 		'user'=>array(
@@ -50,6 +52,7 @@ return array(
 		    ),
 		    'functions' => array(
 		        'rot13' => 'str_rot13',
+		        'print_r' => 'print_r',
 		    ),
 		    'filters' => array(
 		        'jencode' => 'CJSON::encode',
@@ -62,16 +65,32 @@ return array(
 		    ),
 		),
 		// uncomment the following to enable URLs in path-format
-		/*
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName'=>false,
 			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'page/<id:\d+>/'=>'pages/view',
+				'page/<alias:.*?>/'=>'pages/view',
+				'pages/'=>'pages/index',
+				'admin/pages/'=>'pages/admin',
+				'admin/navigation/'=>'menus/admin',
+				'admin/forms/'=>'site/admin',
+				'admin/galleries/'=>'galleries/admin',
+				'admin/modules/'=>'site/admin',
+				'admin/options/'=>'site/admin',
+				'admin/login/'=>'site/login',
+				'admin/add_page/'=>'pages/create',
+				'admin/edit_page/<id:\d+>/'=>'pages/update',
+				'admin/delete_page/<id:\d+>/'=>'pages/delete',
+				'admin/add_gallery/'=>'galleries/create',
+				'admin/edit_gallery/<id:\d+>/'=>'galleries/update',
+				'admin/delete_gallery/<id:\d+>/'=>'galleries/delete',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		
+		/*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
@@ -79,7 +98,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=plaza3',
+			'connectionString' => 'mysql:host=localhost;dbname=insite_samus',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => 'drop',
@@ -92,6 +111,22 @@ return array(
             'defaultRoles' => array('guest'),
         ),
 		*/
+		'clientScript'=>array(
+		  'packages'=>array(
+		    'jquery'=>array(
+		      'baseUrl'=>'//ajax.googleapis.com/ajax/libs/jquery/1.10.2',
+		      'js'=>array('jquery.min.js'),
+		      'coreScriptPosition'=>CClientScript::POS_HEAD
+		    ),
+		    'jquery.ui'=>array(
+		      'baseUrl'=>'//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3',
+		      'js'=>array('jquery-ui.min.js'),
+		      'depends'=>array('jquery'),
+		      'coreScriptPosition'=>CClientScript::POS_BEGIN
+		    )
+		  ),
+		),
+
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',

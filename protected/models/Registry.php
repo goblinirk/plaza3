@@ -62,6 +62,20 @@ class Registry extends CActiveRecord
 			'create_date' => 'Create Date',
 		);
 	}
+	public function getSysParam($param)
+	{
+		return $this->find(array(
+		    'condition'=>'module=:mod and param=:prm',
+		    'params'=>array(':mod'=>'system',':prm'=>$param),
+		));
+	}
+	public function genSpheresMenu($ind)
+	{
+		return $this->findAll(array(
+		    'condition'=>'module=:mod',
+		    'params'=>array(':mod'=>'sphere_module-'.$ind),
+		));
+	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.

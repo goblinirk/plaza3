@@ -1,0 +1,55 @@
+<div class="seoform">
+
+	<div class="row">
+        {{ form.labelEx(model, 'show_in_nav') | raw }}
+        {{ form.dropDownList(model, 'show_in_nav', {'1':' Да ', '0':' Нет ',}) | raw }}
+        {{ form.error(model, 'show_in_nav') | raw }}
+    </div><!-- /.row -->
+
+	<div class="row">
+		{{ form.labelEx(model, 'nav_label') | raw }}
+        {{ form.textField(model, 'nav_label', {'size': 60, 'maxlength': 128}) | raw }}
+        {{ form.error(model, 'nav_label') | raw }}
+	</div>
+
+<hr />
+
+	<div class="row">
+		{{ form.labelEx(model, 'template') | raw }}
+        {{ form.textField(model, 'template', {'size': 60, 'maxlength': 128}) | raw }}
+        {{ form.error(model, 'template') | raw }}
+	</div>
+
+	<div class="row">
+		{{ form.labelEx(seo, 'alias') | raw }}
+        {{ form.textField(seo, 'alias', {'size': 60, 'maxlength': 128}) | raw }}
+        {{ form.error(seo, 'alias') | raw }}
+	</div>
+
+	<div class="row">
+		{{ form.labelEx(seo, 'redirect_url') | raw }}
+        {{ form.textField(seo, 'redirect_url', {'size': 60, 'maxlength': 255}) | raw }}
+        {{ form.error(seo, 'redirect_url') | raw }}
+	</div>
+
+<hr />
+
+	<div class="row">
+		{{ form.labelEx(seo, 'title') | raw }}
+        {{ form.textField(seo, 'title', {'size': 60, 'maxlength': 128}) | raw }}
+        {{ form.error(seo, 'title') | raw }}
+	</div>
+
+	<div class="row">
+		{{ form.labelEx(seo, 'meta_keywords') | raw }}
+        {{ form.textField(seo, 'meta_keywords', {'size': 60, 'maxlength': 500}) | raw }}
+        {{ form.error(seo, 'meta_keywords') | raw }}
+	</div>
+
+	<div class="row">
+		{{ form.labelEx(seo, 'meta_description') | raw }}
+        {{ form.textField(seo, 'meta_description', {'size': 60, 'maxlength': 500}) | raw }}
+        {{ form.error(seo, 'meta_description') | raw }}
+	</div>
+
+</div><!-- form -->

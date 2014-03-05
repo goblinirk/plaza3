@@ -1,0 +1,42 @@
+<div class="form">
+
+{% set form = this.beginWidget('CActiveForm', {
+    'id': 'pages-form',
+    'enableAjaxValidation': false,
+}) %}
+
+	<p class="note">Поля помеченные <span class="required">*</span> обязательны для заполнения.</p>
+
+	<div style="display: inline-block;vertical-align: top;">
+    <div class="row">
+        {{ form.labelEx(model, 'owner_id') | raw }}
+        {{ form.textField(model, 'owner_id', {'size': 160, 'maxlength': 255}) | raw }}
+        {{ form.error(model, 'owner_id') | raw }}
+    </div><!-- /.row -->
+
+    <div class="row">
+        {{ form.labelEx(model, 'label') | raw }}
+        {{ form.textField(model, 'label', {'size': 160, 'maxlength': 255}) | raw }}
+        {{ form.error(model, 'label') | raw }}
+    </div><!-- /.row -->
+
+    <div class="row">
+        {{ form.labelEx(model, 'description') | raw }}
+        {{ form.textArea(model, 'description', {'rows': 6, 'cols': 50}) | raw }}
+        {{ form.error(model, 'description') | raw }}
+    </div><!-- /.row -->
+
+	<div class="row">
+        {{ form.labelEx(model, 'status') | raw }}
+        {{ form.dropDownList(model, 'status', {'1': 'Опубликована', '0': 'Удалена', '2': 'В архиве'}) | raw }}
+        {{ form.error(model, 'status') | raw }}
+    </div><!-- /.row -->
+</div>
+
+	<div class="row buttons">
+		{{ C.Html.submitButton(model.isNewRecord ? 'Создать' : 'Сохранить') | raw }}
+	</div>
+
+{% do this.endWidget %}
+
+</div><!-- form -->

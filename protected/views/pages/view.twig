@@ -1,0 +1,92 @@
+{% extends model.template %}
+
+{% block maincontent %}
+	
+    <div class="b-dop-serv">
+    	<div class="titl">{{ model.label | raw }}</div>
+        {{ model.full_text | raw }}
+    </div><!--end b-dop-serv-->
+
+{% endblock %}
+
+{% block coontactscontent %}
+    
+    <h2>{{ model.label | raw }}</h2>
+        {{ model.full_text | raw }}
+
+{% endblock %}
+
+{% block innercontent %}
+    <h1>{{ model.label | raw }}</h1>
+    <div class="content">
+        <div class="b-about">
+            <div class="img"><img alt="" src="{{ model.thumb | raw }}"></div>
+            {{ model.full_text | raw }}
+        </div><!--end b-about-->
+    </div>
+    <div class="bs-jobs">
+                <h2>Наши работы</h2>
+                <a href="#"><img alt="" src="/img/job.png"></a>
+                <a href="#"><img alt="" src="/img/job.png"></a>
+                <a href="#"><img alt="" src="/img/job.png"></a>
+                <a href="#"><img alt="" src="/img/job.png"></a>
+                <a href="#"><img alt="" src="/img/job.png"></a>
+                <div class="all-link"><a href="#">Перейти в галлерею</a></div>
+            </div><!--end bs-jobs-->
+            <div class="b-otziv">
+                <h2>Отзывы <a href="#">Читать все</a></h2>
+                <div class="otzs">
+                    <div class="otziv">
+                        <div class="name">Антонина</div>
+                        <div class="text">
+                            <span class="str"></span>
+В октябре 2013 года мной был заключен договор с фирмой ”ЭКОСТРОЙДОМ”  на строительство брусового дома размером 6х10 по проекту S1. Руководитель фирмы Алексей Николаевич выехал к нам на участок, где непосредственно... 
+                            <div class="link"><a href="#">Читать далее</a></div>
+                        </div>
+                    </div><!--end otziv-->
+                    <div class="otziv">
+                        <div class="name">Антонина</div>
+                        <div class="text">
+                            <span class="str"></span>
+В октябре 2013 года мной был заключен договор с фирмой ”ЭКОСТРОЙДОМ”  на строительство брусового дома размером 6х10 по проекту S1. Руководитель фирмы Алексей Николаевич выехал к нам на участок, где непосредственно... 
+                            <div class="link"><a href="#">Читать далее</a></div>
+                        </div>
+                    </div><!--end otziv-->
+                    <div class="otziv">
+                        <div class="name">Антонина</div>
+                        <div class="text">
+                            <span class="str"></span>
+В октябре 2013 года мной был заключен договор с фирмой ”ЭКОСТРОЙДОМ”  на строительство брусового дома размером 6х10 по проекту S1. Руководитель фирмы Алексей Николаевич выехал к нам на участок, где непосредственно... 
+                            <div class="link"><a href="#">Читать далее</a></div>
+                        </div>
+                    </div><!--end otziv-->
+                
+                </div><!--end otzs-->
+                <div class="form">
+                    <h2>Написать свой отзыв</h2>
+                    <table cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td><input name="" class="pole" value="Имя" type="text"></td>
+                      </tr>
+                      <tr>
+                        <td><input name="" class="pole" value="Электронная почта" type="text"></td>
+                      </tr>
+                      <tr>
+                        <td><input name="" class="pole" value="Электронная почта" type="text"></td>
+                      </tr>
+                      <tr>
+                        <td><textarea name="" cols="" rows="">Сообщение</textarea></td>
+                      </tr>
+                      <tr>
+                        <td><input class="btn1" name="" type="submit" value="Отправить"></td>
+                      </tr>
+                    </table>
+                </div><!--end form-->
+            </div><!--end b-otziv-->
+            <div class="big-tel">
+                <div class="phone"><span>(3952) </span>672-295</div>
+            ЗВОНИТЕ
+            
+            </div><!--end big-tel-->
+
+{% endblock %}

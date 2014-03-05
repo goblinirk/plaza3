@@ -6,7 +6,9 @@ class PagesController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/admin.twig';
+
+	private $_model;
 
 	/**
 	 * @return array action filters
@@ -28,15 +30,15 @@ class PagesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'showbyalias'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array(''),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','create','update'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -49,10 +51,16 @@ class PagesController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
+	public function actionView()
 	{
+		$page = $this->loadModel();
+		if(!empty($page->seo->redirect_url))
+			$this->redirect(array($page->seo->redirect_url));
+
+		$page->template = empty($page->template) ? 'views/layouts/main.twig' : "views/layouts/".$page->template.".twig";
+
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$page,
 		));
 	}
 
@@ -63,19 +71,32 @@ class PagesController extends Controller
 	public function actionCreate()
 	{
 		$model=new Pages;
+		$seo=new Seo;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Pages']))
 		{
+
 			$model->attributes=$_POST['Pages'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$model->show_in_nav=$_POST['Pages']['show_in_nav'];
+			$model->nav_label=$_POST['Pages']['nav_label'];
+			if($model->save()){
+				//print_r($model);
+				if(isset($_POST['Seo'])){
+			        $seo->attributes=$_POST['Seo'];
+			        $seo->module='pages';
+				    $seo->owner_id=$model->id;
+				    $seo->save();
+			    }
+				$this->redirect(array('admin/pages/'));
+			}
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+			'seo'=>$seo,
 		));
 	}
 
@@ -84,23 +105,41 @@ class PagesController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+	public function actionUpdate()
 	{
-		$model=$this->loadModel($id);
+		if(isset($_GET['id'])){
+			$model=$this->loadModel();
+			$seo=$model->seo;
+			if(!$seo) $seo = new Seo();
+			// Uncomment the following line if AJAX validation is needed
+			// $this->performAjaxValidation($model);
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+			if(isset($_POST['Pages']))
+			{
+				//print_r($_POST['Pages']);
+				//die();
+				$model->attributes=$_POST['Pages'];
+				$model->show_in_nav=$_POST['Pages']['show_in_nav'];
+				$model->nav_label=$_POST['Pages']['nav_label'];
+				if($model->save()){
+				//print_r($model);
+				//die();
+				if(isset($_POST['Seo'])){
+			        $seo->attributes=$_POST['Seo'];
+			        $seo->module='pages';
+				    $seo->owner_id=$model->id;
+				    $seo->save();
+			    }
+				$this->redirect(array('admin/pages/'));
+			}
+			}
 
-		if(isset($_POST['Pages']))
-		{
-			$model->attributes=$_POST['Pages'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
+			$this->render('update',array(
+				'model'=>$model,
+				'seo'=>$seo,
+			));
+		} else
+			$this->redirect(array('admin'));
 	}
 
 	/**
@@ -108,9 +147,9 @@ class PagesController extends Controller
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete($id)
+	public function actionDelete()
 	{
-		$this->loadModel($id)->delete();
+		$this->loadModel()->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -122,10 +161,12 @@ class PagesController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Pages');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+		$_GET['id'] = 1;
+		$this->actionView();
+		//$dataProvider=new CActiveDataProvider('Pages');
+		//$this->render('index',array(
+		//	'dataProvider'=>$dataProvider,
+		//));
 	}
 
 	/**
@@ -137,12 +178,11 @@ class PagesController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Pages']))
 			$model->attributes=$_GET['Pages'];
-
+		
 		$this->render('admin',array(
 			'model'=>$model,
 		));
-	}
-
+	} 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
@@ -150,12 +190,20 @@ class PagesController extends Controller
 	 * @return Pages the loaded model
 	 * @throws CHttpException
 	 */
-	public function loadModel($id)
+	public function loadModel()
 	{
-		$model=Pages::model()->findByPk($id);
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
-		return $model;
+		if($this->_model===null){
+			if(isset($_GET['id'])){
+				$this->_model=Pages::model()->findByPk($_GET['id']);
+			} else {
+				$seo_model = Seo::model()->find('alias="'.$_GET['alias'].'"');
+				$page_id = (isset($seo_model->owner_id)) ? $seo_model->owner_id : 0;
+				$this->_model=Pages::model()->findByPk($page_id);
+			}
+			if($this->_model===null)
+				throw new CHttpException(404,'The requested page does not exist.');
+		}
+		return $this->_model;
 	}
 
 	/**

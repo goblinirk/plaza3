@@ -1,0 +1,65 @@
+{% extends "views/layouts/admin.twig" %}
+
+{% set pageactive = true %}
+
+{% block content %}
+
+	{{ void(App.clientScript.registerCoreScript('jquery')) }}
+	{{ void(App.clientScript.registerCoreScript('jquery.ui')) }}
+
+	{{ void(App.clientScript.registerScript('search', "
+	$('.search-button').click(function(){
+	    $('.search-form').toggle();
+	    return false;
+	});
+	$('.search-form form').submit(function(){
+	    $.fn.yiiGridView.update('pages-grid', {
+	        data: $(this).serialize()
+	    });
+	    return false;
+	});
+	")) }}
+
+	<h1>Управление статьями</h1>
+
+	<a href="/admin/add_page/" class="btn btn-success btn-lg" role="button">Добавить статью</a>
+	<a href="/admin/pages_config/" class="btn btn-default btn-lg" role="button">Конфигурация</a>
+
+	{{ C.Html.link('Расширенный поиск', '#', {'class': 'btn btn-default btn-lg search-button'}) | raw }}
+	<div class="search-form" style="display:none">
+	{% include 'views/pages/_search.twig' with {'model': model} %}
+	</div><!-- search-form -->
+
+	{% set qwert = this.widget('ext.JTreeTable.JTreeTable', {
+		'id':'pages-grid',
+		'dataProvider': model.search,
+		'filter':model,
+		'template':'{pager} {items} {pager}',
+		'itemsCssClass':'table table-striped',
+		'primaryColumn': 'id',
+		'parentColumn': 'owner_id',
+		'ajaxUpdate':'false', 
+		'ajaxVar':'false',
+		'jstree_options': {
+          	'initialState':'expanded',
+        },
+		'columns':[
+	        {
+	            'name':'label',
+	            'type':'raw',
+	            'value':'CHtml::link(CHtml::encode($data->label." [ ".$data->id." ]"), $data->editurl)',
+	        },
+	        {
+	            'name':'create_date',
+	            'value':'Yii::app()->dateFormatter->format("dd MMM y",strtotime($data->create_date))',
+	            'filter':false,
+	        },
+			{
+				'class':'CButtonColumn',
+			},
+		],
+	},true) %}
+
+	{{ qwert|raw }}
+
+{% endblock %}

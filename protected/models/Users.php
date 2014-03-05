@@ -49,6 +49,7 @@ class Users extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'group' => array(self::BELONGS_TO, 'UserGroups', 'group_id'),
 		);
 	}
 
@@ -58,14 +59,14 @@ class Users extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'group_id' => 'Group',
-			'login' => 'Login',
-			'password' => 'Password',
-			'hash' => 'Hash',
-			'reg_date' => 'Reg Date',
-			'last_hit_date' => 'Last Hit Date',
-			'status' => 'Status',
+			'id' => '№',
+			'group_id' => 'Группа пользователей',
+			'login' => 'Имя пользователя',
+			'password' => 'Пароль',
+			'hash' => 'Хэш',
+			'reg_date' => 'Дата регистрации',
+			'last_hit_date' => 'Дата последнего посещения',
+			'status' => 'Статус',
 		);
 	}
 
@@ -101,16 +102,6 @@ class Users extends CActiveRecord
 		));
 	}
 
-	public function validatePassword($password)
-    {
-        return CPasswordHelper::verifyPassword($password,$this->password);
-    }
- 
-    public function hashPassword($password)
-    {
-        return CPasswordHelper::hashPassword($password);
-    }
-	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
@@ -120,5 +111,25 @@ class Users extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	/**
+	 * Checks if the given password is correct.
+	 * @param string the password to be validated
+	 * @return boolean whether the password is valid
+	 */
+	public function validatePassword($password)
+	{
+		return CPasswordHelper::verifyPassword($password,$this->password);
+	}
+
+	/**
+	 * Generates the password hash.
+	 * @param string password
+	 * @return string hash
+	 */
+	public function hashPassword($password)
+	{
+		return CPasswordHelper::hashPassword($password);
 	}
 }

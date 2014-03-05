@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<title>{{this.pagetitle}}</title>
+	<link rel="stylesheet" href="{{ App.baseUrl }}/css/admin.css?v5" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="{{ App.baseUrl }}/add-ons/bootstrap/css/bootstrap.css?v2" />
+	<link rel="stylesheet" href="{{ App.baseUrl }}/add-ons/bootstrap/css/bootstrap-responsive.css?v2" />
+	
+	<script type="text/javascript" src="{{ App.baseUrl }}/add-ons/bootstrap/js/bootstrap.js?v2"></script>
+	<!--[if lte IE 6]><link rel="stylesheet" href="{{ App.baseUrl }}/css/style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
+</head>
+
+<body>
+
+<div id="wrapper">
+
+	<header id="header">
+		
+	</header><!-- #header-->
+
+	<section id="middle_auth">
+		
+				{% block content %}
+
+				{% endblock %}
+		
+	</section><!-- #middle-->
+
+</div><!-- #wrapper -->
+
+<footer id="footer">
+	<p><i>Разработано в стдии IN-SITE</i></p>
+</footer><!-- #footer -->
+
+</body>
+</html>
