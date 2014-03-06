@@ -1,0 +1,14 @@
+{% extends "views/layouts/inner.twig" %}
+
+{% block innercontent %}
+    <h3 style="margin:0px; padding-bottom: 0px; font-weight: normal;">{{ model.label | e }}</h3>
+    <i style="font-style:italic;font-size: 13px;">Дата публикации: {{ App.dateFormatter.format("dd MMM y",strtotime(model.create_date)) }}
+    </i>
+    <br /><br />
+
+    {{ model.full_text | raw }}
+    <br />
+    <a href="/news/">Все новости</a>
+    <br /><br />
+
+{% endblock %}

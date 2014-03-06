@@ -1,7 +1,8 @@
 {% set items = this.getGalleryBlock() %}
 {% if items %}
 	{% for item in items %}
-		<h2>Наши работы</h2>
+		<h2>{{ (this.label=='') ? item.label : this.label }}</h2>
+		{% if this.showdesc %}<p>{{ item.description }}</p>{% endif %}
 		<div class="bs-gallery">
 			{% for img in item.images %}
 				{{ this.widget('ext.lyiightbox.LyiightBox2', {

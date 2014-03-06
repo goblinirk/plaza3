@@ -162,7 +162,7 @@ class Pages extends CActiveRecord
 
 	public function genMenuTree($rid){
 		return $this->findAll(array(
-		    'condition'=>'owner_id=:oid and show_in_nav=:sin',
+		    'condition'=>'owner_id=:oid and show_in_nav=:sin and module="pages"',
 		    'order'=>'sort',
 		    'params'=>array(':oid'=>$rid,':sin'=>1),
 		));

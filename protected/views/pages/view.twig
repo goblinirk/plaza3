@@ -1,5 +1,7 @@
 {% extends model.template %}
 
+{* ============== ВЫВОД ГЛАВНОЙ СТРАНИЦЫ ============= *}
+
 {% block maincontent %}
 	
     <div class="b-dop-serv">
@@ -9,12 +11,16 @@
 
 {% endblock %}
 
+{* =========== ВЫВОД КОНТАКТНОЙ ИНФОРМАЦИИ =========== *}
+
 {% block coontactscontent %}
     
     <h2>{{ model.label | raw }}</h2>
         {{ model.full_text | raw }}
 
 {% endblock %}
+
+{* ============== ВЫВОД ОБЫЧНЫХ СТРАНИЦ ============= *}
 
 {% block innercontent %}
     <h1>{{ model.label | raw }}</h1>
@@ -25,13 +31,7 @@
         </div><!--end b-about-->
     </div>
     <div class="bs-jobs">
-                <h2>Наши работы</h2>
-                <a href="#"><img alt="" src="/img/job.png"></a>
-                <a href="#"><img alt="" src="/img/job.png"></a>
-                <a href="#"><img alt="" src="/img/job.png"></a>
-                <a href="#"><img alt="" src="/img/job.png"></a>
-                <a href="#"><img alt="" src="/img/job.png"></a>
-                <div class="all-link"><a href="#">Перейти в галлерею</a></div>
+                {{ this.widget('Gallery', {'rootId':1, 'label':'Наши работы', 'showdesc': false}, true) | raw }}
             </div><!--end bs-jobs-->
             <div class="b-otziv">
                 <h2>Отзывы <a href="#">Читать все</a></h2>
@@ -66,19 +66,19 @@
                     <h2>Написать свой отзыв</h2>
                     <table cellspacing="0" cellpadding="0">
                       <tr>
-                        <td><input name="" class="pole" value="Имя" type="text"></td>
+                        <td><input name="" class="pole" value="" placeholder="Имя" type="text"></td>
                       </tr>
                       <tr>
-                        <td><input name="" class="pole" value="Электронная почта" type="text"></td>
+                        <td><input name="" class="pole" value="" placeholder="Электронная почта" type="text"></td>
                       </tr>
                       <tr>
-                        <td><input name="" class="pole" value="Электронная почта" type="text"></td>
+                        <td><input name="" class="pole" value="" placeholder="Электронная почта" type="text"></td>
                       </tr>
                       <tr>
-                        <td><textarea name="" cols="" rows="">Сообщение</textarea></td>
+                        <td><textarea name="" cols="" rows="" placeholder="Сообщение"></textarea></td>
                       </tr>
                       <tr>
-                        <td><input class="btn1" name="" type="submit" value="Отправить"></td>
+                        <!-- <td><input class="btn1" name="" type="submit" value="Отправить"></td> -->
                       </tr>
                     </table>
                 </div><!--end form-->

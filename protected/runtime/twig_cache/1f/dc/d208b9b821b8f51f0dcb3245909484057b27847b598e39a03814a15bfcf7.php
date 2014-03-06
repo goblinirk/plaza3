@@ -16,13 +16,13 @@ class __TwigTemplate_1fdcd208b9b821b8f51f0dcb3245909484057b27847b598e39a03814a15
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<div class=\"view\">
+        echo "<div class=\"view\" style=\"clear: both;margin-bottom: 138px;\">
 
 \t";
         // line 3
-        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Gallery", 1 => array("rootId" => 0), 2 => true), "method");
+        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Gallery", 1 => array("rootId" => $this->getAttribute((isset($context["data"]) ? $context["data"] : null), "id")), 2 => true), "method");
         echo "
-</div>";
+</div><br /><br />";
     }
 
     public function getTemplateName()

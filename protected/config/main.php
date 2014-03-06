@@ -53,6 +53,7 @@ return array(
 		    'functions' => array(
 		        'rot13' => 'str_rot13',
 		        'print_r' => 'print_r',
+		        'strtotime' => 'strtotime',
 		    ),
 		    'filters' => array(
 		        'jencode' => 'CJSON::encode',
@@ -73,6 +74,8 @@ return array(
 				'page/<id:\d+>/'=>'pages/view',
 				'page/<alias:.*?>/'=>'pages/view',
 				'pages/'=>'pages/index',
+				'news/'=>'pages/shownewslist',
+				'news/<id:.*?>'=>'pages/shownews',
 				'admin/pages/'=>'pages/admin',
 				'admin/navigation/'=>'menus/admin',
 				'admin/forms/'=>'site/admin',

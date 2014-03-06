@@ -1,0 +1,12 @@
+<div class="view">
+
+	<h3 style="margin:0px; padding-bottom: 0px; font-weight: normal;">{{ data.label | e }}</h3>
+	<i style="font-style:italic;font-size: 13px;">Дата публикации: {{ App.dateFormatter.format("dd MMM y",strtotime(data.create_date)) }}
+	</i>
+	<br /><br />
+
+	{{ data.short_text | raw }}
+	<br />
+	<a href="/news/{{ data.id }}">Читать далее</a>
+	<br /><br />
+</div><hr style="border-color: rgba(218, 218, 218, 0.4);" /><br />

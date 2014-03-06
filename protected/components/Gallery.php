@@ -8,13 +8,17 @@ class Gallery extends CWidget
     public $visible=true;
     public $showdesc=true;
     public $showlabel=true;
+    public $label='';
  
     public function getGalleryBlock() {
         return Galleries::model()->genGalleryInfo($this->rootId);
     }
  
     protected function renderContent() {
-        $this->render('gallery');
+        //if($this->rootId == 0)
+            $this->render('galleries');
+        //else
+        //    $this->render('gallery');
     }
 
     public function init() {

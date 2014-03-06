@@ -24,18 +24,18 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
         $this->getParent($context)->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
+    // line 5
     public function block_maincontent($context, array $blocks = array())
     {
-        // line 4
+        // line 6
         echo "\t
     <div class=\"b-dop-serv\">
     \t<div class=\"titl\">";
-        // line 6
+        // line 8
         echo $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "label");
         echo "</div>
         ";
-        // line 7
+        // line 9
         echo $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "full_text");
         echo "
     </div><!--end b-dop-serv-->
@@ -43,50 +43,47 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
 ";
     }
 
-    // line 12
+    // line 16
     public function block_coontactscontent($context, array $blocks = array())
     {
-        // line 13
+        // line 17
         echo "    
     <h2>";
-        // line 14
+        // line 18
         echo $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "label");
         echo "</h2>
         ";
-        // line 15
+        // line 19
         echo $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "full_text");
         echo "
 
 ";
     }
 
-    // line 19
+    // line 25
     public function block_innercontent($context, array $blocks = array())
     {
-        // line 20
+        // line 26
         echo "    <h1>";
         echo $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "label");
         echo "</h1>
     <div class=\"content\">
         <div class=\"b-about\">
             <div class=\"img\"><img alt=\"\" src=\"";
-        // line 23
+        // line 29
         echo $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "thumb");
         echo "\"></div>
             ";
-        // line 24
+        // line 30
         echo $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "full_text");
         echo "
         </div><!--end b-about-->
     </div>
     <div class=\"bs-jobs\">
-                <h2>Наши работы</h2>
-                <a href=\"#\"><img alt=\"\" src=\"/img/job.png\"></a>
-                <a href=\"#\"><img alt=\"\" src=\"/img/job.png\"></a>
-                <a href=\"#\"><img alt=\"\" src=\"/img/job.png\"></a>
-                <a href=\"#\"><img alt=\"\" src=\"/img/job.png\"></a>
-                <a href=\"#\"><img alt=\"\" src=\"/img/job.png\"></a>
-                <div class=\"all-link\"><a href=\"#\">Перейти в галлерею</a></div>
+                ";
+        // line 34
+        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Gallery", 1 => array("rootId" => 1, "label" => "Наши работы", "showdesc" => false), 2 => true), "method");
+        echo "
             </div><!--end bs-jobs-->
             <div class=\"b-otziv\">
                 <h2>Отзывы <a href=\"#\">Читать все</a></h2>
@@ -121,19 +118,19 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
                     <h2>Написать свой отзыв</h2>
                     <table cellspacing=\"0\" cellpadding=\"0\">
                       <tr>
-                        <td><input name=\"\" class=\"pole\" value=\"Имя\" type=\"text\"></td>
+                        <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Имя\" type=\"text\"></td>
                       </tr>
                       <tr>
-                        <td><input name=\"\" class=\"pole\" value=\"Электронная почта\" type=\"text\"></td>
+                        <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Электронная почта\" type=\"text\"></td>
                       </tr>
                       <tr>
-                        <td><input name=\"\" class=\"pole\" value=\"Электронная почта\" type=\"text\"></td>
+                        <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Электронная почта\" type=\"text\"></td>
                       </tr>
                       <tr>
-                        <td><textarea name=\"\" cols=\"\" rows=\"\">Сообщение</textarea></td>
+                        <td><textarea name=\"\" cols=\"\" rows=\"\" placeholder=\"Сообщение\"></textarea></td>
                       </tr>
                       <tr>
-                        <td><input class=\"btn1\" name=\"\" type=\"submit\" value=\"Отправить\"></td>
+                        <!-- <td><input class=\"btn1\" name=\"\" type=\"submit\" value=\"Отправить\"></td> -->
                       </tr>
                     </table>
                 </div><!--end form-->
@@ -159,6 +156,6 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
 
     public function getDebugInfo()
     {
-        return array (  78 => 24,  74 => 23,  67 => 20,  64 => 19,  57 => 15,  53 => 14,  50 => 13,  47 => 12,  39 => 7,  35 => 6,  31 => 4,  28 => 3,);
+        return array (  85 => 34,  78 => 30,  74 => 29,  67 => 26,  64 => 25,  57 => 19,  53 => 18,  50 => 17,  47 => 16,  39 => 9,  35 => 8,  31 => 6,  28 => 5,);
     }
 }

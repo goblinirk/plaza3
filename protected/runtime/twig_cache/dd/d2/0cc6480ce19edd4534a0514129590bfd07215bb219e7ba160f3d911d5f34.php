@@ -126,7 +126,7 @@ class __TwigTemplate_ddd20cc6480ce19edd4534a0514129590bfd07215bb219e7ba160f3d911
         // line 61
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["App"]) ? $context["App"] : null), "baseUrl"), "html", null, true);
         echo "/images/lenta.png\"></span>
-            <div class=\"title\"><a href=\"#\">Отделка лоджий и балконов 
+            <div class=\"title\"><a href=\"/news/42/\">Отделка лоджий и балконов 
 в Иркутске</a></div>
             <div class=\"img\"><img alt=\"\" src=\"";
         // line 64
@@ -136,7 +136,7 @@ class __TwigTemplate_ddd20cc6480ce19edd4534a0514129590bfd07215bb219e7ba160f3d911
                 <div class=\"txt\">
            Установка пластикового окна подходящего для сохранения тепла; 2. Перенос батареи, ранее ...
                 </div><!--end txt-->
-                <a href=\"#\" class=\"btn1\">Подробнее</a> 
+                <a href=\"/news/42/\" class=\"btn1\">Подробнее</a> 
             </div><!--end right-->
         </div><!--end news-->
         <div class=\"news\">
@@ -144,7 +144,7 @@ class __TwigTemplate_ddd20cc6480ce19edd4534a0514129590bfd07215bb219e7ba160f3d911
         // line 73
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["App"]) ? $context["App"] : null), "baseUrl"), "html", null, true);
         echo "/images/lenta.png\"></span>
-            <div class=\"title\"><a href=\"#\">Отделка лоджий и балконов 
+            <div class=\"title\"><a href=\"/news/43/\">Отделка лоджий и балконов 
 в Иркутске</a></div>
             <div class=\"img\"><img alt=\"\" src=\"";
         // line 76
@@ -154,7 +154,7 @@ class __TwigTemplate_ddd20cc6480ce19edd4534a0514129590bfd07215bb219e7ba160f3d911
                 <div class=\"txt\">
            Установка пластикового окна подходящего для сохранения тепла; 2. Перенос батареи, ранее ...
                 </div><!--end txt-->
-                <a href=\"#\" class=\"btn1\">Подробнее</a> 
+                <a href=\"/news/43/\" class=\"btn1\">Подробнее</a> 
             </div><!--end right-->
         </div><!--end news-->
         <div class=\"news\">
@@ -162,7 +162,7 @@ class __TwigTemplate_ddd20cc6480ce19edd4534a0514129590bfd07215bb219e7ba160f3d911
         // line 85
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["App"]) ? $context["App"] : null), "baseUrl"), "html", null, true);
         echo "/images/lenta.png\"></span>
-            <div class=\"title\"><a href=\"#\">Отделка лоджий и балконов 
+            <div class=\"title\"><a href=\"/news/44/\">Отделка лоджий и балконов 
 в Иркутске</a></div>
             <div class=\"img\"><img alt=\"\" src=\"";
         // line 88
@@ -172,7 +172,7 @@ class __TwigTemplate_ddd20cc6480ce19edd4534a0514129590bfd07215bb219e7ba160f3d911
                 <div class=\"txt\">
            Установка пластикового окна подходящего для сохранения тепла; 2. Перенос батареи, ранее ...
                 </div><!--end txt-->
-                <a href=\"#\" class=\"btn1\">Подробнее</a> 
+                <a href=\"/news/44/\" class=\"btn1\">Подробнее</a> 
             </div><!--end right-->
         </div><!--end news-->
     </div><!--end b-news-->

@@ -1,0 +1,17 @@
+{% extends "views/layouts/inner.twig" %}
+
+{* ============== ВЫВОД ГЛАВНОЙ СТРАНИЦЫ ============= *}
+
+{% block innercontent %}
+	
+	<h2>Новости</h2>
+    
+    {% set tmp = this.widget('zii.widgets.CListView', {
+	'dataProvider': dataProvider,
+	'itemView': '_news',
+	'template': '{items}{pager}'
+	}, true) %}
+
+	{{ tmp |raw }}
+
+{% endblock %}

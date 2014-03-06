@@ -30,7 +30,7 @@ class PagesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'showbyalias'),
+				'actions'=>array('index','view', 'showbyalias', 'shownewslist', 'shownews'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -45,6 +45,34 @@ class PagesController extends Controller
 				'users'=>array('*'),
 			),
 		);
+	}
+
+	public function actionShowNewslist(){
+		$criteria=new CDbCriteria;
+	    $criteria->condition='module=:mod';
+		$criteria->params=array(':mod'=>'news');
+		$criteria->order='create_date DESC';
+
+	    $news = new CActiveDataProvider('Pages', array(
+	        'criteria'=>$criteria,
+	        'pagination'=>array(
+	            'pageSize'=>20,
+	        ),
+	    ));
+	    $this->render('news',array(
+			'dataProvider'=>$news,
+		));
+	}
+
+	public function actionShowNews(){
+
+		if(!isset($_GET['id']))
+			throw new CHttpException(404,'The requested page does not exist.');
+
+		$news = $this->loadModel();
+	    $this->render('shownews',array(
+			'model'=>$news,
+		));
 	}
 
 	/**
