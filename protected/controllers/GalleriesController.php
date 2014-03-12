@@ -71,7 +71,7 @@ class GalleriesController extends Controller
 		{
 			$model->attributes=$_POST['Galleries'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('admin/galleries/'));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class GalleriesController extends Controller
 		{
 			$model->attributes=$_POST['Galleries'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('admin/galleries/'));
 		}
 
 		$this->render('update',array(
@@ -117,9 +117,9 @@ class GalleriesController extends Controller
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
-	/**
-	 * Lists all models.
-	 */
+	/*********************
+	 * Lists all models. *
+	 *********************/
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Galleries');
