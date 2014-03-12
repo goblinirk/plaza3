@@ -28,11 +28,11 @@ class FbMessagesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','create','create_otz'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -71,7 +71,7 @@ class FbMessagesController extends Controller
 		{
 			//$arr = array('label', 'sender', 'message', 'send_date', 'status');
 			$arr['label'] = 'Сообщение с сайта от '.date("d.m.Y",time());
-			$arr['sender'] = 'Сообщение с сайта от '.$_POST['FbMessages']['sndr_email'];
+			$arr['sender'] = $_POST['FbMessages']['sndr_email'];
 			
 			$arr['message'] = '<strong>Сообщение с сайта от '.date("d.m.Y",time()).'</strong><br />';
 			$arr['message'] .= '<strong>Отправитель: </strong>'.$_POST['FbMessages']['sndr_name'].'<br />';
@@ -80,18 +80,61 @@ class FbMessagesController extends Controller
 			$arr['message'] .= '<strong>Сообщение: </strong>'.$_POST['FbMessages']['sndr_message'].'<br />';
 			
 			$arr['send_date'] = date("Y-m-d H:i:s",time());
-			$arr['status'] = 2;
 
 			//print_r($arr);
 			//die('');
 
 			$model->attributes=$arr;
+			$model->form_id = 1;
+			$model->page_id = 0;
+			$model->answer= '';
+			$model->answer_date = date("Y-m-d H:i:s",time());
+			
 			if($model->save()){
 				$this->render('message',array(
 					'message'=>'Ваше сообщение успешно отправленно. Наши менеджеры скоро с вами свяжуться.',
 					'type'=>'success',
 				));
 			} else {
+				$this->render('message',array(
+					'message'=>'При отправке сообщения возникли проблемы. Пожалуйста попробуйте еще раз через некоторое время.',
+					'type'=>'error',
+				));
+			}
+		} else throw new CHttpException(404,'Указанная запись не найдена');
+	}
+
+	public function actionCreate_otz()
+	{
+		$model=new FbMessages;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Otziv']))
+		{
+			//$arr = array('label', 'sender', 'message', 'send_date', 'status');
+			$arr['label'] = 'Новый отзыв от '.$_POST['Otziv']['name'];
+			$arr['sender'] = $_POST['Otziv']['name'];
+			$arr['message'] = $_POST['Otziv']['message'];
+			
+			$arr['send_date'] = date("Y-m-d H:i:s",time());
+			$arr['status'] = 2;
+
+			$model->attributes=$arr;
+			$model->form_id = 2;
+			$model->page_id = $_POST['Otziv']['page_id'];
+			$model->answer= '';
+			$model->answer_date = date("Y-m-d H:i:s",time());
+			
+			if($model->save()){
+				$this->redirect('/page/'.$_POST['Otziv']['page_id'].'/#send');
+				$this->render('message',array(
+					'message'=>'Ваш отзыв успешно отправлен. В скором времени он появиться на наше сайте.',
+					'type'=>'success',
+				));
+			} else {
+				$this->redirect('/page/'.$_POST['Otziv']['page_id'].'/#sendform');
 				$this->render('message',array(
 					'message'=>'При отправке сообщения возникли проблемы. Пожалуйста попробуйте еще раз через некоторое время.',
 					'type'=>'error',

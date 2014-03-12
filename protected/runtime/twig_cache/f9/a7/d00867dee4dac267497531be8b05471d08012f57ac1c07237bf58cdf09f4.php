@@ -57,9 +57,29 @@ class __TwigTemplate_f9a7d00867dee4dac267497531be8b05471d08012f57ac1c07237bf58cd
         // line 21
         echo "
 
-\t<h1>Управление статьями</h1>
+\t<h1>Управление ";
+        // line 23
+        if (((isset($context["mod"]) ? $context["mod"] : null) == "pages")) {
+            echo "статьями";
+        } else {
+            echo "новостями";
+        }
+        echo "</h1>
 
-\t<a href=\"/admin/add_page/\" class=\"btn btn-success btn-lg\" role=\"button\">Добавить статью</a>
+\t<a href=\"/admin/";
+        // line 25
+        if (((isset($context["mod"]) ? $context["mod"] : null) == "pages")) {
+            echo "add_page";
+        } else {
+            echo "add_news";
+        }
+        echo "/\" class=\"btn btn-success btn-lg\" role=\"button\">Добавить ";
+        if (((isset($context["mod"]) ? $context["mod"] : null) == "pages")) {
+            echo "статью";
+        } else {
+            echo "новость";
+        }
+        echo "</a>
 \t<a href=\"/admin/pages_config/\" class=\"btn btn-default btn-lg\" role=\"button\">Конфигурация</a>
 
 \t";
@@ -98,6 +118,6 @@ class __TwigTemplate_f9a7d00867dee4dac267497531be8b05471d08012f57ac1c07237bf58cd
 
     public function getDebugInfo()
     {
-        return array (  83 => 63,  80 => 62,  78 => 33,  74 => 31,  72 => 30,  67 => 28,  58 => 21,  45 => 10,  40 => 8,  36 => 7,  33 => 6,  30 => 5,  25 => 3,);
+        return array (  103 => 63,  100 => 62,  98 => 33,  94 => 31,  92 => 30,  87 => 28,  71 => 25,  62 => 23,  58 => 21,  45 => 10,  40 => 8,  36 => 7,  33 => 6,  30 => 5,  25 => 3,);
     }
 }

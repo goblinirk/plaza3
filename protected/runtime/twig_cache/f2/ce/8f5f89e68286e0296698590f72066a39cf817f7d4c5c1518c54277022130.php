@@ -28,7 +28,13 @@ class __TwigTemplate_f2ce8f5f89e68286e0296698590f72066a39cf817f7d4c5c1518c542770
     public function block_content($context, array $blocks = array())
     {
         // line 4
-        echo "\t<h1>Создание статьи</h1>
+        echo "\t<h1>Создание ";
+        if (((isset($context["mod"]) ? $context["mod"] : null) == "pages")) {
+            echo "статьи";
+        } else {
+            echo "новости";
+        }
+        echo "</h1>
 \t 
 \t";
         // line 6
@@ -47,6 +53,6 @@ class __TwigTemplate_f2ce8f5f89e68286e0296698590f72066a39cf817f7d4c5c1518c542770
 
     public function getDebugInfo()
     {
-        return array (  35 => 6,  31 => 4,  28 => 3,);
+        return array (  41 => 6,  31 => 4,  28 => 3,);
     }
 }

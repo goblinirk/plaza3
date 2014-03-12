@@ -30,7 +30,7 @@ class PagesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'showbyalias', 'shownewslist', 'shownews'),
+				'actions'=>array('index','view', 'showbyalias', 'shownewslist', 'shownews', 'uploadthumb'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -38,13 +38,31 @@ class PagesController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','create','update'),
+				'actions'=>array('admin','delete','create','update','newsadmin'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
+	}
+
+	public function actionUploadThumb() {
+        $model = new Pages;
+	    if(isset($_POST['Pages'], $_FILES['Pages'])) {
+	        $model->attributes=$_POST['Pages'];
+	        $rnd = rand(0123456789, 9876543210);
+	    	$timeStamp = time();
+	        $uploadedFile = CUploadedFile::getInstance($model, 'ajaxthumb');
+	        if ($uploadedFile != null) {
+		        $fileName = "{$rnd}_{$timeStamp}_{$uploadedFile}";
+		    }
+
+	        if (!empty($uploadedFile)) {
+	            $uploadedFile->saveAs(Yii::app()->basePath . '/../images/' . $fileName);
+	        }
+	        echo $fileName;
+		}//*/
 	}
 
 	public function actionShowNewslist(){
@@ -96,7 +114,7 @@ class PagesController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($mod="pages")
 	{
 		$model=new Pages;
 		$seo=new Seo;
@@ -106,10 +124,10 @@ class PagesController extends Controller
 
 		if(isset($_POST['Pages']))
 		{
-
 			$model->attributes=$_POST['Pages'];
 			$model->show_in_nav=$_POST['Pages']['show_in_nav'];
 			$model->nav_label=$_POST['Pages']['nav_label'];
+			$model->module=$mod;
 			if($model->save()){
 				//print_r($model);
 				if(isset($_POST['Seo'])){
@@ -118,13 +136,17 @@ class PagesController extends Controller
 				    $seo->owner_id=$model->id;
 				    $seo->save();
 			    }
-				$this->redirect(array('admin/pages/'));
+			    if($mod == 'news')
+					$this->redirect(array('admin/news/'));
+				else
+					$this->redirect(array('admin/pages/'));
 			}
 		}
-
+		$model->thumb = '';
 		$this->render('create',array(
 			'model'=>$model,
 			'seo'=>$seo,
+			'mod'=>$mod
 		));
 	}
 
@@ -133,7 +155,7 @@ class PagesController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate()
+	public function actionUpdate($mod="pages")
 	{
 		if(isset($_GET['id'])){
 			$model=$this->loadModel();
@@ -158,13 +180,17 @@ class PagesController extends Controller
 				    $seo->owner_id=$model->id;
 				    $seo->save();
 			    }
-				$this->redirect(array('admin/pages/'));
+				if($mod == 'news')
+					$this->redirect(array('admin/news/'));
+				else
+					$this->redirect(array('admin/pages/'));
 			}
 			}
 
 			$this->render('update',array(
 				'model'=>$model,
 				'seo'=>$seo,
+				'mod'=>$mod
 			));
 		} else
 			$this->redirect(array('admin'));
@@ -207,10 +233,29 @@ class PagesController extends Controller
 		if(isset($_GET['Pages']))
 			$model->attributes=$_GET['Pages'];
 		
+		$model->module = 'pages';
+
 		$this->render('admin',array(
 			'model'=>$model,
+			'mod'=>'pages'
 		));
 	} 
+	public function actionNewsadmin()
+	{
+		$model=new Pages('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Pages']))
+			$model->attributes=$_GET['Pages'];
+		
+		$model->module = 'news';
+		//$model->findAll(array('condition'=>'module="news"'));
+
+		$this->render('admin',array(
+			'model'=>$model,
+			'mod'=>'news'
+		));
+	} 
+
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.

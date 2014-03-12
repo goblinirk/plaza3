@@ -127,7 +127,22 @@ class __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394
 \t\t\t\t\t</a></li>
 \t\t\t\t</ul>
 \t\t\t\t<div class=\"tab-content\">
-\t\t\t\t\t<div class=\"tab-pane active\" id=\"lA\">
+\t\t\t\t\t<div class=\"tab-pane ";
+        // line 58
+        if ((isset($context["pageactive"]) ? $context["pageactive"] : null)) {
+            echo " active ";
+        }
+        echo "\" id=\"lA\">
+\t\t\t\t\t\t<br /><p style=\"color: #666;\">В данном разделе вы можете редактировать информацию на страницах вашего сайта, создавать новые страницы, а так же заниматься публикацией новостей.</p><br />
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/pages/\">Управление страницами</a>
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/news/\">Управление новостями</a>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"tab-pane ";
+        // line 63
+        if ((isset($context["feedbackctive"]) ? $context["feedbackctive"] : null)) {
+            echo " active ";
+        }
+        echo "\" id=\"lB\">
 \t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 \t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 \t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -135,7 +150,12 @@ class __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394
 \t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 \t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"tab-pane\" id=\"lB\">
+\t\t\t\t\t<div class=\"tab-pane ";
+        // line 71
+        if ((isset($context["galleryactive"]) ? $context["galleryactive"] : null)) {
+            echo " active ";
+        }
+        echo "\" id=\"lC\">
 \t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 \t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 \t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -143,7 +163,12 @@ class __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394
 \t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 \t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"tab-pane\" id=\"lC\">
+\t\t\t\t\t<div class=\"tab-pane ";
+        // line 79
+        if ((isset($context["moduleactive"]) ? $context["moduleactive"] : null)) {
+            echo " active ";
+        }
+        echo "\" id=\"lD\">
 \t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 \t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 \t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -151,23 +176,12 @@ class __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394
 \t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 \t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"tab-pane\" id=\"lD\">
-\t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-\t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-\t\t\t\t\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-\t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-\t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"tab-pane\" id=\"lE\">
-\t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-\t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-\t\t\t\t\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-\t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-\t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"tab-pane\" id=\"lF\">
+\t\t\t\t\t<div class=\"tab-pane ";
+        // line 87
+        if ((isset($context["optionactive"]) ? $context["optionactive"] : null)) {
+            echo " active ";
+        }
+        echo "\" id=\"lE\">
 \t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 \t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 \t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -212,6 +226,6 @@ class __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394
 
     public function getDebugInfo()
     {
-        return array (  199 => 33,  196 => 32,  122 => 53,  114 => 50,  106 => 47,  98 => 44,  90 => 41,  82 => 35,  80 => 32,  69 => 24,  65 => 23,  61 => 22,  48 => 12,  44 => 11,  39 => 9,  35 => 8,  31 => 7,  27 => 6,  20 => 1,);
+        return array (  213 => 33,  210 => 32,  181 => 87,  168 => 79,  155 => 71,  142 => 63,  132 => 58,  122 => 53,  114 => 50,  106 => 47,  98 => 44,  90 => 41,  82 => 35,  80 => 32,  69 => 24,  65 => 23,  61 => 22,  48 => 12,  44 => 11,  39 => 9,  35 => 8,  31 => 7,  27 => 6,  20 => 1,);
     }
 }

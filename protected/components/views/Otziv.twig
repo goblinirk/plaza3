@@ -1,0 +1,33 @@
+{% set items = this.getOtzivList() %}
+<a name="send"></a>
+{% if items %}
+	<h2>Отзывы <a href="/fb/list/{{this.pageId}}">Читать все</a></h2>
+	<div class="otzs">
+		{% for item in items %}
+			<div class="otziv">
+				<div class="name">{{item.sender}}</div>
+	            <div class="text">
+	                <span class="str"></span>
+	                {{ item.message }}
+					<div class="link"><a href="/fb/read/{{item.id}}">Читать далее</a></div>
+	            </div>
+	        </div>
+		{% endfor %}
+
+{% else %}
+	<h2>Отзывы</h2>
+	<div class="otzs">
+		<div class="text" style="margin: 25px 0 0;">
+		    <span class="str"></span>
+		    Ни кто, пока еще, не оставил ни одного отзыва...
+		</div><br /><br />
+{% endif %}
+		<a name="sendform"></a>
+		<form method="post" action="/feedback/sendotziv/" class="otziv_form">
+		    <input type="text" name="Otziv[name]" placeholder="Введите свое имя" /><br />
+		    <input type="hidden" name="Otziv[lastname]" placeholder="" value="" />
+		    <input type="hidden" name="Otziv[page_id]" placeholder="" value="{{this.pageId}}" />
+		    <textarea name="Otziv[message]" placeholder="Оставте свой отзыв"></textarea><br />
+		    <input type="submit" value="Отправить" />
+		</form>
+	</div>

@@ -1,7 +1,7 @@
 {% extends "views/layouts/admin.twig" %}
 
 {% block content %}
-	<h1>Создание статьи</h1>
+	<h1>Создание {% if mod == 'pages' %}статьи{% else %}новости{% endif %}</h1>
 	 
 	{% include 'views/pages/_form.twig' with {'model': model, 'seo': seo} %}
 {% endblock %}

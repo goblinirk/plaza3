@@ -21,7 +21,7 @@
  */
 class Pages extends CActiveRecord
 {
-	private static $_items=array();
+	private static $_items=array('Корневая');
 
 	/**
 	 * @return string the associated database table name
@@ -33,15 +33,23 @@ class Pages extends CActiveRecord
 
 	public function getEditUrl()
     {
-        return Yii::app()->createUrl('admin/edit_page', array(
-            'id'=>$this->id,
-        ));
+    	if($this->module=='news')
+	        return Yii::app()->createUrl('admin/edit_news', array(
+	            'id'=>$this->id,
+	        ));
+	    else return Yii::app()->createUrl('admin/edit_page', array(
+	            'id'=>$this->id,
+	        ));
     }
     public function getUrl()
     {
-        return Yii::app()->createUrl('page/', array(
-            'id'=>$this->id,
-        ));
+        if($this->module=='news')
+	        return Yii::app()->createUrl('news/', array(
+	            'id'=>$this->id,
+	        ));
+	    else return Yii::app()->createUrl('page/', array(
+	            'id'=>$this->id,
+	        ));
     }
 
 
@@ -76,7 +84,6 @@ class Pages extends CActiveRecord
 		);
 
 	}
-
 
 	public function addSeo($seo)
 	{
@@ -127,6 +134,7 @@ class Pages extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+		$criteria->compare('module',$this->module);
 		$criteria->compare('owner_id',$this->owner_id);
 		$criteria->compare('author',$this->author);
 		$criteria->compare('label',$this->label,true);
@@ -149,14 +157,23 @@ class Pages extends CActiveRecord
 		));
 	}
 
-	public static function getItems(){
+	public static function getItems($start=0, $level=1){
 		
-        self::$_items=array('Корневая');
-
-        $models=self::model()->findAll(array('order'=>'label'));
-        foreach($models as $model)
-            self::$_items[$model->id]=$model->label;
-		
+        //self::$_items=array('Корневая');
+		$lvl = $level;
+		++$lvl;
+        $models=self::model()->findAll(array(
+        	'condition'=>'owner_id=:oid and module="pages"', 
+        	'order'=>'sort',
+        	'params'=>array(':oid'=>$start),
+        	));
+        foreach($models as $model){
+        	$label = $level==0?'':'|';
+        	for($i=0;$i<$level;++$i) $label .= '---';
+        	$label .= $model->label;
+            self::$_items[$model->id]=$label;
+            self::getItems($model->id, $lvl);
+        }
         return self::$_items;
 	}
 
@@ -176,12 +193,13 @@ class Pages extends CActiveRecord
     protected function beforeSave()
     {
     	if(parent::beforeSave()){
+    		unset($_POST['ajaxthumb']);
     		if($this->isNewRecord){
 		    	$model = new Pages;
 			    $criteria=new CDbCriteria;
-				$criteria->select='max(sort) AS maxSort';
+				$criteria->select='max(sort) AS sort';
 				$row = $model->model()->find($criteria);
-				$somevariable = $row['maxSort'];
+				$somevariable = $row['sort'];
 			    $this->sort = ++$somevariable;
 			    $this->create_date = $this->last_update_date = time();
 			    $this->author = Yii::app()->user->id;

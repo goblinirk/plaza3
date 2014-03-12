@@ -86,36 +86,12 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
         echo "
             </div><!--end bs-jobs-->
             <div class=\"b-otziv\">
-                <h2>Отзывы <a href=\"#\">Читать все</a></h2>
-                <div class=\"otzs\">
-                    <div class=\"otziv\">
-                        <div class=\"name\">Антонина</div>
-                        <div class=\"text\">
-                            <span class=\"str\"></span>
-В октябре 2013 года мной был заключен договор с фирмой ”ЭКОСТРОЙДОМ”  на строительство брусового дома размером 6х10 по проекту S1. Руководитель фирмы Алексей Николаевич выехал к нам на участок, где непосредственно... 
-                            <div class=\"link\"><a href=\"#\">Читать далее</a></div>
-                        </div>
-                    </div><!--end otziv-->
-                    <div class=\"otziv\">
-                        <div class=\"name\">Антонина</div>
-                        <div class=\"text\">
-                            <span class=\"str\"></span>
-В октябре 2013 года мной был заключен договор с фирмой ”ЭКОСТРОЙДОМ”  на строительство брусового дома размером 6х10 по проекту S1. Руководитель фирмы Алексей Николаевич выехал к нам на участок, где непосредственно... 
-                            <div class=\"link\"><a href=\"#\">Читать далее</a></div>
-                        </div>
-                    </div><!--end otziv-->
-                    <div class=\"otziv\">
-                        <div class=\"name\">Антонина</div>
-                        <div class=\"text\">
-                            <span class=\"str\"></span>
-В октябре 2013 года мной был заключен договор с фирмой ”ЭКОСТРОЙДОМ”  на строительство брусового дома размером 6х10 по проекту S1. Руководитель фирмы Алексей Николаевич выехал к нам на участок, где непосредственно... 
-                            <div class=\"link\"><a href=\"#\">Читать далее</a></div>
-                        </div>
-                    </div><!--end otziv-->
-                
-                </div><!--end otzs-->
+                ";
+        // line 37
+        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Otziv", 1 => array("pageId" => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "id")), 2 => true), "method");
+        echo "
                 <div class=\"form\">
-                    <h2>Написать свой отзыв</h2>
+                    <h2>Оставить заявку</h2>
                     <table cellspacing=\"0\" cellpadding=\"0\">
                       <tr>
                         <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Имя\" type=\"text\"></td>
@@ -124,7 +100,7 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
                         <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Электронная почта\" type=\"text\"></td>
                       </tr>
                       <tr>
-                        <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Электронная почта\" type=\"text\"></td>
+                        <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Номер телефона\" type=\"text\"></td>
                       </tr>
                       <tr>
                         <td><textarea name=\"\" cols=\"\" rows=\"\" placeholder=\"Сообщение\"></textarea></td>
@@ -156,6 +132,6 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
 
     public function getDebugInfo()
     {
-        return array (  85 => 34,  78 => 30,  74 => 29,  67 => 26,  64 => 25,  57 => 19,  53 => 18,  50 => 17,  47 => 16,  39 => 9,  35 => 8,  31 => 6,  28 => 5,);
+        return array (  91 => 37,  85 => 34,  78 => 30,  74 => 29,  67 => 26,  64 => 25,  57 => 19,  53 => 18,  50 => 17,  47 => 16,  39 => 9,  35 => 8,  31 => 6,  28 => 5,);
     }
 }

@@ -3,6 +3,7 @@
 {% set form = this.beginWidget('CActiveForm', {
     'id': 'pages-form',
     'enableAjaxValidation': false,
+    'htmlOptions': {'enctype': 'multipart/form-data'},
 }) %}
 
 
@@ -23,8 +24,20 @@
 
     <div class="row">
         {{ form.labelEx(model, 'thumb') | raw }}
-        {{ form.fileField(model, 'thumb') | raw }}
+        {{ form.fileField(model, 'ajaxthumb', {'id':'forum_image'}) | raw }}
+        {{ form.hiddenField(model, 'thumb', {'id':'real_thumb'}) | raw }}
         {{ form.error(model, 'thumb') | raw }}
+        {% if model.thumb %}
+            <img style="margin: 0px 20px 0px 0px;" class="preview" src="/images/{{ model.thumb }}" width="80" />
+        {% endif %}
+        <a href="" class="btn btn-info btn-lg" onclick="return uploadImage();">Выбрать</a>
+        {{ C.Html.htmlButton('Загрузить',{
+                'onclick':'javascript: send();',
+                'id':'post-submit-btn',
+                'class':'btn btn-success btn-lg post_submit',
+            }, true) | raw
+        }}
+        <a href="" class="btn btn-danger btn-lg" onclick="return clearImage();">Очистить</a>
     </div><!-- /.row -->
 
     <div class="row">
@@ -61,13 +74,15 @@
         selector:'textarea',
         width: 530, 
         height: 240,
+        language: 'ru',
         plugins: [
              "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
              "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-             "save table contextmenu directionality emoticons template paste textcolor"
+             "save table contextmenu directionality emoticons template paste textcolor filemanager"
        ],
+       image_advtab: true,
        content_css: "css/content.css",
-       toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons", 
+       toolbar: "bold italic | alignleft aligncenter alignright alignjustify | fontselect | fontsizeselect | bullist numlist outdent indent | link image | preview media fullpage | forecolor backcolor emoticons", 
        style_formats: [
             {title: 'Bold text', inline: 'b'},
             {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
@@ -84,7 +99,7 @@
 {{ void(App.clientScript.registerScriptFile('/scripts/transliteration.js')) }}
 {{ void(App.clientScript.registerScript('translit', "
     el = document.getElementById('Pages_label');
-    el.onkeypress = function(e) { oJS.strNormalize(this); }
+    el.onkeyup = function(e) { oJS.strNormalize(this); }
     oJS.strNormalize(el);
     ")) }}
 

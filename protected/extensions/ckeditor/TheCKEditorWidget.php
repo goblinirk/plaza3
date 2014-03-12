@@ -40,7 +40,7 @@
  * ) ); ?>
  */
 
-class theCKEditorWidget extends CInputWidget
+class TheCKEditorWidget extends CInputWidget
 {
 	public $ckeditor;
 	public $ckBasePath;

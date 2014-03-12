@@ -20,9 +20,9 @@
 	});
 	")) }}
 
-	<h1>Управление статьями</h1>
+	<h1>Управление {% if mod == 'pages' %}статьями{% else %}новостями{% endif %}</h1>
 
-	<a href="/admin/add_page/" class="btn btn-success btn-lg" role="button">Добавить статью</a>
+	<a href="/admin/{% if mod == 'pages' %}add_page{% else %}add_news{% endif %}/" class="btn btn-success btn-lg" role="button">Добавить {% if mod == 'pages' %}статью{% else %}новость{% endif %}</a>
 	<a href="/admin/pages_config/" class="btn btn-default btn-lg" role="button">Конфигурация</a>
 
 	{{ C.Html.link('Расширенный поиск', '#', {'class': 'btn btn-default btn-lg search-button'}) | raw }}

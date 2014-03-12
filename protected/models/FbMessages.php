@@ -56,10 +56,14 @@ class FbMessages extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'form_id' => 'form',
+			'page_id' => 'page',
 			'label' => 'Label',
 			'sender' => 'Sender',
 			'message' => 'Message',
+			'answer' => 'Answer',
 			'send_date' => 'Send Date',
+			'answer_date' => 'Answer Date',
 			'status' => 'Status',
 		);
 	}
@@ -93,7 +97,14 @@ class FbMessages extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
+	public function getOtzivList($pageId) {
+		return $this->findAll(array(
+		    'condition'=>'page_id=:oid and status=:status',
+		    'order'=>'send_date DESC',
+		    'limit'=>'3',
+		    'params'=>array(':oid'=>$pageId,':status'=>2),
+		));
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

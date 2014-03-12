@@ -10,7 +10,7 @@
 	<div style="display: inline-block;vertical-align: top;">
     <div class="row">
         {{ form.labelEx(model, 'owner_id') | raw }}
-        {{ form.textField(model, 'owner_id', {'size': 160, 'maxlength': 255}) | raw }}
+        {{ form.dropDownList(model, 'owner_id', model.items) | raw }}
         {{ form.error(model, 'owner_id') | raw }}
     </div><!-- /.row -->
 

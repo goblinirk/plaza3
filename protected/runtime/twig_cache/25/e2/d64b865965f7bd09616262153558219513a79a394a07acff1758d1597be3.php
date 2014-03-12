@@ -75,11 +75,11 @@ class __TwigTemplate_25e2d64b865965f7bd09616262153558219513a79a394a07acff1758d15
 
 \t";
         // line 33
-        $context["qwert"] = $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "ext.JTreeTable.JTreeTable", 1 => array("id" => "galleries-grid", "dataProvider" => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "search"), "filter" => (isset($context["model"]) ? $context["model"] : null), "template" => "{pager} {items} {pager}", "itemsCssClass" => "table table-striped", "primaryColumn" => "id", "parentColumn" => "owner_id", "ajaxUpdate" => "false", "ajaxVar" => "false", "jstree_options" => array("initialState" => "expanded"), "columns" => array(0 => array("name" => "label", "type" => "raw", "value" => "CHtml::link(CHtml::encode(\$data->label.\" [ \".\$data->id.\" ]\"), \$data->editurl)"), 1 => array("name" => "create_date", "value" => "Yii::app()->dateFormatter->format(\"dd MMM y\",strtotime(\$data->create_date))", "filter" => false), 2 => array("class" => "CButtonColumn"))), 2 => true), "method");
-        // line 62
+        $context["qwert"] = $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "ext.JTreeTable.JTreeTable", 1 => array("id" => "galleries-grid", "dataProvider" => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "search"), "filter" => (isset($context["model"]) ? $context["model"] : null), "template" => "{pager} {items} {pager}", "itemsCssClass" => "table table-striped", "primaryColumn" => "id", "parentColumn" => "owner_id", "ajaxUpdate" => "false", "ajaxVar" => "false", "jstree_options" => array("initialState" => "expanded"), "columns" => array(0 => array("name" => "label", "type" => "raw", "value" => "CHtml::link(CHtml::encode(\$data->label.\" [ \".\$data->id.\" ]\"), \$data->editurl)"), 1 => array("name" => "create_date", "value" => "Yii::app()->dateFormatter->format(\"dd MMM y\",strtotime(\$data->create_date))", "filter" => false), 2 => array("class" => "CButtonColumn", "template" => "{top}{up}{down}{bottom}&nbsp;&nbsp;&nbsp;{include}&nbsp;&nbsp;&nbsp;{view}{update}{delete}", "buttons" => array("top" => array("label" => "В начало списка", "imageUrl" => "/images/go-top.png", "url" => "\"#\"", "visible" => "true", "click" => "function(){alert(\"Lets go to top!\");return false;}"), "up" => array("label" => "На один уровень вверх", "url" => "\"#\"", "visible" => "true", "imageUrl" => "/images/go-up.png", "click" => "function(){alert(\"Lets go to up!\");return false;}"), "down" => array("label" => "На один уровень вниз", "imageUrl" => "/images/go-down.png", "url" => "\"#\"", "visible" => "true", "click" => "function(){alert(\"Lets go to down!\");return false;}"), "bottom" => array("label" => "В конец списка", "url" => "\"#\"", "visible" => "true", "imageUrl" => "/images/go-bottom.png", "click" => "function(){alert(\"Lets go to bottom!\");return false;}"), "include" => array("label" => "Посмотреть вложенные элементы", "url" => "\"#\"", "visible" => "true", "imageUrl" => "/images/include.png", "click" => "function(){alert(\"Going into gallery!\");return false;}"))))), 2 => true), "method");
+        // line 100
         echo "
 \t";
-        // line 63
+        // line 101
         echo (isset($context["qwert"]) ? $context["qwert"] : null);
         echo "
 
@@ -98,6 +98,6 @@ class __TwigTemplate_25e2d64b865965f7bd09616262153558219513a79a394a07acff1758d15
 
     public function getDebugInfo()
     {
-        return array (  83 => 63,  80 => 62,  78 => 33,  74 => 31,  72 => 30,  67 => 28,  58 => 21,  45 => 10,  40 => 8,  36 => 7,  33 => 6,  30 => 5,  25 => 3,);
+        return array (  83 => 101,  80 => 100,  78 => 33,  74 => 31,  72 => 30,  67 => 28,  58 => 21,  45 => 10,  40 => 8,  36 => 7,  33 => 6,  30 => 5,  25 => 3,);
     }
 }

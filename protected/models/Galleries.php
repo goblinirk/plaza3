@@ -13,6 +13,7 @@
  */
 class Galleries extends CActiveRecord
 {
+	private static $_items=array('Корневая');
 	/**
 	 * @return string the associated database table name
 	 */
@@ -120,7 +121,25 @@ class Galleries extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
+	public static function getItems($start=0, $level=1){
+		
+        //self::$_items=array('Корневая');
+		$lvl = $level;
+		++$lvl;
+        $models=self::model()->findAll(array(
+        	'condition'=>'owner_id=:oid', 
+        	'order'=>'sort',
+        	'params'=>array(':oid'=>$start),
+        	));
+        foreach($models as $model){
+        	$label = $level==0?'':'|';
+        	for($i=0;$i<$level;++$i) $label .= '---';
+        	$label .= $model->label;
+            self::$_items[$model->id]=$label;
+            self::getItems($model->id, $lvl);
+        }
+        return self::$_items;
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

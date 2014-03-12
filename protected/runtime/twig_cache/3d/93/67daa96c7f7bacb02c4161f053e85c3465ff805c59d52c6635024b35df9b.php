@@ -33,7 +33,7 @@ class __TwigTemplate_3d9367daa96c7f7bacb02c4161f053e85c3465ff805c59d52c6635024b3
         echo "
         ";
         // line 13
-        echo $this->getAttribute((isset($context["form"]) ? $context["form"] : null), "textField", array(0 => (isset($context["model"]) ? $context["model"] : null), 1 => "owner_id", 2 => array("size" => 160, "maxlength" => 255)), "method");
+        echo $this->getAttribute((isset($context["form"]) ? $context["form"] : null), "dropDownList", array(0 => (isset($context["model"]) ? $context["model"] : null), 1 => "owner_id", 2 => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "items")), "method");
         echo "
         ";
         // line 14
@@ -114,6 +114,6 @@ class __TwigTemplate_3d9367daa96c7f7bacb02c4161f053e85c3465ff805c59d52c6635024b3
 
     public function getDebugInfo()
     {
-        return array (  101 => 41,  99 => 40,  93 => 37,  85 => 32,  81 => 31,  77 => 30,  70 => 26,  66 => 25,  62 => 24,  55 => 20,  51 => 19,  47 => 18,  40 => 14,  36 => 13,  32 => 12,  25 => 7,  23 => 3,  19 => 1,  37 => 6,  31 => 4,  28 => 3,);
+        return array (  101 => 41,  99 => 40,  93 => 37,  85 => 32,  81 => 31,  77 => 30,  70 => 26,  66 => 25,  62 => 24,  55 => 20,  51 => 19,  47 => 18,  40 => 14,  36 => 13,  32 => 12,  25 => 7,  23 => 3,  19 => 1,);
     }
 }

@@ -34,36 +34,9 @@
                 {{ this.widget('Gallery', {'rootId':1, 'label':'Наши работы', 'showdesc': false}, true) | raw }}
             </div><!--end bs-jobs-->
             <div class="b-otziv">
-                <h2>Отзывы <a href="#">Читать все</a></h2>
-                <div class="otzs">
-                    <div class="otziv">
-                        <div class="name">Антонина</div>
-                        <div class="text">
-                            <span class="str"></span>
-В октябре 2013 года мной был заключен договор с фирмой ”ЭКОСТРОЙДОМ”  на строительство брусового дома размером 6х10 по проекту S1. Руководитель фирмы Алексей Николаевич выехал к нам на участок, где непосредственно... 
-                            <div class="link"><a href="#">Читать далее</a></div>
-                        </div>
-                    </div><!--end otziv-->
-                    <div class="otziv">
-                        <div class="name">Антонина</div>
-                        <div class="text">
-                            <span class="str"></span>
-В октябре 2013 года мной был заключен договор с фирмой ”ЭКОСТРОЙДОМ”  на строительство брусового дома размером 6х10 по проекту S1. Руководитель фирмы Алексей Николаевич выехал к нам на участок, где непосредственно... 
-                            <div class="link"><a href="#">Читать далее</a></div>
-                        </div>
-                    </div><!--end otziv-->
-                    <div class="otziv">
-                        <div class="name">Антонина</div>
-                        <div class="text">
-                            <span class="str"></span>
-В октябре 2013 года мной был заключен договор с фирмой ”ЭКОСТРОЙДОМ”  на строительство брусового дома размером 6х10 по проекту S1. Руководитель фирмы Алексей Николаевич выехал к нам на участок, где непосредственно... 
-                            <div class="link"><a href="#">Читать далее</a></div>
-                        </div>
-                    </div><!--end otziv-->
-                
-                </div><!--end otzs-->
+                {{ this.widget('Otziv', {'pageId':model.id}, true) | raw }}
                 <div class="form">
-                    <h2>Написать свой отзыв</h2>
+                    <h2>Оставить заявку</h2>
                     <table cellspacing="0" cellpadding="0">
                       <tr>
                         <td><input name="" class="pole" value="" placeholder="Имя" type="text"></td>
@@ -72,7 +45,7 @@
                         <td><input name="" class="pole" value="" placeholder="Электронная почта" type="text"></td>
                       </tr>
                       <tr>
-                        <td><input name="" class="pole" value="" placeholder="Электронная почта" type="text"></td>
+                        <td><input name="" class="pole" value="" placeholder="Номер телефона" type="text"></td>
                       </tr>
                       <tr>
                         <td><textarea name="" cols="" rows="" placeholder="Сообщение"></textarea></td>

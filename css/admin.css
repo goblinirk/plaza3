@@ -155,7 +155,7 @@ th#pages-grid_c0 { text-align: left;}
 th#pages-grid_c1 { width: 200px;}
 tr.filters td input { width: 200px !important;}
 #pages-grid table tbody tr td:nth-child(1){ text-align: left; }
-.grid-view .button-column {text-align: center;width: 80px !important;}
+.grid-view .button-column {text-align: right;width: 220px !important;}
 .row {margin-left: 20px !important;}
 .row input[type=text] {width: 520px !important;}
 .row textarea {width: 520px !important;}
@@ -209,3 +209,4 @@ label[for=LoginForm_rememberMe]{
 	width: 215px !important;
 }
 
+#forum_image{display:none;}
