@@ -56,6 +56,7 @@
 	        },
 			{
 				'class':'CButtonColumn',
+				'template':'{top}{up}{down}{bottom}&nbsp;&nbsp;&nbsp;{view}{update}{delete}',
 				'buttons':{
 			        'view' :{
 			            'url':'($data->module=="pages"? "/pages/" : "/news/").$data->id',
@@ -63,7 +64,30 @@
 			        'update' :{
 			            'url':'"/admin/".($data->module=="pages"? "edit_page/" : "edit_news/").$data->id',
 			        },
-
+			        'top' :{
+			            'label':'В начало списка',
+			            'imageUrl':'/images/go-top.png',
+			            'url':'"/pages/movetop/".$data->id',
+			            'visible':'true',
+			        },
+			        'up' :{
+			            'label':'На один уровень вверх',
+			            'url':'"/pages/moveup/".$data->id',
+			            'visible':'true',
+			            'imageUrl':'/images/go-up.png',
+			        },
+			        'down' :{
+			            'label':'На один уровень вниз',
+			            'imageUrl':'/images/go-down.png',
+			            'url':'"/pages/movedown/".$data->id',
+			            'visible':'true',
+			        },
+			        'bottom' :{
+			            'label':'В конец списка',
+			            'url':'"/pages/movebottom/".$data->id',
+			            'visible':'true',
+			            'imageUrl':'/images/go-bottom.png',
+			        },
 			    },
 			},
 		],

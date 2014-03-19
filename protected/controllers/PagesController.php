@@ -39,7 +39,16 @@ class PagesController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','create','update','newsadmin'),
+				'actions'=>array(
+					'admin',
+					'delete',
+					'create',
+					'update',
+					'newsadmin',
+					'movetop',
+					'moveup',
+					'movedown',
+					'movebottom'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -92,6 +101,104 @@ class PagesController extends Controller
 	    $this->render('shownews',array(
 			'model'=>$news,
 		));
+	}
+
+	public function actionMovetop(){
+
+		if(!isset($_GET['id']))
+			throw new CHttpException(404,'The requested page does not exist.');
+
+		$item = $this->loadModel();
+		$model = $item->model();
+	    $criteria=new CDbCriteria;
+		$criteria->select='min(sort) AS sort';
+		$criteria->condition='owner_id=:oid';
+		$criteria->params=array(':oid' => $item->owner_id);
+		$row = $model->model()->find($criteria);
+		$minsort = $row['sort']-1;
+	    
+	    $item->sort = $minsort;
+	    $item->save();
+
+	    $this->redirect(array('/admin/pages/'));
+	}
+	public function actionMoveup(){
+
+		if(!isset($_GET['id']))
+			throw new CHttpException(404,'The requested page does not exist.');
+
+		$item = $this->loadModel();
+
+		$model = new Pages;
+
+	    $criteria=new CDbCriteria;
+		$criteria->select='sort';
+		$criteria->condition='owner_id=:oid and sort < :cs';
+		$criteria->order='sort DESC';
+		$criteria->limit=1;
+		$criteria->params=array(':oid' => $item->owner_id, ':cs'=>$item->sort);
+
+		$previtem = $model->model()->find($criteria);
+
+		print_r($previtem->sort);
+		echo '<br />';
+		echo $item->sort;
+		echo '-------------';
+
+		$tmp = $item->sort;
+		$item->sort = $previtem->sort;
+		$previtem->sort = $tmp;
+
+		print_r($previtem->sort);
+		echo '<br />';
+		echo $item->sort;
+
+		//$tmp = $model->sort;
+	    //$model->sort = $item->sort;
+	    //$previtem->save();
+
+	    //$item->sort = $tmp;
+	    $item->save();
+	    $previtem->save();
+	    //$this->redirect(array('/admin/pages/'));
+	}
+	public function actionMovedown(){
+
+		if(!isset($_GET['id']))
+			throw new CHttpException(404,'The requested page does not exist.');
+
+		$item = $this->loadModel();
+		$model = $item->model();
+	    $criteria=new CDbCriteria;
+		$criteria->select='sort';
+		$criteria->condition='owner_id=:oid';
+		$criteria->params=array(':oid' => $item->owner_id);
+		$row = $model->model()->find($criteria);
+		$maxsort = $row['sort']-1;
+	    
+	    $item->sort = $maxsort;
+	    $item->save();
+
+	    $this->redirect(array('/admin/pages/'));
+	}
+	public function actionMovebottom(){
+
+		if(!isset($_GET['id']))
+			throw new CHttpException(404,'The requested page does not exist.');
+
+		$item = $this->loadModel();
+		$model = $item->model();
+	    $criteria=new CDbCriteria;
+		$criteria->select='max(sort) AS sort';
+		$criteria->condition='owner_id=:oid';
+		$criteria->params=array(':oid' => $item->owner_id);
+		$row = $model->model()->find($criteria);
+		$maxsort = $row['sort']+1;
+	    
+	    $item->sort = $maxsort;
+	    $item->save();
+
+	    $this->redirect(array('/admin/pages/'));
 	}
 
 	/**

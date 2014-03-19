@@ -148,6 +148,7 @@ class Pages extends CActiveRecord
 		$criteria->compare('sort',$this->sort);
 		$criteria->compare('show_in_nav',$this->show_in_nav);
 		$criteria->compare('nav_label',$this->nav_label,true);
+		$criteria->order = 'owner_id, sort';
 
 		return new CActiveDataProvider($this, array(
 			'pagination'=>array(
