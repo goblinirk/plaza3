@@ -11,7 +11,7 @@ class Gallery extends CWidget
     public $label='';
  
     public function getGalleryBlock() {
-        return Galleries::model()->genGalleryInfo($this->rootId);
+        return $this->rootId?Galleries::model()->genGalleryInfo($this->rootId):false;
     }
  
     protected function renderContent() {

@@ -184,8 +184,7 @@ class Pages extends CActiveRecord
 		    'params'=>array(':oid'=>$rid,':sin'=>1),
 		));
 	}
-	protected function afterDelete()
-    {
+	protected function afterDelete() {
 	    parent::afterDelete();
 	    Pages::model()->updateAll(array('owner_id'=>$this->owner_id),'owner_id="'.$this->id.'"');
 	    Seo::model()->deleteAll('owner_id=' .$this->id);

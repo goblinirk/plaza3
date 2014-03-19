@@ -1,7 +1,9 @@
 {% extends "views/layouts/admin.twig" %}
 
+{% set pageactive = true %}
+
 {% block content %}
 	<h1>Создание {% if mod == 'pages' %}статьи{% else %}новости{% endif %}</h1>
 	 
-	{% include 'views/pages/_form.twig' with {'model': model, 'seo': seo} %}
+	{% include 'views/pages/_form.twig' with {'model': model, 'seo': seo, 'registry': registry} %}
 {% endblock %}

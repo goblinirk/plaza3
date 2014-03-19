@@ -32,17 +32,30 @@ class GalleriesController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array(),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','create','update','delete',
+								 'show_child_images','create_image','update_image','delete_image'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
+	}
+
+	public function actionShow_child_images()
+	{
+		$model=new GalleryImages('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['GalleryImages']))
+			$model->attributes=$_GET['GalleryImages'];
+		$model->owner_id=$_GET['id'];		
+		$this->render('admin_images',array(
+			'model'=>$model,
+		));
 	}
 
 	/**
@@ -77,6 +90,58 @@ class GalleriesController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 		));
+	}
+
+	public function actionCreate_image()
+	{
+		$model=new GalleryImages;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['GalleryImages']))
+		{
+			$model->attributes=$_POST['GalleryImages'];
+			if($model->save())
+				$this->redirect(array('admin/galleries/'));
+		}
+		$model->thumb = '';
+		$this->render('create_image',array(
+			'model'=>$model,
+		));
+	}
+
+	public function actionUpdate_image($id)
+	{
+		$model=$this->loadImageModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['GalleryImages']))
+		{
+			$model->attributes=$_POST['GalleryImages'];
+			if($model->save())
+				$this->redirect(array('admin/galleries/'));
+		}
+
+		$this->render('update_image',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
+	 * Deletes a particular model.
+	 * If deletion is successful, the browser will be redirected to the 'admin' page.
+	 * @param integer $id the ID of the model to be deleted
+	 */
+	public function actionDelete_image($id)
+	{
+		$this->loadImageModel($id)->delete();
+
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if(!isset($_GET['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
 	/**
@@ -116,6 +181,7 @@ class GalleriesController extends Controller
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
+	
 
 	/*********************
 	 * Lists all models. *
@@ -155,6 +221,13 @@ class GalleriesController extends Controller
 	public function loadModel($id)
 	{
 		$model=Galleries::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+	public function loadImageModel($id)
+	{
+		$model=GalleryImages::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

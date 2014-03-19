@@ -21,8 +21,8 @@ class __TwigTemplate_158f41d44a3183e68425164ce4be7f58eea66d1122bdbb4d77859cd274b
 ";
         // line 3
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
-        $context["form"] = $this->getAttribute($_this_, "beginWidget", array(0 => "CActiveForm", 1 => array("id" => "pages-form", "enableAjaxValidation" => false)), "method");
-        // line 7
+        $context["form"] = $this->getAttribute($_this_, "beginWidget", array(0 => "CActiveForm", 1 => array("id" => "pages-form", "enableAjaxValidation" => false, "htmlOptions" => array("enctype" => "multipart/form-data"))), "method");
+        // line 8
         echo "
 
 \t<p class=\"note\">Поля помеченные <span class=\"required\">*</span> обязательны для заполнения.</p>
@@ -30,19 +30,19 @@ class __TwigTemplate_158f41d44a3183e68425164ce4be7f58eea66d1122bdbb4d77859cd274b
 <div style=\"display: inline-block;vertical-align: top;\">
     <div class=\"row\">
         ";
-        // line 13
+        // line 14
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "labelEx", array(0 => $_model_, 1 => "label"), "method");
         echo "
         ";
-        // line 14
+        // line 15
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "textField", array(0 => $_model_, 1 => "label", 2 => array("size" => 160, "maxlength" => 255)), "method");
         echo "
         ";
-        // line 15
+        // line 16
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "error", array(0 => $_model_, 1 => "label"), "method");
@@ -51,19 +51,19 @@ class __TwigTemplate_158f41d44a3183e68425164ce4be7f58eea66d1122bdbb4d77859cd274b
 
 \t<div class=\"row\">
         ";
-        // line 19
+        // line 20
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "labelEx", array(0 => $_model_, 1 => "owner_id"), "method");
         echo "
         ";
-        // line 20
+        // line 21
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "dropDownList", array(0 => $_model_, 1 => "owner_id", 2 => $this->getAttribute($_model_, "items")), "method");
         echo "
         ";
-        // line 21
+        // line 22
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "error", array(0 => $_model_, 1 => "owner_id"), "method");
@@ -72,40 +72,66 @@ class __TwigTemplate_158f41d44a3183e68425164ce4be7f58eea66d1122bdbb4d77859cd274b
 
     <div class=\"row\">
         ";
-        // line 25
+        // line 26
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "labelEx", array(0 => $_model_, 1 => "thumb"), "method");
         echo "
         ";
-        // line 26
+        // line 27
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
-        echo $this->getAttribute($_form_, "fileField", array(0 => $_model_, 1 => "thumb"), "method");
+        echo $this->getAttribute($_form_, "fileField", array(0 => $_model_, 1 => "ajaxthumb", 2 => array("id" => "forum_image")), "method");
         echo "
         ";
-        // line 27
+        // line 28
+        if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
+        if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
+        echo $this->getAttribute($_form_, "hiddenField", array(0 => $_model_, 1 => "thumb", 2 => array("id" => "real_thumb")), "method");
+        echo "
+        ";
+        // line 29
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "error", array(0 => $_model_, 1 => "thumb"), "method");
         echo "
+        ";
+        // line 30
+        if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
+        if ($this->getAttribute($_model_, "thumb")) {
+            // line 31
+            echo "            <img style=\"margin: 0px 20px 0px 0px;\" class=\"preview\" src=\"/images/";
+            if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
+            echo twig_escape_filter($this->env, $this->getAttribute($_model_, "thumb"), "html", null, true);
+            echo "\" width=\"80\" />
+        ";
+        }
+        // line 33
+        echo "        <a href=\"\" class=\"btn btn-info btn-lg\" onclick=\"return uploadImage();\">Выбрать</a>
+        ";
+        // line 34
+        if (isset($context["C"])) { $_C_ = $context["C"]; } else { $_C_ = null; }
+        echo $this->getAttribute($this->getAttribute($_C_, "Html"), "htmlButton", array(0 => "Загрузить", 1 => array("onclick" => "javascript: send();", "id" => "post-submit-btn", "class" => "btn btn-success btn-lg post_submit"), 2 => true), "method");
+        // line 39
+        echo "
+        <a href=\"\" class=\"btn btn-danger btn-lg\" onclick=\"return clearImage();\">Очистить</a>
     </div><!-- /.row -->
 
     <div class=\"row\">
         ";
-        // line 31
+        // line 44
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "labelEx", array(0 => $_model_, 1 => "short_text"), "method");
         echo "
         ";
-        // line 32
+        // line 45
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "textArea", array(0 => $_model_, 1 => "short_text", 2 => array("rows" => 6, "cols" => 50)), "method");
         echo "
         ";
-        // line 33
+        // line 46
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "error", array(0 => $_model_, 1 => "short_text"), "method");
@@ -114,19 +140,19 @@ class __TwigTemplate_158f41d44a3183e68425164ce4be7f58eea66d1122bdbb4d77859cd274b
 
     <div class=\"row\">
         ";
-        // line 37
+        // line 50
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "labelEx", array(0 => $_model_, 1 => "full_text"), "method");
         echo "
         ";
-        // line 38
+        // line 51
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "textArea", array(0 => $_model_, 1 => "full_text", 2 => array("rows" => 6, "cols" => 50)), "method");
         echo "
         ";
-        // line 39
+        // line 52
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "error", array(0 => $_model_, 1 => "full_text"), "method");
@@ -137,19 +163,19 @@ class __TwigTemplate_158f41d44a3183e68425164ce4be7f58eea66d1122bdbb4d77859cd274b
 
     <div class=\"row\">
         ";
-        // line 45
+        // line 58
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "labelEx", array(0 => $_model_, 1 => "status"), "method");
         echo "
         ";
-        // line 46
+        // line 59
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "dropDownList", array(0 => $_model_, 1 => "status", 2 => array("1" => "Опубликована", "0" => "Удалена", "2" => "В архиве")), "method");
         echo "
         ";
-        // line 47
+        // line 60
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "error", array(0 => $_model_, 1 => "status"), "method");
@@ -158,15 +184,15 @@ class __TwigTemplate_158f41d44a3183e68425164ce4be7f58eea66d1122bdbb4d77859cd274b
 </div>
 
 ";
-        // line 51
+        // line 64
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         if (isset($context["seo"])) { $_seo_ = $context["seo"]; } else { $_seo_ = null; }
         $this->env->loadTemplate("views/pages/_seoform.twig")->display(array_merge($context, array("model" => $_model_, "seo" => $_seo_)));
-        // line 52
+        // line 65
         echo "
 \t<div class=\"row buttons\">
 \t\t";
-        // line 54
+        // line 67
         if (isset($context["C"])) { $_C_ = $context["C"]; } else { $_C_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($this->getAttribute($_C_, "Html"), "submitButton", array(0 => (($this->getAttribute($_model_, "isNewRecord")) ? ("Создать") : ("Сохранить"))), "method");
@@ -174,7 +200,7 @@ class __TwigTemplate_158f41d44a3183e68425164ce4be7f58eea66d1122bdbb4d77859cd274b
 \t</div>
 
 ";
-        // line 57
+        // line 70
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_this_, "widget", array(0 => "ext.tinymce.SladekTinyMce", 1 => array(), 2 => true), "method"), "html", null, true);
         echo "
@@ -184,13 +210,15 @@ class __TwigTemplate_158f41d44a3183e68425164ce4be7f58eea66d1122bdbb4d77859cd274b
         selector:'textarea',
         width: 530, 
         height: 240,
+        language: 'ru',
         plugins: [
              \"advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker\",
              \"searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking\",
-             \"save table contextmenu directionality emoticons template paste textcolor\"
+             \"save table contextmenu directionality emoticons template paste textcolor filemanager\"
        ],
+       image_advtab: true,
        content_css: \"css/content.css\",
-       toolbar: \"insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons\", 
+       toolbar: \"bold italic | alignleft aligncenter alignright alignjustify | fontselect | fontsizeselect | bullist numlist outdent indent | link image | preview media fullpage | forecolor backcolor emoticons\", 
        style_formats: [
             {title: 'Bold text', inline: 'b'},
             {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
@@ -203,25 +231,25 @@ class __TwigTemplate_158f41d44a3183e68425164ce4be7f58eea66d1122bdbb4d77859cd274b
 </script>
 
 ";
-        // line 82
+        // line 97
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         $this->getAttribute($_this_, "endWidget");
-        // line 83
+        // line 98
         echo "
 ";
-        // line 84
+        // line 99
         if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
         echo twig_escape_filter($this->env, ETwigViewRendererVoidFunction($this->getAttribute($this->getAttribute($_App_, "clientScript"), "registerScriptFile", array(0 => "/scripts/transliteration.js"), "method")), "html", null, true);
         echo "
 ";
-        // line 85
+        // line 100
         if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
         echo twig_escape_filter($this->env, ETwigViewRendererVoidFunction($this->getAttribute($this->getAttribute($_App_, "clientScript"), "registerScript", array(0 => "translit", 1 => "
     el = document.getElementById('Pages_label');
-    el.onkeypress = function(e) { oJS.strNormalize(this); }
+    el.onkeyup = function(e) { oJS.strNormalize(this); }
     oJS.strNormalize(el);
     "), "method")), "html", null, true);
-        // line 89
+        // line 104
         echo "
 
 </div><!-- form -->";
@@ -239,6 +267,6 @@ class __TwigTemplate_158f41d44a3183e68425164ce4be7f58eea66d1122bdbb4d77859cd274b
 
     public function getDebugInfo()
     {
-        return array (  225 => 89,  218 => 85,  213 => 84,  210 => 83,  207 => 82,  178 => 57,  170 => 54,  166 => 52,  162 => 51,  153 => 47,  147 => 46,  141 => 45,  130 => 39,  124 => 38,  118 => 37,  109 => 33,  103 => 32,  97 => 31,  88 => 27,  82 => 26,  76 => 25,  67 => 21,  61 => 20,  55 => 19,  46 => 15,  40 => 14,  34 => 13,  26 => 7,  23 => 3,  19 => 1,  38 => 6,  31 => 4,  28 => 3,);
+        return array (  253 => 104,  246 => 100,  241 => 99,  238 => 98,  235 => 97,  204 => 70,  196 => 67,  192 => 65,  188 => 64,  179 => 60,  173 => 59,  167 => 58,  156 => 52,  150 => 51,  144 => 50,  135 => 46,  129 => 45,  123 => 44,  116 => 39,  113 => 34,  110 => 33,  103 => 31,  100 => 30,  94 => 29,  88 => 28,  82 => 27,  76 => 26,  67 => 22,  61 => 21,  55 => 20,  46 => 16,  40 => 15,  34 => 14,  26 => 8,  23 => 3,  19 => 1,  39 => 7,  33 => 6,  30 => 5,  25 => 3,);
     }
 }

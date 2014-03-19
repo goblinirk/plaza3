@@ -83,39 +83,55 @@ class __TwigTemplate_d7396b1c483c0f2360e008e42b74796d95339a40d4a593032aec4e34cce
 </div><!--end menu-->
 <div class=\"all\">
 \t<header>
-\t\t<a class=\"logo\" href=\"#\"><img alt=\"\" src=\"";
+        <a class=\"logo\" href=\"/\"><img alt=\"\" src=\"";
         // line 39
         if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_App_, "baseUrl"), "html", null, true);
-        echo "/images/logo.png\"><span>(3952) 672-295</span></a>
-\t\t<div class=\"slogan\">
-        На финише побеждает 
-        качество с компанией 
-        «АС группа 2»
-        </div><!--end slogan-->
+        echo "/images/logo.png\">
+        <span>";
+        // line 40
+        if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
+        echo $this->getAttribute($_this_, "widget", array(0 => "SysRegistry", 1 => array("param" => "phone"), 2 => true), "method");
+        echo "</span></a>
+        <div class=\"slogan\">";
+        // line 41
+        if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
+        echo $this->getAttribute($_this_, "widget", array(0 => "SysRegistry", 1 => array("param" => "slogan"), 2 => true), "method");
+        echo "</div><!--end slogan-->
         <div class=\"top-banner\"><a href=\"#\"><img alt=\"\" src=\"";
-        // line 45
+        // line 42
         if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_App_, "baseUrl"), "html", null, true);
         echo "/images/zamer.png\"></a></div>
-\t</header>
+    </header>
     <div class=\"container\">
     ";
-        // line 48
+        // line 45
         $this->displayBlock('innercontent', $context, $blocks);
-        // line 51
+        // line 48
         echo "    </div><!--end container-->
 </div><!--ed alll-->
 <div class=\"f-clear\"></div>
 </div><!--end over-->
 <div class=\"all\">
 \t<footer>
-\t\t<div class=\"copy\">© 2014 ASGroup</div>
-\t\t<div class=\"tel\">(3952) 672-295</div>
-        <div class=\"mail\"><a href=\"mailto:info@asgroup.ru\">info@asgroup.ru</a></div>
-        <div class=\"addr\">Иркутск, ул. Пролетарская, д 5</div>
+        <div class=\"copy\">© 2014 ASGroup</div>
+        <div class=\"tel\">";
+        // line 55
+        if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
+        echo $this->getAttribute($_this_, "widget", array(0 => "SysRegistry", 1 => array("param" => "phone"), 2 => true), "method");
+        echo "</div>
+        <div class=\"mail\">";
+        // line 56
+        if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
+        echo $this->getAttribute($_this_, "widget", array(0 => "SysRegistry", 1 => array("param" => "email", "maillink" => true), 2 => true), "method");
+        echo "</div>
+        <div class=\"addr\">";
+        // line 57
+        if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
+        echo $this->getAttribute($_this_, "widget", array(0 => "SysRegistry", 1 => array("param" => "address"), 2 => true), "method");
+        echo "</div>
         <div class=\"design\">Разработчик:<a href=\"#\">In-Site</a></div>
-    
     </footer>
 </div><!--end all-->
 </body>
@@ -123,10 +139,10 @@ class __TwigTemplate_d7396b1c483c0f2360e008e42b74796d95339a40d4a593032aec4e34cce
 ";
     }
 
-    // line 48
+    // line 45
     public function block_innercontent($context, array $blocks = array())
     {
-        // line 49
+        // line 46
         echo "
     ";
     }
@@ -143,6 +159,6 @@ class __TwigTemplate_d7396b1c483c0f2360e008e42b74796d95339a40d4a593032aec4e34cce
 
     public function getDebugInfo()
     {
-        return array (  130 => 49,  127 => 48,  107 => 51,  105 => 48,  98 => 45,  88 => 39,  77 => 32,  54 => 13,  47 => 10,  42 => 9,  36 => 7,  31 => 6,  25 => 4,  20 => 1,);
+        return array (  146 => 46,  143 => 45,  131 => 57,  126 => 56,  121 => 55,  112 => 48,  110 => 45,  103 => 42,  98 => 41,  93 => 40,  88 => 39,  77 => 32,  54 => 13,  47 => 10,  42 => 9,  36 => 7,  25 => 4,  20 => 1,  99 => 37,  92 => 34,  84 => 30,  79 => 29,  71 => 26,  68 => 25,  60 => 19,  55 => 18,  52 => 17,  49 => 16,  40 => 9,  35 => 8,  31 => 6,  28 => 5,);
     }
 }

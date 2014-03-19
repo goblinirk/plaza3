@@ -69,7 +69,7 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
         echo "</h1>
     <div class=\"content\">
         <div class=\"b-about\">
-            <div class=\"img\"><img alt=\"\" src=\"";
+            <div class=\"img\"><img alt=\"\" src=\"/images/";
         // line 29
         echo $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "thumb");
         echo "\"></div>
@@ -82,13 +82,13 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
     <div class=\"bs-jobs\">
                 ";
         // line 34
-        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Gallery", 1 => array("rootId" => 1, "label" => "Наши работы", "showdesc" => false), 2 => true), "method");
+        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Gallery", 1 => array("rootId" => $this->getAttribute((isset($context["registry"]) ? $context["registry"] : null), "sg", array(0 => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "id")), "method"), "label" => "Наши работы", "showdesc" => false), 2 => true), "method");
         echo "
             </div><!--end bs-jobs-->
             <div class=\"b-otziv\">
                 ";
         // line 37
-        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Otziv", 1 => array("pageId" => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "id")), 2 => true), "method");
+        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Otziv", 1 => array("pageId" => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "id"), "visible" => $this->getAttribute((isset($context["registry"]) ? $context["registry"] : null), "fbs", array(0 => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "id")), "method")), 2 => true), "method");
         echo "
                 <div class=\"form\">
                     <h2>Оставить заявку</h2>

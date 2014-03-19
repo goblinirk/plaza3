@@ -52,4 +52,17 @@
         {{ form.error(seo, 'meta_description') | raw }}
 	</div>
 
+	<div class="row">
+        <label for="Pages_showgallery">Отображать галерею</label>
+        {{ C.Html.dropDownList('show_gallery', registry.sg(model.isNewRecord?0:model.id), registry.galleries) | raw }}
+    </div><!-- /.row -->
+    
+    <div class="row">
+        <label for="Pages_fb">Отображать отзывы</label>
+        {{ C.Html.dropDownList('show_fb', registry.fbs(model.isNewRecord?0:model.id), {'1':' Да ', '0':' Нет ',}) | raw }}
+    </div><!-- /.row -->
+
+
+<hr />
+
 </div><!-- form -->

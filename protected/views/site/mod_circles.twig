@@ -1,0 +1,38 @@
+{% extends "views/layouts/admin.twig" %}
+
+{% set moduleactive = true %}
+
+{% block content %}
+	<h1>Управление кругами</h1>
+
+	{% if good %}
+		<div class="alert alert-success">Изменения успешно сохранены.</div>
+	{% endif %}
+
+	{% set i = 0 %}
+
+	{% for item in data %}
+		{% set i = i+1 %}
+		{% set form = this.beginWidget('CActiveForm', {
+		    'id': 'circle-form',
+		    'enableAjaxValidation': false,
+		    'htmlOptions': {'enctype': 'multipart/form-data'},
+		}) %}
+			<input type="hidden" value="{{ i }}" name="index" />
+			<div class="row">
+		        <label>Введите заголовок для {{ i }} круга:</label>
+		        {{ form.textField(item, 'label') | raw }}
+		    </div><!-- /.row -->
+			<div class="row">
+		        <label>Выберете страницу для {{ i }} круга:</label>
+		        {{ form.dropDownList(item, 'owner_id', item.items) | raw }}
+		    </div><!-- /.row -->
+		    <div class="row buttons">
+				{{ C.Html.submitButton('Сохранить') | raw }}
+			</div><br /><br />
+
+		{% do this.endWidget %}
+	{% endfor %}
+	
+
+{% endblock %}

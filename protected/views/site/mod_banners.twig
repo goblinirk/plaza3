@@ -1,0 +1,58 @@
+{% extends "views/layouts/admin.twig" %}
+
+{% set moduleactive = true %}
+
+{% block content %}
+	<h1>Управление баннерами</h1>
+
+	{% if good %}
+		<div class="alert alert-success">Изменения успешно сохранены.</div>
+	{% endif %}
+
+	{% set i = 0 %}
+
+	{% for item in data %}
+		{% set i = i+1 %}
+		{% set form = this.beginWidget('CActiveForm', {
+		    'id': 'circle-form',
+		    'enableAjaxValidation': false,
+		    'htmlOptions': {'enctype': 'multipart/form-data'},
+		}) %}
+			<input type="hidden" value="{{ i }}" name="index" />
+			<div class="row">
+		        <label>Введите заголовок для {{ i }} баннера:</label>
+		        {{ form.textField(item, 'label') | raw }}
+		    </div><!-- /.row -->
+		    <div class="row">
+		    	<label>Выберете картинку для {{ i }} баннера:</label>
+		        {{ form.fileField(item, 'ajaxthumb', {'id':'forum_image'}) | raw }}
+		        {{ form.error(item, 'thumb') | raw }}
+		        {% if item.thumb %}
+		            <img style="margin: 0px 20px 0px 0px;" class="preview" src="/images/{{ item.thumb }}" width="80" />
+		        {% endif %}
+		        <a href="" class="btn btn-info btn-lg" onclick="return uploadImage();">Выбрать</a>
+		        {{ C.Html.htmlButton('Загрузить',{
+		                'onclick':'javascript: send();',
+		                'id':'post-submit-btn',
+		                'class':'btn btn-success btn-lg post_submit',
+		            }, true) | raw
+		        }}
+		        <a href="" class="btn btn-danger btn-lg" onclick="return clearImage();">Очистить</a>
+		    </div><!-- /.row --><br />
+		    <div class="row">
+		        <label>Выберете ссылку для {{ i }} баннера:</label>
+		        {{ form.textField(item, 'owner_id') | raw }}
+		    </div><!-- /.row -->
+
+		    <div class="row buttons">
+				{{ C.Html.submitButton('Сохранить') | raw }}
+			</div><br /><br />
+
+		{% do this.endWidget %}
+	{% endfor %}
+	
+{{ void(App.clientScript.registerCoreScript('jquery')) }}
+{{ void(App.clientScript.registerCoreScript('jquery.ui')) }}
+{{ void(App.clientScript.registerScriptFile('/scripts/upload.js')) }}
+
+{% endblock %}

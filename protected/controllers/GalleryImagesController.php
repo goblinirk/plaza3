@@ -36,13 +36,31 @@ class GalleryImagesController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','UploadThumb'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
+	}
+	public function actionUploadThumb() {
+        $model = new GalleryImages;
+        //echo print_r($_POST,true);
+	    if(isset($_POST['GalleryImages'], $_FILES['GalleryImages'])) {
+	        $model->attributes=$_POST['GalleryImages'];
+	        $rnd = rand(0123456789, 9876543210);
+	    	$timeStamp = time();
+	        $uploadedFile = CUploadedFile::getInstance($model, 'ajaxthumb');
+	        if ($uploadedFile != null) {
+		        $fileName = "{$rnd}_{$timeStamp}_{$uploadedFile}";
+		    }
+
+	        if (!empty($uploadedFile)) {
+	            $uploadedFile->saveAs(Yii::app()->basePath . '/../images/' . $fileName);
+	        }
+	        echo $fileName;
+		}//*/
 	}
 
 	/**

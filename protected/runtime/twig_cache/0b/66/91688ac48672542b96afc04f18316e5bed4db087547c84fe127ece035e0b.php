@@ -143,7 +143,7 @@ class __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece0
 
 ";
         // line 64
-        $this->env->loadTemplate("views/pages/_seoform.twig")->display(array_merge($context, array("model" => (isset($context["model"]) ? $context["model"] : null), "seo" => (isset($context["seo"]) ? $context["seo"] : null))));
+        $this->env->loadTemplate("views/pages/_seoform.twig")->display(array_merge($context, array("model" => (isset($context["model"]) ? $context["model"] : null), "seo" => (isset($context["seo"]) ? $context["seo"] : null), "registry" => (isset($context["registry"]) ? $context["registry"] : null))));
         // line 65
         echo "
 \t<div class=\"row buttons\">
@@ -161,7 +161,7 @@ class __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece0
 <script>
     tinymce.init({
         selector:'textarea',
-        width: 530, 
+        width: 500, 
         height: 240,
         language: 'ru',
         plugins: [
@@ -217,6 +217,6 @@ class __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece0
 
     public function getDebugInfo()
     {
-        return array (  203 => 104,  197 => 100,  193 => 99,  190 => 98,  188 => 97,  158 => 70,  152 => 67,  148 => 65,  146 => 64,  139 => 60,  135 => 59,  131 => 58,  122 => 52,  118 => 51,  114 => 50,  107 => 46,  103 => 45,  99 => 44,  92 => 39,  90 => 34,  87 => 33,  81 => 31,  79 => 30,  75 => 29,  71 => 28,  67 => 27,  63 => 26,  56 => 22,  52 => 21,  48 => 20,  41 => 16,  37 => 15,  33 => 14,  25 => 8,  23 => 3,  19 => 1,);
+        return array (  203 => 104,  197 => 100,  193 => 99,  190 => 98,  188 => 97,  158 => 70,  152 => 67,  148 => 65,  146 => 64,  139 => 60,  135 => 59,  131 => 58,  122 => 52,  118 => 51,  114 => 50,  107 => 46,  103 => 45,  99 => 44,  92 => 39,  90 => 34,  87 => 33,  81 => 31,  79 => 30,  75 => 29,  71 => 28,  67 => 27,  63 => 26,  56 => 22,  52 => 21,  48 => 20,  41 => 16,  37 => 15,  23 => 3,  19 => 1,  38 => 7,  33 => 14,  30 => 5,  25 => 8,);
     }
 }

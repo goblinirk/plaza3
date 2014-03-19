@@ -142,6 +142,25 @@ class __TwigTemplate_1abd447165749c77dc192ef77447bab35ca78f6189ac89e873c5f9096fc
         echo "
 \t</div>
 
+\t<div class=\"row\">
+        <label for=\"Pages_showgallery\">Отображать галерею</label>
+        ";
+        // line 57
+        echo $this->getAttribute($this->getAttribute((isset($context["C"]) ? $context["C"] : null), "Html"), "dropDownList", array(0 => "show_gallery", 1 => $this->getAttribute((isset($context["registry"]) ? $context["registry"] : null), "sg", array(0 => (($this->getAttribute((isset($context["model"]) ? $context["model"] : null), "isNewRecord")) ? (0) : ($this->getAttribute((isset($context["model"]) ? $context["model"] : null), "id")))), "method"), 2 => $this->getAttribute((isset($context["registry"]) ? $context["registry"] : null), "galleries")), "method");
+        echo "
+    </div><!-- /.row -->
+    
+    <div class=\"row\">
+        <label for=\"Pages_fb\">Отображать отзывы</label>
+        ";
+        // line 62
+        echo $this->getAttribute($this->getAttribute((isset($context["C"]) ? $context["C"] : null), "Html"), "dropDownList", array(0 => "show_fb", 1 => $this->getAttribute((isset($context["registry"]) ? $context["registry"] : null), "fbs", array(0 => (($this->getAttribute((isset($context["model"]) ? $context["model"] : null), "isNewRecord")) ? (0) : ($this->getAttribute((isset($context["model"]) ? $context["model"] : null), "id")))), "method"), 2 => array("1" => " Да ", "0" => " Нет ")), "method");
+        echo "
+    </div><!-- /.row -->
+
+
+<hr />
+
 </div><!-- form -->";
     }
 
@@ -157,6 +176,6 @@ class __TwigTemplate_1abd447165749c77dc192ef77447bab35ca78f6189ac89e873c5f9096fc
 
     public function getDebugInfo()
     {
-        return array (  141 => 52,  137 => 51,  133 => 50,  126 => 46,  122 => 45,  118 => 44,  111 => 40,  107 => 39,  103 => 38,  94 => 32,  90 => 31,  86 => 30,  79 => 26,  75 => 25,  71 => 24,  64 => 20,  60 => 19,  56 => 18,  47 => 12,  43 => 11,  39 => 10,  32 => 6,  28 => 5,  24 => 4,  19 => 1,);
+        return array (  157 => 62,  149 => 57,  141 => 52,  137 => 51,  133 => 50,  126 => 46,  122 => 45,  118 => 44,  111 => 40,  107 => 39,  103 => 38,  94 => 32,  90 => 31,  86 => 30,  79 => 26,  75 => 25,  71 => 24,  64 => 20,  60 => 19,  56 => 18,  47 => 12,  43 => 11,  39 => 10,  32 => 6,  28 => 5,  24 => 4,  19 => 1,);
     }
 }

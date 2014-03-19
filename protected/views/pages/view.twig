@@ -26,15 +26,15 @@
     <h1>{{ model.label | raw }}</h1>
     <div class="content">
         <div class="b-about">
-            <div class="img"><img alt="" src="{{ model.thumb | raw }}"></div>
+            <div class="img"><img alt="" src="/images/{{ model.thumb | raw }}"></div>
             {{ model.full_text | raw }}
         </div><!--end b-about-->
     </div>
     <div class="bs-jobs">
-                {{ this.widget('Gallery', {'rootId':1, 'label':'Наши работы', 'showdesc': false}, true) | raw }}
+                {{ this.widget('Gallery', {'rootId':registry.sg(model.id), 'label':'Наши работы', 'showdesc': false}, true) | raw }}
             </div><!--end bs-jobs-->
             <div class="b-otziv">
-                {{ this.widget('Otziv', {'pageId':model.id}, true) | raw }}
+                {{ this.widget('Otziv', {'pageId':model.id,'visible':registry.fbs(model.id)}, true) | raw }}
                 <div class="form">
                     <h2>Оставить заявку</h2>
                     <table cellspacing="0" cellpadding="0">

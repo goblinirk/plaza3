@@ -26,6 +26,7 @@ class PagesController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
+	
 	public function accessRules()
 	{
 		return array(
@@ -99,6 +100,7 @@ class PagesController extends Controller
 	 */
 	public function actionView()
 	{
+		$registry= new Registry;
 		$page = $this->loadModel();
 		if(!empty($page->seo->redirect_url))
 			$this->redirect(array($page->seo->redirect_url));
@@ -107,6 +109,7 @@ class PagesController extends Controller
 
 		$this->render('view',array(
 			'model'=>$page,
+			'registry'=>$registry,
 		));
 	}
 
@@ -118,7 +121,7 @@ class PagesController extends Controller
 	{
 		$model=new Pages;
 		$seo=new Seo;
-
+		$registry= new Registry;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -135,6 +138,42 @@ class PagesController extends Controller
 			        $seo->module='pages';
 				    $seo->owner_id=$model->id;
 				    $seo->save();
+
+				    $param = $registry->find(array(
+					    'condition'=>'module=:mod and param=:prm and element=:pid',
+					    'params'=>array(':mod'=>'gallery_widget',':prm'=>'showgallery',':pid'=>$model->id),
+					));
+					if($param){
+						$param->value = $_POST['show_gallery'];
+						$param->save();
+					} else {
+						$registry= new Registry;
+						$registry->module = 'gallery_widget';
+						$registry->param = 'showgallery';
+						$registry->element = $model->id;
+						$registry->label = 'gallery_widget';
+						$registry->value = $_POST['show_gallery'];
+						$registry->create_date = time();
+						$registry->save();
+					}
+
+					$param = $registry->find(array(
+					    'condition'=>'module=:mod and param=:prm and element=:pid',
+					    'params'=>array(':mod'=>'fb_widget',':prm'=>'showfeedback',':pid'=>$model->id),
+					));
+					if($param){
+						$param->value = $_POST['show_fb'];
+						$param->save();
+					} else {
+						$registry= new Registry;
+						$registry->module = 'fb_widget';
+						$registry->param = 'showfeedback';
+						$registry->element = $model->id;
+						$registry->label = 'showfeedback';
+						$registry->value = $_POST['show_fb'];
+						$registry->create_date = time();
+						$registry->save();
+					}
 			    }
 			    if($mod == 'news')
 					$this->redirect(array('admin/news/'));
@@ -146,6 +185,7 @@ class PagesController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 			'seo'=>$seo,
+			'registry'=>$registry,
 			'mod'=>$mod
 		));
 	}
@@ -158,6 +198,8 @@ class PagesController extends Controller
 	public function actionUpdate($mod="pages")
 	{
 		if(isset($_GET['id'])){
+			$registry= new Registry;
+
 			$model=$this->loadModel();
 			$seo=$model->seo;
 			if(!$seo) $seo = new Seo();
@@ -179,6 +221,41 @@ class PagesController extends Controller
 			        $seo->module='pages';
 				    $seo->owner_id=$model->id;
 				    $seo->save();
+
+				    $param = $registry->find(array(
+					    'condition'=>'module=:mod and param=:prm and element=:pid',
+					    'params'=>array(':mod'=>'gallery_widget',':prm'=>'showgallery',':pid'=>$model->id),
+					));
+					if($param){
+						$param->value = $_POST['show_gallery'];
+						$param->save();
+					} else {
+						$registry= new Registry;
+						$registry->module = 'gallery_widget';
+						$registry->param = 'showgallery';
+						$registry->element = $model->id;
+						$registry->label = 'gallery_widget';
+						$registry->value = $_POST['show_gallery'];
+						$registry->create_date = time();
+						$registry->save();
+					}
+					$param = $registry->find(array(
+					    'condition'=>'module=:mod and param=:prm and element=:pid',
+					    'params'=>array(':mod'=>'fb_widget',':prm'=>'showfeedback',':pid'=>$model->id),
+					));
+					if($param){
+						$param->value = $_POST['show_fb'];
+						$param->save();
+					} else {
+						$registry= new Registry;
+						$registry->module = 'fb_widget';
+						$registry->param = 'showfeedback';
+						$registry->element = $model->id;
+						$registry->label = 'showfeedback';
+						$registry->value = $_POST['show_fb'];
+						$registry->create_date = time();
+						$registry->save();
+					}
 			    }
 				if($mod == 'news')
 					$this->redirect(array('admin/news/'));
@@ -190,6 +267,7 @@ class PagesController extends Controller
 			$this->render('update',array(
 				'model'=>$model,
 				'seo'=>$seo,
+				'registry'=>$registry,
 				'mod'=>$mod
 			));
 		} else

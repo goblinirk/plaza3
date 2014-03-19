@@ -20,7 +20,12 @@ class FbMessages extends CActiveRecord
 	{
 		return 'fb_messages';
 	}
-
+	public function getUrl()
+    {
+        return Yii::app()->createUrl('admin/fbshow/', array(
+            'id'=>$this->id,
+        ));
+    }
 	/**
 	 * @return array validation rules for model attributes.
 	 */
@@ -56,15 +61,15 @@ class FbMessages extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'form_id' => 'form',
-			'page_id' => 'page',
-			'label' => 'Label',
-			'sender' => 'Sender',
-			'message' => 'Message',
-			'answer' => 'Answer',
-			'send_date' => 'Send Date',
-			'answer_date' => 'Answer Date',
-			'status' => 'Status',
+			'form_id' => 'Форма',
+			'page_id' => 'Страница',
+			'label' => 'Заголовок',
+			'sender' => 'Отправитель',
+			'message' => 'Сообщение',
+			'answer' => 'Ответ',
+			'send_date' => 'Дата отправления',
+			'answer_date' => 'Дата ответа',
+			'status' => 'Статус',
 		);
 	}
 
@@ -87,6 +92,8 @@ class FbMessages extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+		$criteria->compare('form_id',$this->form_id);
+		$criteria->compare('page_id',$this->page_id);
 		$criteria->compare('label',$this->label,true);
 		$criteria->compare('sender',$this->sender,true);
 		$criteria->compare('message',$this->message,true);

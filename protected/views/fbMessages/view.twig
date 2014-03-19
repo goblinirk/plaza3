@@ -1,0 +1,13 @@
+{% extends "views/layouts/admin.twig" %}
+
+{% set feedbackctive = true %}
+
+{% block content %}
+	
+	<h1>Просмотр сообщения #{{ model.id }}</h1>
+
+    {% include 'views/fbMessages/_view.twig' with {'model': model } %}
+
+{% endblock %}
+
+

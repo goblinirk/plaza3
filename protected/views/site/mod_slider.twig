@@ -1,0 +1,29 @@
+{% extends "views/layouts/admin.twig" %}
+
+{% set moduleactive = true %}
+
+{% block content %}
+	<h1>Управление слайдером</h1>
+
+{% set form = this.beginWidget('CActiveForm', {
+    'id': 'slider-form',
+    'enableAjaxValidation': false,
+    'htmlOptions': {'enctype': 'multipart/form-data'},
+}) %}
+
+	{% if good %}
+		<div class="alert alert-success">Изменения успешно сохранены.</div>
+	{% endif %}
+
+	<div class="row">
+        <label>Выберете галерею для слайдера:</label>
+        {{ form.dropDownList(data, 'owner_id', data.items) | raw }}
+    </div><!-- /.row -->
+
+	<div class="row buttons">
+		{{ C.Html.submitButton('Сохранить') | raw }}
+	</div>
+
+{% do this.endWidget %}
+
+{% endblock %}

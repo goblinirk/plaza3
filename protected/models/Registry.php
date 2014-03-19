@@ -69,6 +69,13 @@ class Registry extends CActiveRecord
 		    'params'=>array(':mod'=>'system',':prm'=>$param),
 		));
 	}
+	public function getFreeParam($module, $param)
+	{
+		return $this->find(array(
+		    'condition'=>'module=:mod and param=:prm',
+		    'params'=>array(':mod'=>$module,':prm'=>$param),
+		));
+	}
 	public function genSpheresMenu($ind)
 	{
 		return $this->findAll(array(
@@ -76,6 +83,37 @@ class Registry extends CActiveRecord
 		    'params'=>array(':mod'=>'sphere_module-'.$ind),
 		));
 	}
+	public function genBanners($ind)
+	{
+		return $this->findAll(array(
+		    'condition'=>'module=:mod',
+		    'params'=>array(':mod'=>'banner-module-'.$ind),
+		));
+	}
+	public function getGalleries(){
+		$gal = new Galleries;
+		$arr = $gal->items;
+		$arr[0] = 'Нет';
+		return $arr;
+	}
+	public function getFbs($page_id=0){
+
+		$param = $this->find(array(
+		    'condition'=>'module=:mod and param=:prm and element=:pid',
+		    'params'=>array(':mod'=>'fb_widget',':prm'=>'showfeedback',':pid'=>$page_id),
+		));
+
+		return $param?$param->value:0;
+	}
+	public function getSg($page_id){
+		$param = $this->find(array(
+		    'condition'=>'module=:mod and param=:prm and element=:pid',
+		    'params'=>array(':mod'=>'gallery_widget',':prm'=>'showgallery',':pid'=>$page_id),
+		));
+
+		return $param?$param->value:0;
+	}
+
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.

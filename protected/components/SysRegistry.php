@@ -9,6 +9,11 @@ class SysRegistry extends CWidget
     public $maillink=false;
     public $visible=true;
  
+    public function getGalleryBlock() {
+        //print_r(Galleries::model()->genGalleryInfo(2));
+        return Galleries::model()->genSliderInfo($this->rootId);
+    }
+
     public function getSpheres($ind)
     {
         $sphereparams = Registry::model()->genSpheresMenu($ind);
@@ -26,6 +31,18 @@ class SysRegistry extends CWidget
             case 'sphere_module':
                 $this->render('sphere_module');
             break;
+            case 'slider':
+                $this->render('slider');
+            break;
+
+            case 'banner':
+                $param = Registry::model()->genBanners(1);
+                foreach ($param as $key => $value) {
+                    $model[$value->param] = $value->value;
+                }
+                echo '<div class="top-banner"><a target="_blank" href="'.$model['link'].'"><img alt="'.$model['label'].'" src="/images/'.$model['image'].'"></a></div>';
+            break;
+
             
             default:
                 $param = Registry::model()->getSysParam($this->param);

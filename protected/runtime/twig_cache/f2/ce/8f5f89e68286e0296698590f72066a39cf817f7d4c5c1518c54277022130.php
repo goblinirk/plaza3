@@ -21,13 +21,15 @@ class __TwigTemplate_f2ce8f5f89e68286e0296698590f72066a39cf817f7d4c5c1518c542770
 
     protected function doDisplay(array $context, array $blocks = array())
     {
+        // line 3
+        $context["pageactive"] = true;
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
+    // line 5
     public function block_content($context, array $blocks = array())
     {
-        // line 4
+        // line 6
         echo "\t<h1>Создание ";
         if (((isset($context["mod"]) ? $context["mod"] : null) == "pages")) {
             echo "статьи";
@@ -37,8 +39,8 @@ class __TwigTemplate_f2ce8f5f89e68286e0296698590f72066a39cf817f7d4c5c1518c542770
         echo "</h1>
 \t 
 \t";
-        // line 6
-        $this->env->loadTemplate("views/pages/_form.twig")->display(array_merge($context, array("model" => (isset($context["model"]) ? $context["model"] : null), "seo" => (isset($context["seo"]) ? $context["seo"] : null))));
+        // line 8
+        $this->env->loadTemplate("views/pages/_form.twig")->display(array_merge($context, array("model" => (isset($context["model"]) ? $context["model"] : null), "seo" => (isset($context["seo"]) ? $context["seo"] : null), "registry" => (isset($context["registry"]) ? $context["registry"] : null))));
     }
 
     public function getTemplateName()
@@ -53,6 +55,6 @@ class __TwigTemplate_f2ce8f5f89e68286e0296698590f72066a39cf817f7d4c5c1518c542770
 
     public function getDebugInfo()
     {
-        return array (  41 => 6,  31 => 4,  28 => 3,);
+        return array (  43 => 8,  33 => 6,  30 => 5,  25 => 3,);
     }
 }

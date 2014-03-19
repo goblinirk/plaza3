@@ -1,0 +1,101 @@
+{% extends "views/layouts/admin.twig" %}
+
+{% set galleryactive = true %}
+
+{% block content %}
+
+	{{ void(App.clientScript.registerCoreScript('jquery')) }}
+	{{ void(App.clientScript.registerCoreScript('jquery.ui')) }}
+
+	{{ void(App.clientScript.registerScript('search', "
+	    $('.search-button').click(function(){
+			$('.search-form').toggle();
+			return false;
+		});
+		$('.search-form form').submit(function(){
+			$('#galleries-grid').yiiGridView('update', {
+				data: $(this).serialize()
+			});
+			return false;
+		});
+	")) }}
+
+	<h1>Управление галереями</h1>
+
+	<a href="/admin/add_image/" class="btn btn-success btn-lg" role="button">Добавить изображение</a>
+
+	{{ C.Html.link('Расширенный поиск', '#', {'class': 'btn btn-default btn-lg search-button'}) | raw }}
+	<div class="search-form" style="display:none">
+	{% include 'views/galleries/_search.twig' with {'model': model} %}
+	</div><!-- search-form -->
+
+	{% set qwert = this.widget('ext.JTreeTable.JTreeTable', {
+		'id':'galleries-grid',
+		'dataProvider': model.search,
+		'filter':model,
+		'template':'{pager} {items} {pager}',
+		'itemsCssClass':'table table-striped',
+		'primaryColumn': 'id',
+		'parentColumn': 'owner_id',
+		'ajaxUpdate':'false', 
+		'ajaxVar':'false',
+		'jstree_options': {
+          	'initialState':'expanded',
+        },
+		'columns':[
+	        {
+	            'name':'label',
+	            'type':'raw',
+	            'value':'CHtml::link(CHtml::encode($data->label." [ ".$data->id." ]"), $data->editurl)',
+	        },
+	        {
+	            'name':'create_date',
+	            'value':'Yii::app()->dateFormatter->format("dd MMM y",strtotime($data->create_date))',
+	            'filter':false,
+	        },
+			{
+				'class':'CButtonColumn',
+				'template':'{top}{up}{down}{bottom}&nbsp;&nbsp;&nbsp;{update}{delete}',
+				'buttons':{
+			        'update' :{
+			            'url':'"/admin/edit_image/".$data->id',
+			        },
+			        'delete' :{
+			            'url':'"/admin/delete_image/".$data->id',
+			        },
+			        'top' :{
+			            'label':'В начало списка',
+			            'imageUrl':'/images/go-top.png',
+			            'url':'"#"',
+			            'visible':'true',
+			            'click':'function(){alert("Lets go to top!");return false;}',
+			        },
+			        'up' :{
+			            'label':'На один уровень вверх',
+			            'url':'"#"',
+			            'visible':'true',
+			            'imageUrl':'/images/go-up.png',
+			            'click':'function(){alert("Lets go to up!");return false;}',
+			        },
+			        'down' :{
+			            'label':'На один уровень вниз',
+			            'imageUrl':'/images/go-down.png',
+			            'url':'"#"',
+			            'visible':'true',
+			            'click':'function(){alert("Lets go to down!");return false;}',
+			        },
+			        'bottom' :{
+			            'label':'В конец списка',
+			            'url':'"#"',
+			            'visible':'true',
+			            'imageUrl':'/images/go-bottom.png',
+			            'click':'function(){alert("Lets go to bottom!");return false;}',
+			        },
+			    },
+			},
+		],
+	},true) %}
+
+	{{ qwert|raw }}
+
+{% endblock %}

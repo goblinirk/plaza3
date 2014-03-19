@@ -18,6 +18,7 @@
  */
 class GalleryImages extends CActiveRecord
 {
+	private static $_items=array('Корневая');
 	/**
 	 * @return string the associated database table name
 	 */
@@ -25,7 +26,13 @@ class GalleryImages extends CActiveRecord
 	{
 		return 'gallery_images';
 	}
-
+	public function getEditUrl()
+    {
+        return Yii::app()->createUrl('admin/edit_image/', array(
+            'id'=>$this->id,
+        ));
+    }
+   
 	/**
 	 * @return array validation rules for model attributes.
 	 */
@@ -63,17 +70,37 @@ class GalleryImages extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'owner_id' => 'Owner',
-			'label' => 'Label',
-			'description' => 'Description',
-			'link' => 'Link',
-			'thumb' => 'Thumb',
+			'owner_id' => 'Галерея',
+			'label' => 'Заголовок',
+			'description' => 'Описание',
+			'link' => 'Ссылка',
+			'thumb' => 'Изображение',
 			'medium' => 'Medium',
 			'large' => 'Large',
-			'create_date' => 'Create Date',
-			'status' => 'Status',
+			'create_date' => 'Дата создания',
+			'status' => 'Статус',
 			'sort' => 'Sort',
 		);
+	}
+
+	public static function getItems($start=0, $level=1){
+		
+        //self::$_items=array('Корневая');
+		$lvl = $level;
+		++$lvl;
+        $models=Galleries::model()->findAll(array(
+        	'condition'=>'owner_id=:oid', 
+        	'order'=>'sort',
+        	'params'=>array(':oid'=>$start),
+        	));
+        foreach($models as $model){
+        	$label = $level==0?'':'|';
+        	for($i=0;$i<$level;++$i) $label .= '---';
+        	$label .= $model->label;
+            self::$_items[$model->id]=$label;
+            self::getItems($model->id, $lvl);
+        }
+        return self::$_items;
 	}
 
 	/**
@@ -110,6 +137,16 @@ class GalleryImages extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	protected function beforeSave()
+    {
+    	if(parent::beforeSave()){
+    		unset($_POST['ajaxthumb']);
+    		return true;
+    	}else{
+    		return false;
+    	}
+    }
 
 	/**
 	 * Returns the static model of the specified AR class.

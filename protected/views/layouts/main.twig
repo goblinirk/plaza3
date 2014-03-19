@@ -38,20 +38,10 @@
         <a class="logo" href="/"><img alt="" src="{{ App.baseUrl }}/images/logo.png">
         <span>{{ this.widget('SysRegistry', {'param':'phone'}, true) | raw }}</span></a>
         <div class="slogan">{{ this.widget('SysRegistry', {'param':'slogan'}, true) | raw }}</div><!--end slogan-->
-        <div class="top-banner"><a href="#"><img alt="" src="{{ App.baseUrl }}/images/zamer.png"></a></div>
+        {{ this.widget('SysRegistry', {'param':'banner'}, true) | raw }}
     </header>
-    <div class="slider">
-            <div id="slides">
-                <div class="slides_container">
-                    <a href="#"><img src="{{ App.baseUrl }}/images/slide.png" alt="Slide 1"></a>
-                    <a href="#"><img src="{{ App.baseUrl }}/images/slide.png" alt="Slide 1"></a>
-                    <a href="#"><img src="{{ App.baseUrl }}/images/slide.png" alt="Slide 1"></a>
-                </div>
-                <a href="#" class="prev"></a>
-                <a href="#" class="next"></a>
-                
-            </div>    
-    </div><!--end slider-->
+    {{ this.widget('SysRegistry', {'param':'slider', 'rootId':2}, true) | raw }}
+    
     <div class="circles">
         {{ this.widget('SysRegistry', {'param':'sphere_module'}, true) | raw }}
     </div><!--end circlres-->

@@ -1,0 +1,16 @@
+{% set items = this.getGalleryBlock() %}
+{% if items %}
+<div class="slider">
+    <div id="slides">
+        <div class="slides_container">
+		{% for item in items %}
+			{% for img in item.images %}
+				<a href="#"><img src="{{ App.baseUrl }}/images/{{ img.large }}" alt="Slide 1"></a>
+			{% endfor %}
+		{% endfor %}
+        </div>
+        <a href="#" class="prev"></a>
+        <a href="#" class="next"></a>
+    </div>
+</div><!--end slider-->
+{% endif %}

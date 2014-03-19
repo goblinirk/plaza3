@@ -8,6 +8,8 @@ class FbMessagesController extends Controller
 	 */
 	public $layout='//layouts/messages.twig';
 
+	private $_model;
+
 	/**
 	 * @return array action filters
 	 */
@@ -36,7 +38,7 @@ class FbMessagesController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','fb_contacts','fb_otziv','fb_order'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -49,10 +51,10 @@ class FbMessagesController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
+	public function actionView()
 	{
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$this->loadModel(),
 		));
 	}
 
@@ -197,15 +199,49 @@ class FbMessagesController extends Controller
 	 */
 	public function actionAdmin()
 	{
+		$this->render('forms');
+	}
+	public function actionFb_contacts() {
 		$model=new FbMessages('search');
 		$model->unsetAttributes();  // clear any default values
+
 		if(isset($_GET['FbMessages']))
 			$model->attributes=$_GET['FbMessages'];
 
-		$this->render('admin',array(
+		$model->form_id = 1;
+
+		$this->render('fb_contacts',array(
 			'model'=>$model,
 		));
 	}
+	public function actionFb_otziv() {
+		$model=new FbMessages('search');
+		$model->unsetAttributes();  // clear any default values
+
+		if(isset($_GET['FbMessages']))
+			$model->attributes=$_GET['FbMessages'];
+
+		$model->form_id = 2;
+
+		$this->render('fb_contacts',array(
+			'model'=>$model,
+		));
+	}
+	public function actionFb_order() {
+		$model=new FbMessages('search');
+		$model->unsetAttributes();  // clear any default values
+
+		if(isset($_GET['FbMessages']))
+			$model->attributes=$_GET['FbMessages'];
+
+		$model->form_id = 3;
+
+		$this->render('fb_contacts',array(
+			'model'=>$model,
+		));
+	}
+
+
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
@@ -214,12 +250,17 @@ class FbMessagesController extends Controller
 	 * @return FbMessages the loaded model
 	 * @throws CHttpException
 	 */
-	public function loadModel($id)
+	public function loadModel()
 	{
-		$model=FbMessages::model()->findByPk($id);
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
-		return $model;
+		if($this->_model===null){
+			if(isset($_GET['id'])){
+				$this->_model=FbMessages::model()->findByPk($_GET['id']);
+			}
+
+			if($this->_model===null)
+				throw new CHttpException(404,'The requested page does not exist.');
+		}
+		return $this->_model;
 	}
 
 	/**

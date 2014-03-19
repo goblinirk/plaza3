@@ -8,7 +8,8 @@ class Otziv extends CWidget
  
     public function getOtzivList()
     {
-        return FbMessages::model()->getOtzivList($this->pageId);
+        $reg = new Registry;
+        return ($this->visible)?FbMessages::model()->getOtzivList($this->pageId):false;
     }
  
     protected function renderContent()

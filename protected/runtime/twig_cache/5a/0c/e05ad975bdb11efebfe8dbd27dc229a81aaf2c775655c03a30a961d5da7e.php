@@ -88,10 +88,10 @@ class __TwigTemplate_5a0ce05ad975bdb11efebfe8dbd27dc229a81aaf2c775655c03a30a961d
         // line 41
         echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "SysRegistry", 1 => array("param" => "slogan"), 2 => true), "method");
         echo "</div><!--end slogan-->
-        <div class=\"top-banner\"><a href=\"#\"><img alt=\"\" src=\"";
+        ";
         // line 42
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["App"]) ? $context["App"] : null), "baseUrl"), "html", null, true);
-        echo "/images/zamer.png\"></a></div>
+        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "SysRegistry", 1 => array("param" => "banner"), 2 => true), "method");
+        echo "
     </header>
     <div class=\"container\">
     ";

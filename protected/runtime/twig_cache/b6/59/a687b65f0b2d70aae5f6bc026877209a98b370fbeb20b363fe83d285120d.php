@@ -94,24 +94,71 @@ class __TwigTemplate_b659a687b65f0b2d70aae5f6bc026877209a98b370fbeb20b363fe83d28
 \t\t<aside id=\"sideLeft\">
 \t\t\t<div class=\"tabbable tabs-left\">
 \t\t\t\t<ul class=\"nav nav-tabs\">
-\t\t\t\t\t<li class=\"active\"><a href=\"/admin/pages/\" onclick=\"document.location.href='/admin/pages/'\" data-toggle=\"tab\">
+\t\t\t\t\t<li ";
+        // line 41
+        if (isset($context["pageactive"])) { $_pageactive_ = $context["pageactive"]; } else { $_pageactive_ = null; }
+        if ($_pageactive_) {
+            echo " class=\"active\" ";
+        }
+        echo "><a href=\"/admin/pages/\" onclick=\"document.location.href='/admin/pages/'\" data-toggle=\"tab\">
 \t\t\t\t\t\t<img src=\"/images/pages_btn.png\"  width=\"50\" height=\"50\" /><br />Страницы
 \t\t\t\t\t</a></li>
-\t\t\t\t\t<li><a href=\"/admin/feedback/\" onclick=\"document.location.href='/admin/feedback/'\" data-toggle=\"tab\">
+\t\t\t\t\t<li ";
+        // line 44
+        if (isset($context["feedbackctive"])) { $_feedbackctive_ = $context["feedbackctive"]; } else { $_feedbackctive_ = null; }
+        if ($_feedbackctive_) {
+            echo " class=\"active\" ";
+        }
+        echo "><a href=\"/admin/feedback/\" onclick=\"document.location.href='/admin/feedback/'\" data-toggle=\"tab\">
 \t\t\t\t\t\t<img src=\"/images/forms_btn.png\" width=\"50\" height=\"50\" /><br />Формы
 \t\t\t\t\t</a></li>
-\t\t\t\t\t<li><a href=\"/admin/galleries/\" onclick=\"document.location.href='/admin/galleries/'\" data-toggle=\"tab\">
+\t\t\t\t\t<li ";
+        // line 47
+        if (isset($context["galleryactive"])) { $_galleryactive_ = $context["galleryactive"]; } else { $_galleryactive_ = null; }
+        if ($_galleryactive_) {
+            echo " class=\"active\" ";
+        }
+        echo "><a href=\"/admin/galleries/\" onclick=\"document.location.href='/admin/galleries/'\" data-toggle=\"tab\">
 \t\t\t\t\t\t<img src=\"/images/gallery_btn.png\" width=\"50\" height=\"50\" /><br />Галереи
 \t\t\t\t\t</a></li>
-\t\t\t\t\t<li><a href=\"/admin/modules/\" onclick=\"document.location.href='/admin/modules/'\" data-toggle=\"tab\">
+\t\t\t\t\t<li ";
+        // line 50
+        if (isset($context["moduleactive"])) { $_moduleactive_ = $context["moduleactive"]; } else { $_moduleactive_ = null; }
+        if ($_moduleactive_) {
+            echo " class=\"active\" ";
+        }
+        echo "><a href=\"/admin/modules/\" onclick=\"document.location.href='/admin/modules/'\" data-toggle=\"tab\">
 \t\t\t\t\t\t<img src=\"/images/modules_btn.png\" width=\"50\" height=\"50\" /><br />Модули
 \t\t\t\t\t</a></li>
-\t\t\t\t\t<li><a href=\"/admin/options\" onclick=\"document.location.href='/admin/options/'\" data-toggle=\"tab\">
+\t\t\t\t\t<li ";
+        // line 53
+        if (isset($context["optionactive"])) { $_optionactive_ = $context["optionactive"]; } else { $_optionactive_ = null; }
+        if ($_optionactive_) {
+            echo " class=\"active\" ";
+        }
+        echo "><a href=\"/admin/options\" onclick=\"document.location.href='/admin/options/'\" data-toggle=\"tab\">
 \t\t\t\t\t\t<img src=\"/images/options_btn.png\" width=\"50\" height=\"50\" /><br />Настройки
 \t\t\t\t\t</a></li>
 \t\t\t\t</ul>
 \t\t\t\t<div class=\"tab-content\">
-\t\t\t\t\t<div class=\"tab-pane active\" id=\"lA\">
+\t\t\t\t\t<div class=\"tab-pane ";
+        // line 58
+        if (isset($context["pageactive"])) { $_pageactive_ = $context["pageactive"]; } else { $_pageactive_ = null; }
+        if ($_pageactive_) {
+            echo " active ";
+        }
+        echo "\" id=\"lA\">
+\t\t\t\t\t\t<br /><p style=\"color: #666;\">В данном разделе вы можете редактировать информацию на страницах вашего сайта, создавать новые страницы, а так же заниматься публикацией новостей.</p><br />
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/pages/\">Управление страницами</a>
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/news/\">Управление новостями</a>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"tab-pane ";
+        // line 63
+        if (isset($context["feedbackctive"])) { $_feedbackctive_ = $context["feedbackctive"]; } else { $_feedbackctive_ = null; }
+        if ($_feedbackctive_) {
+            echo " active ";
+        }
+        echo "\" id=\"lB\">
 \t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 \t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 \t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -119,45 +166,34 @@ class __TwigTemplate_b659a687b65f0b2d70aae5f6bc026877209a98b370fbeb20b363fe83d28
 \t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 \t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"tab-pane\" id=\"lB\">
-\t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-\t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-\t\t\t\t\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-\t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-\t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+\t\t\t\t\t<div class=\"tab-pane ";
+        // line 71
+        if (isset($context["galleryactive"])) { $_galleryactive_ = $context["galleryactive"]; } else { $_galleryactive_ = null; }
+        if ($_galleryactive_) {
+            echo " active ";
+        }
+        echo "\" id=\"lC\">
+\t\t\t\t\t\t<br /><p style=\"color: #666;\">В данном разделе вы можете редактировать медиа содержимое вашего сайта, создавать новые галереи, загружать изображения и управлять их отображением.</p><p style=\"color: #666;\">Для просмотра, уже загруженных, изображений перейдите в раздел <q>Посмотреть вложенные изображения</q> интересующей вас галереи.</p>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"tab-pane\" id=\"lC\">
-\t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-\t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-\t\t\t\t\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-\t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-\t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+\t\t\t\t\t<div class=\"tab-pane ";
+        // line 74
+        if (isset($context["moduleactive"])) { $_moduleactive_ = $context["moduleactive"]; } else { $_moduleactive_ = null; }
+        if ($_moduleactive_) {
+            echo " active ";
+        }
+        echo "\" id=\"lD\">
+\t\t\t\t\t\t<br /><p style=\"color: #666;\">В данном разделе вы можете редактировать отдельные блоки вашего сайта, для того, что бы наать выберете интересующий вас модуль.</p><br />
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/mod_slider/\">Управление слайдером</a>
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/mod_circles/\">Управление кругами</a>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"tab-pane\" id=\"lD\">
-\t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-\t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-\t\t\t\t\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-\t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-\t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"tab-pane\" id=\"lE\">
-\t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-\t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-\t\t\t\t\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-\t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-\t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"tab-pane\" id=\"lF\">
-\t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-\t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-\t\t\t\t\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-\t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-\t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+\t\t\t\t\t<div class=\"tab-pane ";
+        // line 79
+        if (isset($context["optionactive"])) { $_optionactive_ = $context["optionactive"]; } else { $_optionactive_ = null; }
+        if ($_optionactive_) {
+            echo " active ";
+        }
+        echo "\" id=\"lE\">
+\t\t\t\t\t\t<br /><p style=\"color: #666;\">В этом разделе вы можете управлять основными настройками и переменными окружения вашего сайта.</p>
 \t\t\t\t\t</div>
 
 \t\t\t\t</div>
@@ -196,6 +232,6 @@ class __TwigTemplate_b659a687b65f0b2d70aae5f6bc026877209a98b370fbeb20b363fe83d28
 
     public function getDebugInfo()
     {
-        return array (  183 => 33,  180 => 32,  91 => 35,  89 => 32,  72 => 23,  67 => 22,  53 => 12,  48 => 11,  42 => 9,  37 => 8,  32 => 7,  27 => 6,  20 => 1,  88 => 62,  85 => 61,  81 => 32,  77 => 24,  74 => 29,  68 => 27,  59 => 20,  45 => 9,  39 => 7,  34 => 6,  31 => 5,  28 => 4,);
+        return array (  219 => 33,  216 => 32,  191 => 79,  180 => 74,  171 => 71,  157 => 63,  146 => 58,  135 => 53,  126 => 50,  117 => 47,  108 => 44,  91 => 35,  89 => 32,  77 => 24,  72 => 23,  67 => 22,  53 => 12,  48 => 11,  42 => 9,  37 => 8,  32 => 7,  27 => 6,  20 => 1,  113 => 72,  110 => 71,  106 => 33,  102 => 31,  99 => 41,  93 => 28,  75 => 25,  65 => 23,  61 => 21,  47 => 10,  41 => 8,  36 => 7,  33 => 6,  30 => 5,  25 => 3,);
     }
 }

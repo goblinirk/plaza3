@@ -91,7 +91,7 @@ class __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394
             echo " class=\"active\" ";
         }
         echo "><a href=\"/admin/pages/\" onclick=\"document.location.href='/admin/pages/'\" data-toggle=\"tab\">
-\t\t\t\t\t\t<img src=\"/images/pages_btn.png\"  width=\"50\" height=\"50\" /><br />Страницы
+\t\t\t\t\t\t<img src=\"/images/pages_btn.png\"  width=\"35\" height=\"35\" /><br />Страницы
 \t\t\t\t\t</a></li>
 \t\t\t\t\t<li ";
         // line 44
@@ -99,7 +99,7 @@ class __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394
             echo " class=\"active\" ";
         }
         echo "><a href=\"/admin/feedback/\" onclick=\"document.location.href='/admin/feedback/'\" data-toggle=\"tab\">
-\t\t\t\t\t\t<img src=\"/images/forms_btn.png\" width=\"50\" height=\"50\" /><br />Формы
+\t\t\t\t\t\t<img src=\"/images/forms_btn.png\" width=\"35\" height=\"35\" /><br />Формы
 \t\t\t\t\t</a></li>
 \t\t\t\t\t<li ";
         // line 47
@@ -107,7 +107,7 @@ class __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394
             echo " class=\"active\" ";
         }
         echo "><a href=\"/admin/galleries/\" onclick=\"document.location.href='/admin/galleries/'\" data-toggle=\"tab\">
-\t\t\t\t\t\t<img src=\"/images/gallery_btn.png\" width=\"50\" height=\"50\" /><br />Галереи
+\t\t\t\t\t\t<img src=\"/images/gallery_btn.png\" width=\"35\" height=\"35\" /><br />Галереи
 \t\t\t\t\t</a></li>
 \t\t\t\t\t<li ";
         // line 50
@@ -115,7 +115,7 @@ class __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394
             echo " class=\"active\" ";
         }
         echo "><a href=\"/admin/modules/\" onclick=\"document.location.href='/admin/modules/'\" data-toggle=\"tab\">
-\t\t\t\t\t\t<img src=\"/images/modules_btn.png\" width=\"50\" height=\"50\" /><br />Модули
+\t\t\t\t\t\t<img src=\"/images/modules_btn.png\" width=\"35\" height=\"35\" /><br />Модули
 \t\t\t\t\t</a></li>
 \t\t\t\t\t<li ";
         // line 53
@@ -123,7 +123,7 @@ class __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394
             echo " class=\"active\" ";
         }
         echo "><a href=\"/admin/options\" onclick=\"document.location.href='/admin/options/'\" data-toggle=\"tab\">
-\t\t\t\t\t\t<img src=\"/images/options_btn.png\" width=\"50\" height=\"50\" /><br />Настройки
+\t\t\t\t\t\t<img src=\"/images/options_btn.png\" width=\"35\" height=\"35\" /><br />Настройки
 \t\t\t\t\t</a></li>
 \t\t\t\t</ul>
 \t\t\t\t<div class=\"tab-content\">
@@ -143,51 +143,38 @@ class __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394
             echo " active ";
         }
         echo "\" id=\"lB\">
-\t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-\t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-\t\t\t\t\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-\t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-\t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+\t\t\t\t\t\t<br /><p style=\"color: #666;\">В данном разделе вы можете читать сообщения пользователей с сайта, настраивать электронный адрес для оповещений с сайта, и отвечать пользователям.</p>
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/fb_contacts/\">Обратная связь</a>
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/fb_otziv/\">Отзывы</a>
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/fb_order/\">Заказы</a>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"tab-pane ";
-        // line 71
+        // line 69
         if ((isset($context["galleryactive"]) ? $context["galleryactive"] : null)) {
             echo " active ";
         }
         echo "\" id=\"lC\">
-\t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-\t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-\t\t\t\t\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-\t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-\t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+\t\t\t\t\t\t<br /><p style=\"color: #666;\">В данном разделе вы можете редактировать медиа содержимое вашего сайта, создавать новые галереи, загружать изображения и управлять их отображением.</p><p style=\"color: #666;\">Для просмотра, уже загруженных, изображений перейдите в раздел <q>Посмотреть вложенные изображения</q> интересующей вас галереи.</p>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"tab-pane ";
-        // line 79
+        // line 72
         if ((isset($context["moduleactive"]) ? $context["moduleactive"] : null)) {
             echo " active ";
         }
         echo "\" id=\"lD\">
-\t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-\t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-\t\t\t\t\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-\t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-\t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+\t\t\t\t\t\t<br /><p style=\"color: #666;\">В данном разделе вы можете редактировать отдельные блоки вашего сайта, для того, что бы наать выберете интересующий вас модуль.</p><br />
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/mod_slider/\">Управление слайдером</a>
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/mod_circles/\">Управление кругами</a>
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/mod_banners/\">Управление баннерами</a>
+
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"tab-pane ";
-        // line 87
+        // line 79
         if ((isset($context["optionactive"]) ? $context["optionactive"] : null)) {
             echo " active ";
         }
         echo "\" id=\"lE\">
-\t\t\t\t\t\t<br /><p style=\"color: #666;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-\t\t\t\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-\t\t\t\t\t\tconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-\t\t\t\t\t\tcillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-\t\t\t\t\t\tproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+\t\t\t\t\t\t<br /><p style=\"color: #666;\">В этом разделе вы можете управлять основными настройками и переменными окружения вашего сайта.</p>
 \t\t\t\t\t</div>
 
 \t\t\t\t</div>
@@ -199,7 +186,7 @@ class __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394
 </div><!-- #wrapper -->
 
 <footer id=\"footer\">
-\t<p><i>Разработано в стдии IN-SITE</i></p>
+\t<p><i>Разработано в студии IN-SITE</i></p>
 </footer><!-- #footer -->
 
 </body>
@@ -226,6 +213,6 @@ class __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394
 
     public function getDebugInfo()
     {
-        return array (  213 => 33,  210 => 32,  181 => 87,  168 => 79,  155 => 71,  142 => 63,  132 => 58,  122 => 53,  114 => 50,  106 => 47,  98 => 44,  90 => 41,  82 => 35,  80 => 32,  69 => 24,  65 => 23,  61 => 22,  48 => 12,  44 => 11,  39 => 9,  35 => 8,  31 => 7,  27 => 6,  20 => 1,);
+        return array (  200 => 33,  197 => 32,  173 => 79,  161 => 72,  153 => 69,  142 => 63,  132 => 58,  122 => 53,  114 => 50,  106 => 47,  98 => 44,  90 => 41,  82 => 35,  80 => 32,  69 => 24,  65 => 23,  61 => 22,  48 => 12,  44 => 11,  39 => 9,  35 => 8,  31 => 7,  27 => 6,  20 => 1,);
     }
 }

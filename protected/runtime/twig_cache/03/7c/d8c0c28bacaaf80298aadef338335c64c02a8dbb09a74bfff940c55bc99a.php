@@ -7,7 +7,7 @@ class __TwigTemplate_037cd8c0c28bacaaf80298aadef338335c64c02a8dbb09a74bfff940c55
     {
         parent::__construct($env);
 
-        $this->parent = $this->env->loadTemplate("views/layouts/index.twig");
+        $this->parent = $this->env->loadTemplate("views/layouts/auth.twig");
 
         $this->blocks = array(
             'content' => array($this, 'block_content'),
@@ -16,7 +16,7 @@ class __TwigTemplate_037cd8c0c28bacaaf80298aadef338335c64c02a8dbb09a74bfff940c55
 
     protected function doGetParent(array $context)
     {
-        return "views/layouts/index.twig";
+        return "views/layouts/auth.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -39,7 +39,7 @@ class __TwigTemplate_037cd8c0c28bacaaf80298aadef338335c64c02a8dbb09a74bfff940c55
         $context["form"] = $this->getAttribute($_this_, "beginWidget", array(0 => "CActiveForm", 1 => array("id" => "login-form", "enableClientValidation" => true, "clientOptions" => array("validateOnSubmit" => true))), "method");
         // line 16
         echo "
-\t\t<p class=\"note\">Fields with <span class=\"required\">*</span> are required.</p>
+\t\t<p class=\"note\">Поля помеченные <span class=\"required\">*</span> обязательны для заполнения.</p>
 
 \t\t<div class=\"row\">
 \t        ";
@@ -81,26 +81,23 @@ class __TwigTemplate_037cd8c0c28bacaaf80298aadef338335c64c02a8dbb09a74bfff940c55
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "error", array(0 => $_model_, 1 => "password"), "method");
         echo "
-\t        <p class=\"hint\">
-\t\t\t\tHint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
-\t\t\t</p>
 \t    </div><!-- /.row -->
 
 \t    <div class=\"row\">
 \t        ";
-        // line 35
+        // line 32
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "checkBox", array(0 => $_model_, 1 => "rememberMe"), "method");
         echo "
 \t        ";
-        // line 36
+        // line 33
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "label", array(0 => $_model_, 1 => "rememberMe"), "method");
         echo "
 \t        ";
-        // line 37
+        // line 34
         if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_form_, "error", array(0 => $_model_, 1 => "rememberMe"), "method");
@@ -109,17 +106,17 @@ class __TwigTemplate_037cd8c0c28bacaaf80298aadef338335c64c02a8dbb09a74bfff940c55
 
 \t\t<div class=\"row buttons\">
 \t\t\t";
-        // line 41
+        // line 38
         if (isset($context["C"])) { $_C_ = $context["C"]; } else { $_C_ = null; }
         echo $this->getAttribute($this->getAttribute($_C_, "Html"), "submitButton", array(0 => "Вход"), "method");
         echo "
 \t\t</div>
 
 \t";
-        // line 44
+        // line 41
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         $this->getAttribute($_this_, "endWidget");
-        // line 45
+        // line 42
         echo "
 \t</div><!-- form -->
 ";
@@ -137,6 +134,6 @@ class __TwigTemplate_037cd8c0c28bacaaf80298aadef338335c64c02a8dbb09a74bfff940c55
 
     public function getDebugInfo()
     {
-        return array (  123 => 45,  120 => 44,  113 => 41,  104 => 37,  98 => 36,  92 => 35,  80 => 28,  74 => 27,  68 => 26,  59 => 22,  53 => 21,  47 => 20,  41 => 16,  38 => 9,  31 => 4,  28 => 3,);
+        return array (  120 => 42,  117 => 41,  110 => 38,  101 => 34,  95 => 33,  89 => 32,  80 => 28,  74 => 27,  68 => 26,  59 => 22,  53 => 21,  47 => 20,  41 => 16,  38 => 9,  31 => 4,  28 => 3,);
     }
 }

@@ -81,15 +81,21 @@ class Galleries extends CActiveRecord
 	public function genGalleryInfo($rid){
 		if(!$rid){
 			return $this->findAll(array(
-			    'condition'=>'owner_id=:oid',
+			    'condition'=>'owner_id=:oid and status=1',
 			    'params'=>array(':oid'=>$rid),
 			));
 		} else {
 			return $this->findAll(array(
-			    'condition'=>'id=:rid',
+			    'condition'=>'id=:rid and status=1',
 			    'params'=>array(':rid'=>$rid),
 			));
 		}
+	}
+	public function genSliderInfo($rid){
+		return $this->findAll(array(
+		    'condition'=>'id=:rid and (status=1 or status=2)',
+		    'params'=>array(':rid'=>$rid),
+		));
 	}
 
 	/**

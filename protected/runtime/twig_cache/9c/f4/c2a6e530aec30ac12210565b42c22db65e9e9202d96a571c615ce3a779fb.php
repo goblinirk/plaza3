@@ -21,20 +21,21 @@ class __TwigTemplate_9cf4c2a6e530aec30ac12210565b42c22db65e9e9202d96a571c615ce3a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
+        // line 3
+        $context["pageactive"] = true;
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
+    // line 5
     public function block_content($context, array $blocks = array())
     {
-        // line 4
+        // line 6
         echo "\t<h1>Редактирование записи # ";
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_model_, "id"), "html", null, true);
         echo "</h1>
-\t 
 \t";
-        // line 6
+        // line 7
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         if (isset($context["seo"])) { $_seo_ = $context["seo"]; } else { $_seo_ = null; }
         $this->env->loadTemplate("views/pages/_form.twig")->display(array_merge($context, array("model" => $_model_, "seo" => $_seo_)));
@@ -52,6 +53,6 @@ class __TwigTemplate_9cf4c2a6e530aec30ac12210565b42c22db65e9e9202d96a571c615ce3a
 
     public function getDebugInfo()
     {
-        return array (  38 => 6,  31 => 4,  28 => 3,);
+        return array (  39 => 7,  33 => 6,  30 => 5,  25 => 3,);
     }
 }

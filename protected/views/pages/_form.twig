@@ -61,7 +61,7 @@
     </div><!-- /.row -->
 </div>
 
-{% include 'views/pages/_seoform.twig' with {'model': model, 'seo': seo} %}
+{% include 'views/pages/_seoform.twig' with {'model': model, 'seo': seo, 'registry': registry} %}
 
 	<div class="row buttons">
 		{{ C.Html.submitButton(model.isNewRecord ? 'Создать' : 'Сохранить') | raw }}
@@ -72,7 +72,7 @@
 <script>
     tinymce.init({
         selector:'textarea',
-        width: 530, 
+        width: 500, 
         height: 240,
         language: 'ru',
         plugins: [

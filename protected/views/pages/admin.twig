@@ -56,6 +56,15 @@
 	        },
 			{
 				'class':'CButtonColumn',
+				'buttons':{
+			        'view' :{
+			            'url':'($data->module=="pages"? "/pages/" : "/news/").$data->id',
+			        },
+			        'update' :{
+			            'url':'"/admin/".($data->module=="pages"? "edit_page/" : "edit_news/").$data->id',
+			        },
+
+			    },
 			},
 		],
 	},true) %}

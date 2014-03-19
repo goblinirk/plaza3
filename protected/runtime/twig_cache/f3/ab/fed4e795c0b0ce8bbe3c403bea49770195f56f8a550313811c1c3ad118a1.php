@@ -21,27 +21,29 @@ class __TwigTemplate_f3abfed4e795c0b0ce8bbe3c403bea49770195f56f8a550313811c1c3ad
 
     protected function doDisplay(array $context, array $blocks = array())
     {
+        // line 3
+        $context["galleryactive"] = true;
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
+    // line 5
     public function block_content($context, array $blocks = array())
     {
-        // line 4
+        // line 6
         echo "
 \t";
-        // line 5
+        // line 7
         if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
         echo twig_escape_filter($this->env, ETwigViewRendererVoidFunction($this->getAttribute($this->getAttribute($_App_, "clientScript"), "registerCoreScript", array(0 => "jquery"), "method")), "html", null, true);
         echo "
 \t";
-        // line 6
+        // line 8
         if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
         echo twig_escape_filter($this->env, ETwigViewRendererVoidFunction($this->getAttribute($this->getAttribute($_App_, "clientScript"), "registerCoreScript", array(0 => "jquery.ui"), "method")), "html", null, true);
         echo "
 
 \t";
-        // line 8
+        // line 10
         if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
         echo twig_escape_filter($this->env, ETwigViewRendererVoidFunction($this->getAttribute($this->getAttribute($_App_, "clientScript"), "registerScript", array(0 => "search", 1 => "
 \t    \$('.search-button').click(function(){
@@ -55,7 +57,7 @@ class __TwigTemplate_f3abfed4e795c0b0ce8bbe3c403bea49770195f56f8a550313811c1c3ad
 \t\t\treturn false;
 \t\t});
 \t"), "method")), "html", null, true);
-        // line 19
+        // line 21
         echo "
 
 \t<h1>Управление галереями</h1>
@@ -64,27 +66,27 @@ class __TwigTemplate_f3abfed4e795c0b0ce8bbe3c403bea49770195f56f8a550313811c1c3ad
 \t<a href=\"/admin/galleries_config/\" class=\"btn btn-default btn-lg\" role=\"button\">Конфигурация</a>
 
 \t";
-        // line 26
+        // line 28
         if (isset($context["C"])) { $_C_ = $context["C"]; } else { $_C_ = null; }
         echo $this->getAttribute($this->getAttribute($_C_, "Html"), "link", array(0 => "Расширенный поиск", 1 => "#", 2 => array("class" => "btn btn-default btn-lg search-button")), "method");
         echo "
 \t<div class=\"search-form\" style=\"display:none\">
 \t";
-        // line 28
+        // line 30
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         $this->env->loadTemplate("views/galleries/_search.twig")->display(array_merge($context, array("model" => $_model_)));
-        // line 29
+        // line 31
         echo "\t</div><!-- search-form -->
 
 \t";
-        // line 31
+        // line 33
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
-        $context["qwert"] = $this->getAttribute($_this_, "widget", array(0 => "ext.JTreeTable.JTreeTable", 1 => array("id" => "galleries-grid", "dataProvider" => $this->getAttribute($_model_, "search"), "filter" => $_model_, "template" => "{pager} {items} {pager}", "itemsCssClass" => "table table-striped", "primaryColumn" => "id", "parentColumn" => "owner_id", "ajaxUpdate" => "false", "ajaxVar" => "false", "jstree_options" => array("initialState" => "expanded"), "columns" => array(0 => array("name" => "label", "type" => "raw", "value" => "CHtml::link(CHtml::encode(\$data->label.\" [ \".\$data->id.\" ]\"), \$data->editurl)"), 1 => array("name" => "create_date", "value" => "Yii::app()->dateFormatter->format(\"dd MMM y\",strtotime(\$data->create_date))", "filter" => false), 2 => array("class" => "CButtonColumn"))), 2 => true), "method");
-        // line 60
+        $context["qwert"] = $this->getAttribute($_this_, "widget", array(0 => "ext.JTreeTable.JTreeTable", 1 => array("id" => "galleries-grid", "dataProvider" => $this->getAttribute($_model_, "search"), "filter" => $_model_, "template" => "{pager} {items} {pager}", "itemsCssClass" => "table table-striped", "primaryColumn" => "id", "parentColumn" => "owner_id", "ajaxUpdate" => "false", "ajaxVar" => "false", "jstree_options" => array("initialState" => "expanded"), "columns" => array(0 => array("name" => "label", "type" => "raw", "value" => "CHtml::link(CHtml::encode(\$data->label.\" [ \".\$data->id.\" ]\"), \$data->editurl)"), 1 => array("name" => "create_date", "value" => "Yii::app()->dateFormatter->format(\"dd MMM y\",strtotime(\$data->create_date))", "filter" => false), 2 => array("class" => "CButtonColumn", "template" => "{top}{up}{down}{bottom}&nbsp;&nbsp;&nbsp;{include}&nbsp;&nbsp;&nbsp;{view}{update}{delete}", "buttons" => array("top" => array("label" => "В начало списка", "imageUrl" => "/images/go-top.png", "url" => "\"#\"", "visible" => "true", "click" => "function(){alert(\"Lets go to top!\");return false;}"), "up" => array("label" => "На один уровень вверх", "url" => "\"#\"", "visible" => "true", "imageUrl" => "/images/go-up.png", "click" => "function(){alert(\"Lets go to up!\");return false;}"), "down" => array("label" => "На один уровень вниз", "imageUrl" => "/images/go-down.png", "url" => "\"#\"", "visible" => "true", "click" => "function(){alert(\"Lets go to down!\");return false;}"), "bottom" => array("label" => "В конец списка", "url" => "\"#\"", "visible" => "true", "imageUrl" => "/images/go-bottom.png", "click" => "function(){alert(\"Lets go to bottom!\");return false;}"), "include" => array("label" => "Посмотреть вложенные элементы", "url" => "\"/admin/gallery_images/\".\$data->id", "visible" => "true", "imageUrl" => "/images/include.png"))))), 2 => true), "method");
+        // line 99
         echo "
 \t";
-        // line 61
+        // line 100
         if (isset($context["qwert"])) { $_qwert_ = $context["qwert"]; } else { $_qwert_ = null; }
         echo $_qwert_;
         echo "
@@ -104,6 +106,6 @@ class __TwigTemplate_f3abfed4e795c0b0ce8bbe3c403bea49770195f56f8a550313811c1c3ad
 
     public function getDebugInfo()
     {
-        return array (  88 => 61,  85 => 60,  81 => 31,  77 => 29,  74 => 28,  68 => 26,  59 => 19,  45 => 8,  39 => 6,  34 => 5,  31 => 4,  28 => 3,);
+        return array (  90 => 100,  87 => 99,  83 => 33,  79 => 31,  76 => 30,  70 => 28,  61 => 21,  47 => 10,  41 => 8,  36 => 7,  33 => 6,  30 => 5,  25 => 3,);
     }
 }
