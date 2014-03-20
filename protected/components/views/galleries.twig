@@ -1,16 +1,26 @@
 {% set items = this.getGalleryBlock() %}
 {% if items %}
 	{% for item in items %}
-		<h2>{{ (this.label=='') ? item.label : this.label }}</h2>
-		{% if this.showdesc %}<p>{{ item.description }}</p>{% endif %}
-		<div class="bs-gallery">
-			{% for img in item.images %}
-				{{ this.widget('ext.lyiightbox.LyiightBox2', {
-	                'thumbnail' : img.thumb,
-	                'image' : img.large,
-	                'title' : img.description
-	            }, true) | raw }}
-			{% endfor %}
+		<div class="view" style="clear: both;">
+			<h2>{{ (this.label=='') ? item.label : this.label }}</h2>
+			{% if this.showdesc %}<p>{{ item.description }}</p>{% endif %}
+			<div class="bs-gallery" style="padding-bottom:30px;">
+				{% if this.widget == false %}
+					{% set childs = this.getChildGalleryBlocks(item.id) %}
+					{% for img in childs %}
+						<a style="display:inline-block;text-align:center;" href="/gallery/{{ img.id }}/" title="{{img.label}}">
+							<img src="/images/{{ img.thumb }}" border="0"><br />{{img.label}}</a>
+					{% endfor %}
+				{% endif %}
+				<div></div><br />
+				{% for img in item.images %}
+					{{ this.widget('ext.lyiightbox.LyiightBox2', {
+		                'thumbnail' : '/images/'~img.thumb,
+		                'image' : '/images/'~img.large,
+		                'title' : '/images/'~img.description
+		            }, true) | raw }}
+				{% endfor %}
+			</div>
 		</div>
 	{% endfor %}
 {% endif %}

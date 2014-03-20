@@ -31,12 +31,13 @@
         </div><!--end b-about-->
     </div>
     <div class="bs-jobs">
-                {{ this.widget('Gallery', {'rootId':registry.sg(model.id), 'label':'Наши работы', 'showdesc': false}, true) | raw }}
+                {{ this.widget('Gallery', {'rootId':registry.sg(model.id), 'label':'Наши работы', 'showdesc': false, 'widget':true}, true) | raw }}
             </div><!--end bs-jobs-->
             <div class="b-otziv">
                 {{ this.widget('Otziv', {'pageId':model.id,'visible':registry.fbs(model.id)}, true) | raw }}
                 <div class="form">
                     <h2>Оставить заявку</h2>
+                    <form method="post" action="/feedback/sendorder2/">
                     <table cellspacing="0" cellpadding="0">
                       <tr>
                         <td><input name="" class="pole" value="" placeholder="Имя" type="text"></td>
@@ -51,9 +52,10 @@
                         <td><textarea name="" cols="" rows="" placeholder="Сообщение"></textarea></td>
                       </tr>
                       <tr>
-                        <!-- <td><input class="btn1" name="" type="submit" value="Отправить"></td> -->
+                        <td><input class="btn1" name="" type="submit" value="Отправить"></td>
                       </tr>
                     </table>
+                    </form>
                 </div><!--end form-->
             </div><!--end b-otziv-->
             <div class="big-tel">

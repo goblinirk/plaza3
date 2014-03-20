@@ -82,7 +82,7 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
     <div class=\"bs-jobs\">
                 ";
         // line 34
-        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Gallery", 1 => array("rootId" => $this->getAttribute((isset($context["registry"]) ? $context["registry"] : null), "sg", array(0 => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "id")), "method"), "label" => "Наши работы", "showdesc" => false), 2 => true), "method");
+        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Gallery", 1 => array("rootId" => $this->getAttribute((isset($context["registry"]) ? $context["registry"] : null), "sg", array(0 => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "id")), "method"), "label" => "Наши работы", "showdesc" => false, "widget" => true), 2 => true), "method");
         echo "
             </div><!--end bs-jobs-->
             <div class=\"b-otziv\">
@@ -92,6 +92,7 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
         echo "
                 <div class=\"form\">
                     <h2>Оставить заявку</h2>
+                    <form method=\"post\" action=\"/feedback/sendorder2/\">
                     <table cellspacing=\"0\" cellpadding=\"0\">
                       <tr>
                         <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Имя\" type=\"text\"></td>
@@ -106,9 +107,10 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
                         <td><textarea name=\"\" cols=\"\" rows=\"\" placeholder=\"Сообщение\"></textarea></td>
                       </tr>
                       <tr>
-                        <!-- <td><input class=\"btn1\" name=\"\" type=\"submit\" value=\"Отправить\"></td> -->
+                        <td><input class=\"btn1\" name=\"\" type=\"submit\" value=\"Отправить\"></td>
                       </tr>
                     </table>
+                    </form>
                 </div><!--end form-->
             </div><!--end b-otziv-->
             <div class=\"big-tel\">

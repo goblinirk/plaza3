@@ -1,12 +1,16 @@
 {% extends "views/layouts/inner.twig" %}
 
 {% block innercontent %}
+	
+	{% set current = curr %}
 
 	<h1>Галерея</h1>
 
 	{% set qwe = this.widget('zii.widgets.CListView', {
 		'dataProvider':dataProvider,
 		'itemView':'_view',
+		'template':'{items}',
+		'viewData': {'curr':curr},
 	}, true) %}
 
 	{{ qwe | raw }}

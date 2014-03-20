@@ -111,11 +111,11 @@ class SiteController extends Controller
 			$i=0;
 			foreach ($model[$_POST['index']-1] as $key => $value) {
 	            if($value->param == 'link')
-					$model[$_POST['index']-1][$i]->value = $_POST['Pages']['link'];
+					$model[$_POST['index']-1][$i]->value = $_POST['Pages']['owner_id'];
 				if($value->param == 'label')
 					$model[$_POST['index']-1][$i]->value = $_POST['Pages']['label'];
 				if($value->param == 'image')
-					$model[$_POST['index']-1][$i]->value = $_POST['Pages']['image'];
+					$model[$_POST['index']-1][$i]->value = $_POST['Pages']['ajaxthumb'];
 
 				$model[$_POST['index']-1][$i]->save();
 				$good = true;

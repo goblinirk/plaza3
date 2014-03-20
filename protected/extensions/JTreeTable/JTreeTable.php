@@ -71,12 +71,46 @@ class JTreeTable extends CGridView
         $id=$this->itemsCssId;
 
         $js='$("#'.$id.'").find("tr").each(function(){ 
-            var curr = $(this); 
-            if(curr.attr("data-tt-parent-id") !== 0){ 
-                var pid = curr.attr("data-tt-parent-id"); 
-                $("#'.$id.'").find("tr[data-tt-id="+pid+"]").after(curr); 
-            } });';
+               var curr = $(this); 
+               if(curr.attr("data-tt-parent-id") !== 0){ 
+                    var pid = curr.attr("data-tt-parent-id"); 
+                    childs = $("#'.$id.'").find("tr[data-tt-id="+pid+"]"); 
+                    var rowsArray = [];
+                    for(var i = 0; i<childs.length; i++)
+                        rowsArray.push(childs[i]);
+
+                    var compare = function(rowA, rowB) {
+                        return rowA.attr("data-tt-sort") - rowB.attr("data-tt-sort");
+                    };
+
+                    rowsArray.sort(compare);
+
+                    for(var i=0; i<rowsArray.length; i++)
+                        $(rowsArray[i]).after(curr);
+               } 
+            });';
+
         $js.='$("#'.$id.'").treetable('.$jstree_options.');';
+
+        $js.='$("#'.$id.'").find("tr").each(function(){ 
+               var curr = $(this); 
+               if(curr.attr("data-tt-parent-id") !== 0){ 
+                    var pid = curr.attr("data-tt-parent-id"); 
+                    childs = $("#'.$id.'").find("tr[data-tt-id="+pid+"]"); 
+                    var rowsArray = [];
+                    for(var i = 0; i<childs.length; i++)
+                        rowsArray.push(childs[i]);
+
+                    var compare = function(rowA, rowB) {
+                        return rowA.attr("data-tt-sort") - rowB.attr("data-tt-sort");
+                    };
+
+                    rowsArray.sort(compare);
+
+                    for(var i=0; i<rowsArray.length; i++)
+                        $(rowsArray[i]).after(curr);
+               } 
+            });';
 
         $cs = Yii::app()->getClientScript();
 
@@ -121,6 +155,7 @@ class JTreeTable extends CGridView
         //$htmlOptions['id']='node-'.$data[$this->primaryColumn];
         $htmlOptions['data-tt-id']=$data[$this->primaryColumn];
         $htmlOptions['data-tt-parent-id']=$data[$this->parentColumn];
+        $htmlOptions['data-tt-sort']=$data['sort'];
 
         if(!empty($class))
         {

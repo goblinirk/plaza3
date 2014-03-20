@@ -90,7 +90,9 @@ class __TwigTemplate_3b103bfe3b7354a92dc0fad6fea905277d1afec48c1d9408e8d3e739f47
                 ";
         // line 34
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
-        echo $this->getAttribute($_this_, "widget", array(0 => "Gallery", 1 => array("rootId" => 1, "label" => "Наши работы", "showdesc" => false), 2 => true), "method");
+        if (isset($context["registry"])) { $_registry_ = $context["registry"]; } else { $_registry_ = null; }
+        if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
+        echo $this->getAttribute($_this_, "widget", array(0 => "Gallery", 1 => array("rootId" => $this->getAttribute($_registry_, "sg", array(0 => $this->getAttribute($_model_, "id")), "method"), "label" => "Наши работы", "showdesc" => false), 2 => true), "method");
         echo "
             </div><!--end bs-jobs-->
             <div class=\"b-otziv\">
@@ -98,7 +100,8 @@ class __TwigTemplate_3b103bfe3b7354a92dc0fad6fea905277d1afec48c1d9408e8d3e739f47
         // line 37
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
-        echo $this->getAttribute($_this_, "widget", array(0 => "Otziv", 1 => array("pageId" => $this->getAttribute($_model_, "id")), 2 => true), "method");
+        if (isset($context["registry"])) { $_registry_ = $context["registry"]; } else { $_registry_ = null; }
+        echo $this->getAttribute($_this_, "widget", array(0 => "Otziv", 1 => array("pageId" => $this->getAttribute($_model_, "id"), "visible" => $this->getAttribute($_registry_, "fbs", array(0 => $this->getAttribute($_model_, "id")), "method")), 2 => true), "method");
         echo "
                 <div class=\"form\">
                     <h2>Оставить заявку</h2>
@@ -142,6 +145,6 @@ class __TwigTemplate_3b103bfe3b7354a92dc0fad6fea905277d1afec48c1d9408e8d3e739f47
 
     public function getDebugInfo()
     {
-        return array (  99 => 37,  92 => 34,  84 => 30,  79 => 29,  71 => 26,  68 => 25,  60 => 19,  55 => 18,  52 => 17,  49 => 16,  40 => 9,  35 => 8,  31 => 6,  28 => 5,);
+        return array (  101 => 37,  92 => 34,  84 => 30,  79 => 29,  71 => 26,  68 => 25,  60 => 19,  55 => 18,  52 => 17,  49 => 16,  40 => 9,  35 => 8,  31 => 6,  28 => 5,);
     }
 }

@@ -16,13 +16,12 @@ class __TwigTemplate_1fdcd208b9b821b8f51f0dcb3245909484057b27847b598e39a03814a15
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<div class=\"view\" style=\"clear: both;margin-bottom: 138px;\">
-
-\t";
-        // line 3
-        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Gallery", 1 => array("rootId" => $this->getAttribute((isset($context["data"]) ? $context["data"] : null), "id")), 2 => true), "method");
-        echo "
-</div><br /><br />";
+        if ((($this->getAttribute((isset($context["data"]) ? $context["data"] : null), "owner_id") == (isset($context["curr"]) ? $context["curr"] : null)) || ($this->getAttribute((isset($context["data"]) ? $context["data"] : null), "id") == (isset($context["curr"]) ? $context["curr"] : null)))) {
+            // line 2
+            echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Gallery", 1 => array("rootId" => $this->getAttribute((isset($context["data"]) ? $context["data"] : null), "id")), 2 => true), "method");
+            echo "
+";
+        }
     }
 
     public function getTemplateName()
@@ -37,6 +36,6 @@ class __TwigTemplate_1fdcd208b9b821b8f51f0dcb3245909484057b27847b598e39a03814a15
 
     public function getDebugInfo()
     {
-        return array (  23 => 3,  19 => 1,);
+        return array (  21 => 2,  19 => 1,);
     }
 }

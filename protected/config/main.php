@@ -78,6 +78,8 @@ return array(
 				
 				'news/'								=>'pages/shownewslist',
 				'news/<id:.*?>'						=>'pages/shownews',
+
+				'gallery/<id:.*?>'					=>'galleries/index',
 				
 				'feedback/send/'					=>'FbMessages/create',
 				'feedback/sendotziv/'				=>'FbMessages/create_otz',

@@ -45,9 +45,10 @@ class GalleryImagesController extends Controller
 		);
 	}
 	public function actionUploadThumb() {
-        $model = new GalleryImages;
+        
         //echo print_r($_POST,true);
 	    if(isset($_POST['GalleryImages'], $_FILES['GalleryImages'])) {
+	    	$model = new GalleryImages;
 	        $model->attributes=$_POST['GalleryImages'];
 	        $rnd = rand(0123456789, 9876543210);
 	    	$timeStamp = time();
@@ -61,6 +62,22 @@ class GalleryImagesController extends Controller
 	        }
 	        echo $fileName;
 		}//*/
+		if(isset($_POST['Galleries'], $_FILES['Galleries'])) {
+			$model = new Galleries;
+	        $model->attributes=$_POST['Galleries'];
+	        $rnd = rand(0123456789, 9876543210);
+	    	$timeStamp = time();
+	        $uploadedFile = CUploadedFile::getInstance($model, 'ajaxthumb');
+	        if ($uploadedFile != null) {
+		        $fileName = "{$rnd}_{$timeStamp}_{$uploadedFile}";
+		    }
+
+	        if (!empty($uploadedFile)) {
+	            $uploadedFile->saveAs(Yii::app()->basePath . '/../images/' . $fileName);
+	        }
+	        echo $fileName;
+		}//*/
+
 	}
 
 	/**

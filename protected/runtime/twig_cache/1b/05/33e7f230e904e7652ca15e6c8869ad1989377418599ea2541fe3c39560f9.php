@@ -97,44 +97,21 @@ class __TwigTemplate_1b0533e7f230e904e7652ca15e6c8869ad1989377418599ea2541fe3c39
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         echo $this->getAttribute($_this_, "widget", array(0 => "SysRegistry", 1 => array("param" => "slogan"), 2 => true), "method");
         echo "</div><!--end slogan-->
-        <div class=\"top-banner\"><a href=\"#\"><img alt=\"\" src=\"";
+        ";
         // line 41
-        if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_App_, "baseUrl"), "html", null, true);
-        echo "/images/zamer.png\"></a></div>
+        if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
+        echo $this->getAttribute($_this_, "widget", array(0 => "SysRegistry", 1 => array("param" => "banner"), 2 => true), "method");
+        echo "
     </header>
-    <div class=\"slider\">
-            <div id=\"slides\">
-                <div class=\"slides_container\">
-                    <a href=\"#\"><img src=\"";
-        // line 46
-        if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_App_, "baseUrl"), "html", null, true);
-        echo "/images/slide.png\" alt=\"Slide 1\"></a>
-                    <a href=\"#\"><img src=\"";
-        // line 47
-        if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_App_, "baseUrl"), "html", null, true);
-        echo "/images/slide2.jpg\" alt=\"Slide 1\"></a>
-                    <a href=\"#\"><img src=\"";
-        // line 48
-        if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_App_, "baseUrl"), "html", null, true);
-        echo "/images/slide3.jpg\" alt=\"Slide 1\"></a>
-                    <a href=\"#\"><img src=\"";
-        // line 49
-        if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_App_, "baseUrl"), "html", null, true);
-        echo "/images/slide4.jpg\" alt=\"Slide 1\"></a>
-                </div>
-                <a href=\"#\" class=\"prev\"></a>
-                <a href=\"#\" class=\"next\"></a>
-                
-            </div>    
-    </div><!--end slider-->
+    ";
+        // line 43
+        if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
+        echo $this->getAttribute($_this_, "widget", array(0 => "SysRegistry", 1 => array("param" => "slider", "rootId" => 2), 2 => true), "method");
+        echo "
+    
     <div class=\"circles\">
         ";
-        // line 57
+        // line 46
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         echo $this->getAttribute($_this_, "widget", array(0 => "SysRegistry", 1 => array("param" => "sphere_module"), 2 => true), "method");
         echo "
@@ -143,14 +120,14 @@ class __TwigTemplate_1b0533e7f230e904e7652ca15e6c8869ad1989377418599ea2541fe3c39
         <div class=\"titl\">Новости</div>
         <div class=\"news\">
             <span class=\"lenta\"><img alt=\"\" src=\"";
-        // line 62
+        // line 51
         if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_App_, "baseUrl"), "html", null, true);
         echo "/images/lenta.png\"></span>
             <div class=\"title\"><a href=\"/news/42/\">Отделка лоджий и балконов 
 в Иркутске</a></div>
             <div class=\"img\"><img alt=\"\" src=\"";
-        // line 65
+        // line 54
         if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_App_, "baseUrl"), "html", null, true);
         echo "/images/img.png\"></div>
@@ -163,14 +140,14 @@ class __TwigTemplate_1b0533e7f230e904e7652ca15e6c8869ad1989377418599ea2541fe3c39
         </div><!--end news-->
         <div class=\"news\">
             <span class=\"lenta\"><img alt=\"\" src=\"";
-        // line 74
+        // line 63
         if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_App_, "baseUrl"), "html", null, true);
         echo "/images/lenta.png\"></span>
             <div class=\"title\"><a href=\"/news/43/\">Отделка лоджий и балконов 
 в Иркутске</a></div>
             <div class=\"img\"><img alt=\"\" src=\"";
-        // line 77
+        // line 66
         if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_App_, "baseUrl"), "html", null, true);
         echo "/images/img.png\"></div>
@@ -183,14 +160,14 @@ class __TwigTemplate_1b0533e7f230e904e7652ca15e6c8869ad1989377418599ea2541fe3c39
         </div><!--end news-->
         <div class=\"news\">
             <span class=\"lenta\"><img alt=\"\" src=\"";
-        // line 86
+        // line 75
         if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_App_, "baseUrl"), "html", null, true);
         echo "/images/lenta.png\"></span>
             <div class=\"title\"><a href=\"/news/44/\">Отделка лоджий и балконов 
 в Иркутске</a></div>
             <div class=\"img\"><img alt=\"\" src=\"";
-        // line 89
+        // line 78
         if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
         echo twig_escape_filter($this->env, $this->getAttribute($_App_, "baseUrl"), "html", null, true);
         echo "/images/img.png\"></div>
@@ -203,9 +180,9 @@ class __TwigTemplate_1b0533e7f230e904e7652ca15e6c8869ad1989377418599ea2541fe3c39
         </div><!--end news-->
     </div><!--end b-news-->
     ";
-        // line 98
+        // line 87
         $this->displayBlock('maincontent', $context, $blocks);
-        // line 101
+        // line 90
         echo "</div><!--ed alll-->
 <div class=\"f-clear\"></div>
 </div><!--end over-->
@@ -213,17 +190,17 @@ class __TwigTemplate_1b0533e7f230e904e7652ca15e6c8869ad1989377418599ea2541fe3c39
 \t<footer>
         <div class=\"copy\">© 2014 ASGroup</div>
         <div class=\"tel\">";
-        // line 107
+        // line 96
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         echo $this->getAttribute($_this_, "widget", array(0 => "SysRegistry", 1 => array("param" => "phone"), 2 => true), "method");
         echo "</div>
         <div class=\"mail\">";
-        // line 108
+        // line 97
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         echo $this->getAttribute($_this_, "widget", array(0 => "SysRegistry", 1 => array("param" => "email", "maillink" => true), 2 => true), "method");
         echo "</div>
         <div class=\"addr\">";
-        // line 109
+        // line 98
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         echo $this->getAttribute($_this_, "widget", array(0 => "SysRegistry", 1 => array("param" => "address"), 2 => true), "method");
         echo "</div>
@@ -235,10 +212,10 @@ class __TwigTemplate_1b0533e7f230e904e7652ca15e6c8869ad1989377418599ea2541fe3c39
 ";
     }
 
-    // line 98
+    // line 87
     public function block_maincontent($context, array $blocks = array())
     {
-        // line 99
+        // line 88
         echo "
     ";
     }
@@ -255,6 +232,6 @@ class __TwigTemplate_1b0533e7f230e904e7652ca15e6c8869ad1989377418599ea2541fe3c39
 
     public function getDebugInfo()
     {
-        return array (  242 => 99,  239 => 98,  227 => 109,  222 => 108,  217 => 107,  209 => 101,  207 => 98,  194 => 89,  187 => 86,  174 => 77,  167 => 74,  154 => 65,  147 => 62,  138 => 57,  126 => 49,  121 => 48,  116 => 47,  111 => 46,  102 => 41,  97 => 40,  92 => 39,  87 => 38,  77 => 32,  54 => 13,  47 => 10,  42 => 9,  36 => 7,  31 => 6,  25 => 4,  20 => 1,);
+        return array (  219 => 88,  216 => 87,  204 => 98,  199 => 97,  194 => 96,  186 => 90,  184 => 87,  171 => 78,  164 => 75,  151 => 66,  144 => 63,  131 => 54,  124 => 51,  115 => 46,  108 => 43,  102 => 41,  97 => 40,  92 => 39,  87 => 38,  77 => 32,  54 => 13,  47 => 10,  42 => 9,  36 => 7,  31 => 6,  25 => 4,  20 => 1,);
     }
 }

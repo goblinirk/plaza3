@@ -6,6 +6,7 @@ class Gallery extends CWidget
     
     public $rootId=0;
     public $visible=true;
+    public $widget=false;
     public $showdesc=true;
     public $showlabel=true;
     public $label='';
@@ -13,6 +14,10 @@ class Gallery extends CWidget
     public function getGalleryBlock() {
         return $this->rootId?Galleries::model()->genGalleryInfo($this->rootId):false;
     }
+    public function getChildGalleryBlocks($currid) {
+        return Galleries::model()->genChilds($currid);
+    }
+
  
     protected function renderContent() {
         //if($this->rootId == 0)

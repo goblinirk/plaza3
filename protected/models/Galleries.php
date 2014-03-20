@@ -71,6 +71,7 @@ class Galleries extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'owner_id' => 'Родительская категория',
+			'thumb' => 'Миниатюра',
 			'label' => 'Заголовок',
 			'description' => 'Описание',
 			'create_date' => 'Дата создания',
@@ -91,6 +92,15 @@ class Galleries extends CActiveRecord
 			));
 		}
 	}
+	
+	
+	public function genChilds($rid){
+		return $this->findAll(array(
+		    'condition'=>'owner_id=:oid and status=1',
+		    'params'=>array(':oid'=>$rid),
+		));
+	}
+
 	public function genSliderInfo($rid){
 		return $this->findAll(array(
 		    'condition'=>'id=:rid and (status=1 or status=2)',
@@ -118,10 +128,12 @@ class Galleries extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('owner_id',$this->owner_id);
+		$criteria->compare('thumb',$this->thumb,true);
 		$criteria->compare('label',$this->label,true);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('create_date',$this->create_date,true);
 		$criteria->compare('status',$this->status);
+		$criteria->order = 'owner_id, sort';
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -146,6 +158,16 @@ class Galleries extends CActiveRecord
         }
         return self::$_items;
 	}
+
+	protected function beforeSave()
+    {
+    	if(parent::beforeSave()){
+    		unset($_POST['ajaxthumb']);
+    		return true;
+    	}else{
+    		return false;
+    	}
+    }
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

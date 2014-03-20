@@ -132,6 +132,7 @@ class GalleryImages extends CActiveRecord
 		$criteria->compare('create_date',$this->create_date,true);
 		$criteria->compare('status',$this->status);
 		$criteria->compare('sort',$this->sort);
+		$criteria->order = 'owner_id, sort';
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

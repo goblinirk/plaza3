@@ -40,6 +40,28 @@
         <span>{{ this.widget('SysRegistry', {'param':'phone'}, true) | raw }}</span></a>
         <div class="slogan">{{ this.widget('SysRegistry', {'param':'slogan'}, true) | raw }}</div><!--end slogan-->
         {{ this.widget('SysRegistry', {'param':'banner'}, true) | raw }}
+        <div class="zammer-form">
+            <h2>Вызвать замерщика</h2>
+            <form method="post" action="/feedback/sendorder1/">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td><input name="" class="pole" value="" placeholder="Имя" type="text"></td>
+              </tr>
+              <tr>
+                <td><input name="" class="pole" value="" placeholder="Электронная почта" type="text"></td>
+              </tr>
+              <tr>
+                <td><input name="" class="pole" value="" placeholder="Номер телефона" type="text"></td>
+              </tr>
+              <tr>
+                <td><textarea name="" cols="" rows="" placeholder="Сообщение"></textarea></td>
+              </tr>
+              <tr>
+                <td><input class="btn1" name="" type="submit" value="Отправить"></td>
+              </tr>
+            </table>
+            </form>
+        </div><!--end form-->
     </header>
     <div class="container">
     {% block innercontent %}

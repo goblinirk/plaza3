@@ -105,11 +105,11 @@ class __TwigTemplate_a912db863e22b261fa2d4175b4a17665b39a4ce02948cad8405f1d946a0
         // line 33
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
-        $context["qwert"] = $this->getAttribute($_this_, "widget", array(0 => "ext.JTreeTable.JTreeTable", 1 => array("id" => "pages-grid", "dataProvider" => $this->getAttribute($_model_, "search"), "filter" => $_model_, "template" => "{pager} {items} {pager}", "itemsCssClass" => "table table-striped", "primaryColumn" => "id", "parentColumn" => "owner_id", "ajaxUpdate" => "false", "ajaxVar" => "false", "jstree_options" => array("initialState" => "expanded"), "columns" => array(0 => array("name" => "label", "type" => "raw", "value" => "CHtml::link(CHtml::encode(\$data->label.\" [ \".\$data->id.\" ]\"), \$data->editurl)"), 1 => array("name" => "create_date", "value" => "Yii::app()->dateFormatter->format(\"dd MMM y\",strtotime(\$data->create_date))", "filter" => false), 2 => array("class" => "CButtonColumn", "buttons" => array("view" => array("url" => "(\$data->module==\"pages\"? \"/pages/\" : \"/news/\").\$data->id"), "update" => array("url" => "\"/admin/\".(\$data->module==\"pages\"? \"edit_page/\" : \"edit_news/\").\$data->id"))))), 2 => true), "method");
-        // line 71
+        $context["qwert"] = $this->getAttribute($_this_, "widget", array(0 => "ext.JTreeTable.JTreeTable", 1 => array("id" => "pages-grid", "dataProvider" => $this->getAttribute($_model_, "search"), "filter" => $_model_, "template" => "{pager} {items} {pager}", "itemsCssClass" => "table table-striped", "primaryColumn" => "id", "parentColumn" => "owner_id", "ajaxUpdate" => "false", "ajaxVar" => "false", "jstree_options" => array("initialState" => "expanded"), "columns" => array(0 => array("name" => "label", "type" => "raw", "value" => "CHtml::link(CHtml::encode(\$data->label.\" [ \".\$data->id.\" ]\"), \$data->editurl)"), 1 => array("name" => "create_date", "value" => "Yii::app()->dateFormatter->format(\"dd MMM y\",strtotime(\$data->create_date))", "filter" => false), 2 => array("class" => "CButtonColumn", "template" => "{top}{up}{down}{bottom}&nbsp;&nbsp;&nbsp;{view}{update}{delete}", "buttons" => array("view" => array("url" => "(\$data->module==\"pages\"? \"/pages/\" : \"/news/\").\$data->id"), "update" => array("url" => "\"/admin/\".(\$data->module==\"pages\"? \"edit_page/\" : \"edit_news/\").\$data->id"), "top" => array("label" => "В начало списка", "imageUrl" => "/images/go-top.png", "url" => "\"/pages/movetop/\".\$data->id", "visible" => "true"), "up" => array("label" => "На один уровень вверх", "url" => "\"/pages/moveup/\".\$data->id", "visible" => "true", "imageUrl" => "/images/go-up.png"), "down" => array("label" => "На один уровень вниз", "imageUrl" => "/images/go-down.png", "url" => "\"/pages/movedown/\".\$data->id", "visible" => "true"), "bottom" => array("label" => "В конец списка", "url" => "\"/pages/movebottom/\".\$data->id", "visible" => "true", "imageUrl" => "/images/go-bottom.png"))))), 2 => true), "method");
+        // line 95
         echo "
 \t";
-        // line 72
+        // line 96
         if (isset($context["qwert"])) { $_qwert_ = $context["qwert"]; } else { $_qwert_ = null; }
         echo $_qwert_;
         echo "
@@ -129,6 +129,6 @@ class __TwigTemplate_a912db863e22b261fa2d4175b4a17665b39a4ce02948cad8405f1d946a0
 
     public function getDebugInfo()
     {
-        return array (  113 => 72,  110 => 71,  106 => 33,  102 => 31,  99 => 30,  93 => 28,  75 => 25,  65 => 23,  61 => 21,  47 => 10,  41 => 8,  36 => 7,  33 => 6,  30 => 5,  25 => 3,);
+        return array (  113 => 96,  110 => 95,  106 => 33,  102 => 31,  99 => 30,  93 => 28,  75 => 25,  65 => 23,  61 => 21,  47 => 10,  41 => 8,  36 => 7,  33 => 6,  30 => 5,  25 => 3,);
     }
 }

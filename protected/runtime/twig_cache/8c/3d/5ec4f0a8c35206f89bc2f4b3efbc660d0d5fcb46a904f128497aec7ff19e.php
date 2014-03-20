@@ -28,16 +28,21 @@ class __TwigTemplate_8c3d5ec4f0a8c35206f89bc2f4b3efbc660d0d5fcb46a904f128497aec7
     public function block_innercontent($context, array $blocks = array())
     {
         // line 4
+        echo "\t
+\t";
+        // line 5
+        $context["current"] = (isset($context["curr"]) ? $context["curr"] : null);
+        // line 6
         echo "
 \t<h1>Галерея</h1>
 
 \t";
-        // line 7
-        $context["qwe"] = $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "zii.widgets.CListView", 1 => array("dataProvider" => (isset($context["dataProvider"]) ? $context["dataProvider"] : null), "itemView" => "_view"), 2 => true), "method");
-        // line 11
+        // line 9
+        $context["qwe"] = $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "zii.widgets.CListView", 1 => array("dataProvider" => (isset($context["dataProvider"]) ? $context["dataProvider"] : null), "itemView" => "_view", "template" => "{items}", "viewData" => array("curr" => (isset($context["curr"]) ? $context["curr"] : null))), 2 => true), "method");
+        // line 15
         echo "
 \t";
-        // line 12
+        // line 16
         echo (isset($context["qwe"]) ? $context["qwe"] : null);
         echo "
 
@@ -56,6 +61,6 @@ class __TwigTemplate_8c3d5ec4f0a8c35206f89bc2f4b3efbc660d0d5fcb46a904f128497aec7
 
     public function getDebugInfo()
     {
-        return array (  41 => 12,  38 => 11,  36 => 7,  31 => 4,  28 => 3,);
+        return array (  46 => 16,  43 => 15,  41 => 9,  36 => 6,  34 => 5,  31 => 4,  28 => 3,);
     }
 }

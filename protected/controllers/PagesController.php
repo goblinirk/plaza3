@@ -132,7 +132,7 @@ class PagesController extends Controller
 		$model = new Pages;
 
 	    $criteria=new CDbCriteria;
-		$criteria->select='sort';
+		$criteria->select='id, sort';
 		$criteria->condition='owner_id=:oid and sort < :cs';
 		$criteria->order='sort DESC';
 		$criteria->limit=1;
@@ -140,27 +140,17 @@ class PagesController extends Controller
 
 		$previtem = $model->model()->find($criteria);
 
-		print_r($previtem->sort);
-		echo '<br />';
-		echo $item->sort;
-		echo '-------------';
+		if($previtem){
+			$temp = $item->sort;
+			$item->sort = $previtem->sort;
+			$item->save();
+	    
+			$prevmodel = Pages::model()->findByPk($previtem->id);
+			$prevmodel->sort = $temp;
+			$prevmodel->save();
+		}
 
-		$tmp = $item->sort;
-		$item->sort = $previtem->sort;
-		$previtem->sort = $tmp;
-
-		print_r($previtem->sort);
-		echo '<br />';
-		echo $item->sort;
-
-		//$tmp = $model->sort;
-	    //$model->sort = $item->sort;
-	    //$previtem->save();
-
-	    //$item->sort = $tmp;
-	    $item->save();
-	    $previtem->save();
-	    //$this->redirect(array('/admin/pages/'));
+	    $this->redirect(array('/admin/pages/'));
 	}
 	public function actionMovedown(){
 
@@ -168,16 +158,27 @@ class PagesController extends Controller
 			throw new CHttpException(404,'The requested page does not exist.');
 
 		$item = $this->loadModel();
-		$model = $item->model();
+
+		$model = new Pages;
+
 	    $criteria=new CDbCriteria;
-		$criteria->select='sort';
-		$criteria->condition='owner_id=:oid';
-		$criteria->params=array(':oid' => $item->owner_id);
-		$row = $model->model()->find($criteria);
-		$maxsort = $row['sort']-1;
+		$criteria->select='id, sort';
+		$criteria->condition='owner_id=:oid and sort > :cs';
+		$criteria->order='sort ASC';
+		$criteria->limit=1;
+		$criteria->params=array(':oid' => $item->owner_id, ':cs'=>$item->sort);
+
+		$previtem = $model->model()->find($criteria);
+
+		if($previtem){
+			$temp = $item->sort;
+			$item->sort = $previtem->sort;
+			$item->save();
 	    
-	    $item->sort = $maxsort;
-	    $item->save();
+			$prevmodel = Pages::model()->findByPk($previtem->id);
+			$prevmodel->sort = $temp;
+			$prevmodel->save();
+		}
 
 	    $this->redirect(array('/admin/pages/'));
 	}

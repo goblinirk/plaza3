@@ -36,14 +36,220 @@ class GalleriesController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','create','update','delete',
-								 'show_child_images','create_image','update_image','delete_image'),
+				'actions'=>array(
+					'admin','create','update','delete',
+					'show_child_images','create_image','update_image','delete_image',
+					'movetop',
+					'moveup',
+					'movedown',
+					'movebottom',
+					'moveimagetop',
+					'moveimageup',
+					'moveimagedown',
+					'moveimagebottom'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
+	}
+
+	public function actionMovetop(){
+
+		if(!isset($_GET['id']))
+			throw new CHttpException(404,'The requested page does not exist.');
+
+		$item = $this->loadModel();
+		$model = $item->model();
+	    $criteria=new CDbCriteria;
+		$criteria->select='min(sort) AS sort';
+		$criteria->condition='owner_id=:oid';
+		$criteria->params=array(':oid' => $item->owner_id);
+		$row = $model->model()->find($criteria);
+		$minsort = $row['sort']-1;
+	    
+	    $item->sort = $minsort;
+	    $item->save();
+
+	    $this->redirect(array('/admin/galleries/'));
+	}
+	public function actionMoveup(){
+
+		if(!isset($_GET['id']))
+			throw new CHttpException(404,'The requested page does not exist.');
+
+		$item = $this->loadModel();
+
+		$model = new Galleries;
+
+	    $criteria=new CDbCriteria;
+		$criteria->select='id, sort';
+		$criteria->condition='owner_id=:oid and sort < :cs';
+		$criteria->order='sort DESC';
+		$criteria->limit=1;
+		$criteria->params=array(':oid' => $item->owner_id, ':cs'=>$item->sort);
+
+		$previtem = $model->model()->find($criteria);
+
+		if($previtem){
+			$temp = $item->sort;
+			$item->sort = $previtem->sort;
+			$item->save();
+	    
+			$prevmodel = Galleries::model()->findByPk($previtem->id);
+			$prevmodel->sort = $temp;
+			$prevmodel->save();
+		}
+
+	    $this->redirect(array('/admin/galleries/'));
+	}
+	public function actionMovedown(){
+
+		if(!isset($_GET['id']))
+			throw new CHttpException(404,'The requested page does not exist.');
+
+		$item = $this->loadModel();
+
+		$model = new Galleries;
+
+	    $criteria=new CDbCriteria;
+		$criteria->select='id, sort';
+		$criteria->condition='owner_id=:oid and sort > :cs';
+		$criteria->order='sort ASC';
+		$criteria->limit=1;
+		$criteria->params=array(':oid' => $item->owner_id, ':cs'=>$item->sort);
+
+		$previtem = $model->model()->find($criteria);
+
+		if($previtem){
+			$temp = $item->sort;
+			$item->sort = $previtem->sort;
+			$item->save();
+	    
+			$prevmodel = Galleries::model()->findByPk($previtem->id);
+			$prevmodel->sort = $temp;
+			$prevmodel->save();
+		}
+
+	    $this->redirect(array('/admin/galleries/'));
+	}
+	public function actionMovebottom(){
+
+		if(!isset($_GET['id']))
+			throw new CHttpException(404,'The requested page does not exist.');
+
+		$item = $this->loadModel();
+		$model = $item->model();
+	    $criteria=new CDbCriteria;
+		$criteria->select='max(sort) AS sort';
+		$criteria->condition='owner_id=:oid';
+		$criteria->params=array(':oid' => $item->owner_id);
+		$row = $model->model()->find($criteria);
+		$maxsort = $row['sort']+1;
+	    
+	    $item->sort = $maxsort;
+	    $item->save();
+
+	    $this->redirect(array('/admin/galleries/'));
+	}
+	public function actionMoveimagetop(){
+
+		if(!isset($_GET['id']))
+			throw new CHttpException(404,'The requested page does not exist.');
+
+		$item = $this->loadImageModel();
+		$model = $item->model();
+	    $criteria=new CDbCriteria;
+		$criteria->select='min(sort) AS sort';
+		$criteria->condition='owner_id=:oid';
+		$criteria->params=array(':oid' => $item->owner_id);
+		$row = $model->model()->find($criteria);
+		$minsort = $row['sort']-1;
+	    
+	    $item->sort = $minsort;
+	    $item->save();
+
+	    $this->redirect(array('/admin/gallery_images/'.$item->owner_id));
+	}
+	public function actionMoveimageup(){
+
+		if(!isset($_GET['id']))
+			throw new CHttpException(404,'The requested page does not exist.');
+
+		$item = $this->loadImageModel();
+
+		$model = new GalleryImages;
+
+	    $criteria=new CDbCriteria;
+		$criteria->select='id, sort';
+		$criteria->condition='owner_id=:oid and sort < :cs';
+		$criteria->order='sort DESC';
+		$criteria->limit=1;
+		$criteria->params=array(':oid' => $item->owner_id, ':cs'=>$item->sort);
+
+		$previtem = $model->model()->find($criteria);
+
+		if($previtem){
+			$temp = $item->sort;
+			$item->sort = $previtem->sort;
+			$item->save();
+	    
+			$prevmodel = GalleryImages::model()->findByPk($previtem->id);
+			$prevmodel->sort = $temp;
+			$prevmodel->save();
+		}
+
+	    $this->redirect(array('/admin/gallery_images/'.$item->owner_id));
+	}
+	public function actionMoveimagedown(){
+
+		if(!isset($_GET['id']))
+			throw new CHttpException(404,'The requested page does not exist.');
+
+		$item = $this->loadImageModel();
+
+		$model = new GalleryImages;
+
+	    $criteria=new CDbCriteria;
+		$criteria->select='id, sort';
+		$criteria->condition='owner_id=:oid and sort > :cs';
+		$criteria->order='sort ASC';
+		$criteria->limit=1;
+		$criteria->params=array(':oid' => $item->owner_id, ':cs'=>$item->sort);
+
+		$previtem = $model->model()->find($criteria);
+
+		if($previtem){
+			$temp = $item->sort;
+			$item->sort = $previtem->sort;
+			$item->save();
+	    
+			$prevmodel = GalleryImages::model()->findByPk($previtem->id);
+			$prevmodel->sort = $temp;
+			$prevmodel->save();
+		}
+
+	    $this->redirect(array('/admin/gallery_images/'.$item->owner_id));
+	}
+	public function actionMoveimagebottom(){
+
+		if(!isset($_GET['id']))
+			throw new CHttpException(404,'The requested page does not exist.');
+
+		$item = $this->loadImageModel();
+		$model = $item->model();
+	    $criteria=new CDbCriteria;
+		$criteria->select='max(sort) AS sort';
+		$criteria->condition='owner_id=:oid';
+		$criteria->params=array(':oid' => $item->owner_id);
+		$row = $model->model()->find($criteria);
+		$maxsort = $row['sort']+1;
+	    
+	    $item->sort = $maxsort;
+	    $item->save();
+
+	    $this->redirect(array('/admin/gallery_images/'.$item->owner_id));
 	}
 
 	public function actionShow_child_images()
@@ -83,10 +289,12 @@ class GalleriesController extends Controller
 		if(isset($_POST['Galleries']))
 		{
 			$model->attributes=$_POST['Galleries'];
+			$model->thumb=$_POST['Galleries']['thumb'];
 			if($model->save())
 				$this->redirect(array('admin/galleries/'));
 		}
 
+		$model->thumb = '';
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -159,10 +367,11 @@ class GalleriesController extends Controller
 		if(isset($_POST['Galleries']))
 		{
 			$model->attributes=$_POST['Galleries'];
+			$model->thumb=$_POST['Galleries']['thumb'];
 			if($model->save())
 				$this->redirect(array('admin/galleries/'));
 		}
-
+		if(empty($model->thumb)) $model->thumb = '';
 		$this->render('update',array(
 			'model'=>$model,
 		));
@@ -188,11 +397,14 @@ class GalleriesController extends Controller
 	 *********************/
 	public function actionIndex()
 	{
+		$curr = isset($_GET['id'])?$_GET['id']:0;
+		$_GET['id'] = isset($_GET['id'])?$_GET['id']:0;
 		$dataProvider=new CActiveDataProvider('Galleries');
 		$dataProvider2=new CActiveDataProvider('GalleryImages');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 			'dataProvider2'=>$dataProvider2,
+			'curr'=>$curr,
 		));
 	}
 
@@ -218,16 +430,24 @@ class GalleriesController extends Controller
 	 * @return Galleries the loaded model
 	 * @throws CHttpException
 	 */
-	public function loadModel($id)
+	public function loadModel($id=0)
 	{
-		$model=Galleries::model()->findByPk($id);
+		if(isset($_GET['id']))
+			$model=Galleries::model()->findByPk($_GET['id']);
+		else
+			$model=Galleries::model()->findByPk($id);
+
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
 	}
-	public function loadImageModel($id)
+	public function loadImageModel($id=0)
 	{
-		$model=GalleryImages::model()->findByPk($id);
+		if(isset($_GET['id']))
+			$model=GalleryImages::model()->findByPk($_GET['id']);
+		else
+			$model=GalleryImages::model()->findByPk($id);
+
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

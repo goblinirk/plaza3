@@ -1,7 +1,7 @@
 <div class="form">
 
 {% set form = this.beginWidget('CActiveForm', {
-    'id': 'pages-form',
+    'id': 'gallery-images-form',
     'enableAjaxValidation': false,
 }) %}
 
@@ -12,6 +12,24 @@
         {{ form.labelEx(model, 'owner_id') | raw }}
         {{ form.dropDownList(model, 'owner_id', model.items) | raw }}
         {{ form.error(model, 'owner_id') | raw }}
+    </div><!-- /.row -->
+
+    <div class="row">
+        {{ form.labelEx(model, 'thumb') | raw }}
+        {{ form.fileField(model, 'ajaxthumb', {'id':'forum_image'}) | raw }}
+        {{ form.hiddenField(model, 'thumb', {'id':'real_thumb'}) | raw }}
+        {{ form.error(model, 'thumb') | raw }}
+        {% if model.thumb %}
+            <img style="margin: 0px 20px 0px 0px;" class="preview" src="/images/{{ model.thumb }}" width="80" />
+        {% endif %}
+        <a href="" class="btn btn-info btn-lg" onclick="return uploadImage();">Выбрать</a>
+        {{ C.Html.htmlButton('Загрузить',{
+                'onclick':'javascript: send();',
+                'id':'post-submit-btn',
+                'class':'btn btn-success btn-lg post_submit',
+            }, true) | raw
+        }}
+        <a href="" class="btn btn-danger btn-lg" onclick="return clearImage();">Очистить</a>
     </div><!-- /.row -->
 
     <div class="row">
@@ -38,5 +56,9 @@
 	</div>
 
 {% do this.endWidget %}
+
+{{ void(App.clientScript.registerCoreScript('jquery')) }}
+{{ void(App.clientScript.registerCoreScript('jquery.ui')) }}
+{{ void(App.clientScript.registerScriptFile('/scripts/upload.js')) }}
 
 </div><!-- form -->
