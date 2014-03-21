@@ -50,13 +50,15 @@ class __TwigTemplate_9bfaf1109afb9cba180114b15f0963a39a650cd4a9222d98cd24ee4047e
         echo "/scripts/slides.min.jquery.js\"></script>
 \t<script type=\"text/javascript\">
 \t\t\$(function(){
-\t\t\t\$('#slides').slides({
-\t\t\t\tpreload:false,
-\t\t\t\tplay: 5000,
-\t\t\t\tpause: 2500,
-\t\t\t\teffect: 'fade',
-\t\t\t\thoverPause: true
-\t\t\t});
+\t\t\tif(\$('#slides') != undefined){
+                \$('#slides').slides({
+    \t\t\t\tpreload:false,
+    \t\t\t\tplay: 5000,
+    \t\t\t\tpause: 2500,
+    \t\t\t\teffect: 'fade',
+    \t\t\t\thoverPause: true
+    \t\t\t});
+            }
 \t\t});
 \t</script>
 </head>
@@ -67,7 +69,7 @@ class __TwigTemplate_9bfaf1109afb9cba180114b15f0963a39a650cd4a9222d98cd24ee4047e
 \t<div class=\"all\">
 \t\t<nav>
 \t\t\t";
-        // line 32
+        // line 34
         echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "MainMenu", 1 => array("rootId" => 0), 2 => true), "method");
         echo "
 \t\t</nav>
@@ -76,28 +78,50 @@ class __TwigTemplate_9bfaf1109afb9cba180114b15f0963a39a650cd4a9222d98cd24ee4047e
 <div class=\"all\">
 \t<header>
 \t\t<a class=\"logo\" href=\"#\"><img alt=\"\" src=\"";
-        // line 38
+        // line 40
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["App"]) ? $context["App"] : null), "baseUrl"), "html", null, true);
         echo "/images/logo.png\">
         <span>";
-        // line 39
+        // line 41
         echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "SysRegistry", 1 => array("param" => "phone"), 2 => true), "method");
         echo "</span></a>
 \t\t<div class=\"slogan\">";
-        // line 40
+        // line 42
         echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "SysRegistry", 1 => array("param" => "slogan"), 2 => true), "method");
         echo "</div><!--end slogan-->
-        <div class=\"top-banner\"><a href=\"#\"><img alt=\"\" src=\"";
-        // line 41
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["App"]) ? $context["App"] : null), "baseUrl"), "html", null, true);
-        echo "/images/zamer.png\"></a></div>
+        ";
+        // line 43
+        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "SysRegistry", 1 => array("param" => "banner"), 2 => true), "method");
+        echo "
+        <div class=\"zammer-form\">
+            <h2>Вызвать замерщика</h2>
+            <form method=\"post\" action=\"/feedback/sendorder1/\">
+            <table cellspacing=\"0\" cellpadding=\"0\">
+              <tr>
+                <td><input name=\"Order[name]\" class=\"pole\" value=\"\" placeholder=\"Имя\" type=\"text\"></td>
+              </tr>
+              <tr>
+                <td><input name=\"Order[email]\" class=\"pole\" value=\"\" placeholder=\"Электронная почта\" type=\"text\"></td>
+              </tr>
+              <tr>
+                <td><input name=\"Order[phone]\" class=\"pole\" value=\"\" placeholder=\"Номер телефона\" type=\"text\"></td>
+              </tr>
+              <tr>
+                <td><textarea name=\"Order[message]\" cols=\"\" rows=\"\" placeholder=\"Сообщение\"></textarea></td>
+              </tr>
+              <tr>
+                <td><input class=\"btn1\" name=\"\" type=\"submit\" value=\"Отправить\"></td>
+              </tr>
+            </table>
+            </form>
+        </div><!--end form-->
 \t</header>
     <div class=\"container\">
         <div class=\"contact-r\" style=\"width:80%\"> 
             ";
-        // line 45
+        // line 69
         $this->displayBlock('message', $context, $blocks);
-        // line 48
+        // line 72
         echo "        </div><!--end contact-r-->
     </div><!--end container-->
     
@@ -108,15 +132,15 @@ class __TwigTemplate_9bfaf1109afb9cba180114b15f0963a39a650cd4a9222d98cd24ee4047e
 \t<footer>
 \t\t<div class=\"copy\">© 2014 ASGroup</div>
 \t\t<div class=\"tel\">";
-        // line 57
+        // line 81
         echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "SysRegistry", 1 => array("param" => "phone"), 2 => true), "method");
         echo "</div>
         <div class=\"mail\">";
-        // line 58
+        // line 82
         echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "SysRegistry", 1 => array("param" => "email", "maillink" => true), 2 => true), "method");
         echo "</div>
         <div class=\"addr\">";
-        // line 59
+        // line 83
         echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "SysRegistry", 1 => array("param" => "address"), 2 => true), "method");
         echo "</div>
         <div class=\"design\">Разработчик:<a href=\"#\">In-Site</a></div>
@@ -128,10 +152,10 @@ class __TwigTemplate_9bfaf1109afb9cba180114b15f0963a39a650cd4a9222d98cd24ee4047e
 ";
     }
 
-    // line 45
+    // line 69
     public function block_message($context, array $blocks = array())
     {
-        // line 46
+        // line 70
         echo "
             ";
     }
@@ -148,6 +172,6 @@ class __TwigTemplate_9bfaf1109afb9cba180114b15f0963a39a650cd4a9222d98cd24ee4047e
 
     public function getDebugInfo()
     {
-        return array (  135 => 46,  132 => 45,  120 => 59,  116 => 58,  112 => 57,  101 => 48,  99 => 45,  92 => 41,  88 => 40,  84 => 39,  80 => 38,  71 => 32,  49 => 13,  43 => 10,  39 => 9,  30 => 6,  25 => 4,  20 => 1,  69 => 28,  64 => 26,  53 => 17,  50 => 16,  45 => 14,  34 => 7,  31 => 4,  28 => 3,);
+        return array (  159 => 70,  156 => 69,  144 => 83,  140 => 82,  136 => 81,  125 => 72,  123 => 69,  94 => 43,  90 => 42,  86 => 41,  82 => 40,  73 => 34,  49 => 13,  43 => 10,  39 => 9,  34 => 7,  30 => 6,  25 => 4,  20 => 1,);
     }
 }

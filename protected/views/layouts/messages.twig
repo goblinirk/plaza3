@@ -13,13 +13,15 @@
 	<script type="text/javascript" src="{{ App.baseUrl }}/scripts/slides.min.jquery.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			$('#slides').slides({
-				preload:false,
-				play: 5000,
-				pause: 2500,
-				effect: 'fade',
-				hoverPause: true
-			});
+			if($('#slides') != undefined){
+                $('#slides').slides({
+    				preload:false,
+    				play: 5000,
+    				pause: 2500,
+    				effect: 'fade',
+    				hoverPause: true
+    			});
+            }
 		});
 	</script>
 </head>
@@ -38,7 +40,29 @@
 		<a class="logo" href="#"><img alt="" src="{{ App.baseUrl }}/images/logo.png">
         <span>{{ this.widget('SysRegistry', {'param':'phone'}, true) | raw }}</span></a>
 		<div class="slogan">{{ this.widget('SysRegistry', {'param':'slogan'}, true) | raw }}</div><!--end slogan-->
-        <div class="top-banner"><a href="#"><img alt="" src="{{ App.baseUrl }}/images/zamer.png"></a></div>
+        {{ this.widget('SysRegistry', {'param':'banner'}, true) | raw }}
+        <div class="zammer-form">
+            <h2>Вызвать замерщика</h2>
+            <form method="post" action="/feedback/sendorder1/">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td><input name="Order[name]" class="pole" value="" placeholder="Имя" type="text"></td>
+              </tr>
+              <tr>
+                <td><input name="Order[email]" class="pole" value="" placeholder="Электронная почта" type="text"></td>
+              </tr>
+              <tr>
+                <td><input name="Order[phone]" class="pole" value="" placeholder="Номер телефона" type="text"></td>
+              </tr>
+              <tr>
+                <td><textarea name="Order[message]" cols="" rows="" placeholder="Сообщение"></textarea></td>
+              </tr>
+              <tr>
+                <td><input class="btn1" name="" type="submit" value="Отправить"></td>
+              </tr>
+            </table>
+            </form>
+        </div><!--end form-->
 	</header>
     <div class="container">
         <div class="contact-r" style="width:80%"> 

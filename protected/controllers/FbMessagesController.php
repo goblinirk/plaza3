@@ -38,7 +38,7 @@ class FbMessagesController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','fb_contacts','fb_otziv','fb_order'),
+				'actions'=>array('admin','delete','fb_contacts','fb_otziv','fb_order','create_order'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -94,7 +94,7 @@ class FbMessagesController extends Controller
 			
 			if($model->save()){
 				$this->render('message',array(
-					'message'=>'Ваше сообщение успешно отправленно. Наши менеджеры скоро с вами свяжуться.',
+					'message'=>'Ваше сообщение успешно отправленно. Наши менеджеры скоро с Вами свяжуться.',
 					'type'=>'success',
 				));
 			} else {
@@ -144,6 +144,48 @@ class FbMessagesController extends Controller
 			}
 		} else throw new CHttpException(404,'Указанная запись не найдена');
 	}
+	public function actionCreate_order($ord=1)
+	{
+		$model=new FbMessages;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+		//echo $ord;
+		if(isset($_POST['Order']))
+		{
+			//$arr = array('label', 'sender', 'message', 'send_date', 'status');
+			$arr['label'] = 'Новая заявка от '.date("d.m.Y",time());
+			$arr['sender'] = $_POST['Order']['email'];
+			
+			$arr['message'] = '<strong>Сообщение с сайта от '.date("d.m.Y",time()).'</strong><br />';
+			$arr['message'] .= '<strong>Отправитель: </strong>'.$_POST['Order']['name'].'<br />';
+			$arr['message'] .= '<strong>Телефон: </strong>'.$_POST['Order']['phone'].'<br />';
+			$arr['message'] .= '<strong>E-Mail: </strong>'.$_POST['Order']['email'].'<br />';
+			$arr['message'] .= '<strong>Сообщение: </strong>'.$_POST['Order']['message'].'<br />';
+			
+			$arr['send_date'] = date("Y-m-d H:i:s",time());
+			$arr['status'] = 2;
+
+			$model->attributes=$arr;
+			$model->form_id = 2+$ord;
+			$model->page_id = 0;
+			$model->answer= '';
+			$model->answer_date = date("Y-m-d H:i:s",time());
+			
+			if($model->save()){
+				$this->render('message',array(
+					'message'=>'Ваше сообщение успешно отправленно. Наши менеджеры скоро с Вами свяжуться.',
+					'type'=>'success',
+				));
+			} else {
+				$this->render('message',array(
+					'message'=>'При отправке сообщения возникли проблемы. Пожалуйста попробуйте еще раз через некоторое время.',
+					'type'=>'error',
+				));
+			}
+		} else throw new CHttpException(404,'Указанная запись не найдена');
+	}
+
 
 	/**
 	 * Updates a particular model.
@@ -227,14 +269,16 @@ class FbMessagesController extends Controller
 			'model'=>$model,
 		));
 	}
-	public function actionFb_order() {
+	public function actionFb_order($ord=1) {
+		//echo $ord;
+		//die();
 		$model=new FbMessages('search');
 		$model->unsetAttributes();  // clear any default values
 
 		if(isset($_GET['FbMessages']))
 			$model->attributes=$_GET['FbMessages'];
 
-		$model->form_id = 3;
+		$model->form_id = $ord+2;
 
 		$this->render('fb_contacts',array(
 			'model'=>$model,

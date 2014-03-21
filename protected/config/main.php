@@ -17,6 +17,8 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+	    'ext.yii-tinymce.*',
+	    'ext.yii-elfinder.*',
 	),
 
 	'modules'=>array(
@@ -83,11 +85,14 @@ return array(
 				
 				'feedback/send/'					=>'FbMessages/create',
 				'feedback/sendotziv/'				=>'FbMessages/create_otz',
+				'feedback/sendorder1/'				=>'FbMessages/create_order/ord/1',
+				'feedback/sendorder2/'				=>'FbMessages/create_order/ord/2',
 				
 				'admin/feedback/'					=>'FbMessages/admin',
 				'admin/fb_contacts/'				=>'FbMessages/fb_contacts',
 				'admin/fb_otziv/'					=>'FbMessages/fb_otziv',
-				'admin/fb_order/'					=>'FbMessages/fb_order',
+				'admin/fb_order1/'					=>'FbMessages/fb_order/ord/1',
+				'admin/fb_order2/'					=>'FbMessages/fb_order/ord/2',
 				'admin/fbshow/<id:\d+>/'			=>'fbMessages/view',
 				
 				'admin/modules/'					=>'site/admin_modules',
@@ -117,6 +122,8 @@ return array(
 				'admin/edit_image/<id:\d+>/'		=>'galleries/update_image',
 				'admin/delete_image/<id:\d+>/'		=>'galleries/delete_image',
 				'galleryimages/uploadthumb'			=>'GalleryImages/uploadthumb',
+
+				'admin/elfinder/connector'=>'Elfinder/connector',
 
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'			=>'<controller>/<action>',

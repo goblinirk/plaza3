@@ -100,25 +100,27 @@ class __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece0
         echo "
         ";
         // line 45
-        echo $this->getAttribute((isset($context["form"]) ? $context["form"] : null), "textArea", array(0 => (isset($context["model"]) ? $context["model"] : null), 1 => "short_text", 2 => array("rows" => 6, "cols" => 50)), "method");
+        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "ext.yii-tinymce.TinyMce", 1 => array("model" => (isset($context["model"]) ? $context["model"] : null), "attribute" => "short_text", "spellcheckerUrl" => "http://speller.yandex.net/services/tinyspell", "fileManager" => array("class" => "ext.yii-elfinder.TinyMceElFinder", "connectorRoute" => "admin/elfinder/connector"), "htmlOptions" => array("rows" => 6, "cols" => 20)), 2 => true), "method");
+        // line 57
         echo "
         ";
-        // line 46
+        // line 58
         echo $this->getAttribute((isset($context["form"]) ? $context["form"] : null), "error", array(0 => (isset($context["model"]) ? $context["model"] : null), 1 => "short_text"), "method");
         echo "
     </div><!-- /.row -->
 
     <div class=\"row\">
         ";
-        // line 50
+        // line 62
         echo $this->getAttribute((isset($context["form"]) ? $context["form"] : null), "labelEx", array(0 => (isset($context["model"]) ? $context["model"] : null), 1 => "full_text"), "method");
         echo "
         ";
-        // line 51
-        echo $this->getAttribute((isset($context["form"]) ? $context["form"] : null), "textArea", array(0 => (isset($context["model"]) ? $context["model"] : null), 1 => "full_text", 2 => array("rows" => 6, "cols" => 50)), "method");
+        // line 63
+        echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "ext.yii-tinymce.TinyMce", 1 => array("model" => (isset($context["model"]) ? $context["model"] : null), "attribute" => "full_text", "spellcheckerUrl" => "http://speller.yandex.net/services/tinyspell", "fileManager" => array("class" => "ext.yii-elfinder.TinyMceElFinder", "connectorRoute" => "admin/elfinder/connector"), "htmlOptions" => array("rows" => 6, "cols" => 20)), 2 => true), "method");
+        // line 75
         echo "
         ";
-        // line 52
+        // line 76
         echo $this->getAttribute((isset($context["form"]) ? $context["form"] : null), "error", array(0 => (isset($context["model"]) ? $context["model"] : null), 1 => "full_text"), "method");
         echo "
     </div><!-- /.row -->
@@ -127,79 +129,49 @@ class __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece0
 
     <div class=\"row\">
         ";
-        // line 58
+        // line 82
         echo $this->getAttribute((isset($context["form"]) ? $context["form"] : null), "labelEx", array(0 => (isset($context["model"]) ? $context["model"] : null), 1 => "status"), "method");
         echo "
         ";
-        // line 59
+        // line 83
         echo $this->getAttribute((isset($context["form"]) ? $context["form"] : null), "dropDownList", array(0 => (isset($context["model"]) ? $context["model"] : null), 1 => "status", 2 => array("1" => "Опубликована", "0" => "Удалена", "2" => "В архиве")), "method");
         echo "
         ";
-        // line 60
+        // line 84
         echo $this->getAttribute((isset($context["form"]) ? $context["form"] : null), "error", array(0 => (isset($context["model"]) ? $context["model"] : null), 1 => "status"), "method");
         echo "
     </div><!-- /.row -->
 </div>
 
 ";
-        // line 64
+        // line 88
         $this->env->loadTemplate("views/pages/_seoform.twig")->display(array_merge($context, array("model" => (isset($context["model"]) ? $context["model"] : null), "seo" => (isset($context["seo"]) ? $context["seo"] : null), "registry" => (isset($context["registry"]) ? $context["registry"] : null))));
-        // line 65
+        // line 89
         echo "
 \t<div class=\"row buttons\">
 \t\t";
-        // line 67
+        // line 91
         echo $this->getAttribute($this->getAttribute((isset($context["C"]) ? $context["C"] : null), "Html"), "submitButton", array(0 => (($this->getAttribute((isset($context["model"]) ? $context["model"] : null), "isNewRecord")) ? ("Создать") : ("Сохранить"))), "method");
         echo "
 \t</div>
 
 ";
-        // line 70
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "ext.tinymce.SladekTinyMce", 1 => array(), 2 => true), "method"), "html", null, true);
-        echo "
-
-<script>
-    tinymce.init({
-        selector:'textarea',
-        width: 500, 
-        height: 240,
-        language: 'ru',
-        plugins: [
-             \"advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker\",
-             \"searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking\",
-             \"save table contextmenu directionality emoticons template paste textcolor filemanager\"
-       ],
-       image_advtab: true,
-       content_css: \"css/content.css\",
-       toolbar: \"bold italic | alignleft aligncenter alignright alignjustify | fontselect | fontsizeselect | bullist numlist outdent indent | link image | preview media fullpage | forecolor backcolor emoticons\", 
-       style_formats: [
-            {title: 'Bold text', inline: 'b'},
-            {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
-            {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
-            {title: 'Example 1', inline: 'span', classes: 'example1'},
-            {title: 'Example 2', inline: 'span', classes: 'example2'},
-            {title: 'Table styles'},
-            {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
-        ]});
-</script>
-
-";
-        // line 97
+        // line 94
         $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "endWidget");
-        // line 98
+        // line 95
         echo "
 ";
-        // line 99
+        // line 96
         echo twig_escape_filter($this->env, ETwigViewRendererVoidFunction($this->getAttribute($this->getAttribute((isset($context["App"]) ? $context["App"] : null), "clientScript"), "registerScriptFile", array(0 => "/scripts/transliteration.js"), "method")), "html", null, true);
         echo "
 ";
-        // line 100
+        // line 97
         echo twig_escape_filter($this->env, ETwigViewRendererVoidFunction($this->getAttribute($this->getAttribute((isset($context["App"]) ? $context["App"] : null), "clientScript"), "registerScript", array(0 => "translit", 1 => "
     el = document.getElementById('Pages_label');
     el.onkeyup = function(e) { oJS.strNormalize(this); }
     oJS.strNormalize(el);
     "), "method")), "html", null, true);
-        // line 104
+        // line 101
         echo "
 
 </div><!-- form -->";
@@ -217,6 +189,6 @@ class __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece0
 
     public function getDebugInfo()
     {
-        return array (  203 => 104,  197 => 100,  193 => 99,  190 => 98,  188 => 97,  158 => 70,  152 => 67,  148 => 65,  146 => 64,  139 => 60,  135 => 59,  131 => 58,  122 => 52,  118 => 51,  114 => 50,  107 => 46,  103 => 45,  99 => 44,  92 => 39,  90 => 34,  87 => 33,  81 => 31,  79 => 30,  75 => 29,  71 => 28,  67 => 27,  63 => 26,  56 => 22,  52 => 21,  48 => 20,  41 => 16,  37 => 15,  23 => 3,  19 => 1,  38 => 7,  33 => 14,  30 => 5,  25 => 8,);
+        return array (  175 => 101,  169 => 97,  165 => 96,  162 => 95,  160 => 94,  154 => 91,  150 => 89,  148 => 88,  141 => 84,  137 => 83,  133 => 82,  124 => 76,  121 => 75,  119 => 63,  115 => 62,  108 => 58,  105 => 57,  103 => 45,  99 => 44,  92 => 39,  90 => 34,  87 => 33,  81 => 31,  79 => 30,  75 => 29,  71 => 28,  67 => 27,  63 => 26,  56 => 22,  52 => 21,  48 => 20,  41 => 16,  37 => 15,  33 => 14,  25 => 8,  23 => 3,  19 => 1,);
     }
 }

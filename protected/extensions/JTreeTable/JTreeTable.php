@@ -155,7 +155,7 @@ class JTreeTable extends CGridView
         //$htmlOptions['id']='node-'.$data[$this->primaryColumn];
         $htmlOptions['data-tt-id']=$data[$this->primaryColumn];
         $htmlOptions['data-tt-parent-id']=$data[$this->parentColumn];
-        $htmlOptions['data-tt-sort']=$data['sort'];
+        $htmlOptions['data-tt-sort']=isset($data['sort'])?$data['sort']:0;
 
         if(!empty($class))
         {

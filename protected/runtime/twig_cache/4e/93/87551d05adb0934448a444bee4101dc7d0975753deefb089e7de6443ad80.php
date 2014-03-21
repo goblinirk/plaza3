@@ -95,16 +95,16 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
                     <form method=\"post\" action=\"/feedback/sendorder2/\">
                     <table cellspacing=\"0\" cellpadding=\"0\">
                       <tr>
-                        <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Имя\" type=\"text\"></td>
+                        <td><input name=\"Order[name]\" class=\"pole\" value=\"\" placeholder=\"Имя\" type=\"text\"></td>
                       </tr>
                       <tr>
-                        <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Электронная почта\" type=\"text\"></td>
+                        <td><input name=\"Order[email]\" class=\"pole\" value=\"\" placeholder=\"Электронная почта\" type=\"text\"></td>
                       </tr>
                       <tr>
-                        <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Номер телефона\" type=\"text\"></td>
+                        <td><input name=\"Order[phone]\" class=\"pole\" value=\"\" placeholder=\"Номер телефона\" type=\"text\"></td>
                       </tr>
                       <tr>
-                        <td><textarea name=\"\" cols=\"\" rows=\"\" placeholder=\"Сообщение\"></textarea></td>
+                        <td><textarea name=\"Order[message]\" cols=\"\" rows=\"\" placeholder=\"Сообщение\"></textarea></td>
                       </tr>
                       <tr>
                         <td><input class=\"btn1\" name=\"\" type=\"submit\" value=\"Отправить\"></td>

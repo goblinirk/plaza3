@@ -42,13 +42,37 @@
 
     <div class="row">
         {{ form.labelEx(model, 'short_text') | raw }}
-        {{ form.textArea(model, 'short_text', {'rows': 6, 'cols': 50}) | raw }}
+        {{ this.widget('ext.yii-tinymce.TinyMce', {
+            'model' : model,
+            'attribute' : 'short_text',
+            'spellcheckerUrl' : 'http://speller.yandex.net/services/tinyspell',
+            'fileManager' : {
+                'class' : 'ext.yii-elfinder.TinyMceElFinder',
+                'connectorRoute':'admin/elfinder/connector',
+            },
+            'htmlOptions' : {
+                'rows' : 6,
+                'cols' : 20,
+            },
+        }, true) | raw }}
         {{ form.error(model, 'short_text') | raw }}
     </div><!-- /.row -->
 
     <div class="row">
         {{ form.labelEx(model, 'full_text') | raw }}
-        {{ form.textArea(model, 'full_text', {'rows': 6, 'cols': 50}) | raw }}
+        {{ this.widget('ext.yii-tinymce.TinyMce', {
+            'model' : model,
+            'attribute' : 'full_text',
+            'spellcheckerUrl' : 'http://speller.yandex.net/services/tinyspell',
+            'fileManager' : {
+                'class' : 'ext.yii-elfinder.TinyMceElFinder',
+                'connectorRoute':'admin/elfinder/connector',
+            },
+            'htmlOptions' : {
+                'rows' : 6,
+                'cols' : 20,
+            },
+        }, true) | raw }}
         {{ form.error(model, 'full_text') | raw }}
     </div><!-- /.row -->
 
@@ -66,33 +90,6 @@
 	<div class="row buttons">
 		{{ C.Html.submitButton(model.isNewRecord ? 'Создать' : 'Сохранить') | raw }}
 	</div>
-
-{{ this.widget('ext.tinymce.SladekTinyMce', {}, true) }}
-
-<script>
-    tinymce.init({
-        selector:'textarea',
-        width: 500, 
-        height: 240,
-        language: 'ru',
-        plugins: [
-             "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
-             "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-             "save table contextmenu directionality emoticons template paste textcolor filemanager"
-       ],
-       image_advtab: true,
-       content_css: "css/content.css",
-       toolbar: "bold italic | alignleft aligncenter alignright alignjustify | fontselect | fontsizeselect | bullist numlist outdent indent | link image | preview media fullpage | forecolor backcolor emoticons", 
-       style_formats: [
-            {title: 'Bold text', inline: 'b'},
-            {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
-            {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
-            {title: 'Example 1', inline: 'span', classes: 'example1'},
-            {title: 'Example 2', inline: 'span', classes: 'example2'},
-            {title: 'Table styles'},
-            {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
-        ]});
-</script>
 
 {% do this.endWidget %}
 
