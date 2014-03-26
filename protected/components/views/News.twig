@@ -1,0 +1,18 @@
+{% set items = this.getNewsWidget() %}
+{% if items %}
+<div class="titl">Новости</div>
+	{% for item in items %}
+		<div class="news">
+            <span class="lenta"><img alt="" src="{{ App.baseUrl }}/images/lenta.png"></span>
+            <div class="title"><a href="/news/{{ item.id }}/">Отделка лоджий и балконов 
+в Иркутске</a></div>
+            <div class="img"><img alt="" src="{{ App.baseUrl }}/images/{{ item.thumb }}"></div>
+            <div class="right">
+                <div class="txt">
+           			{{ item.short_text }}...
+                </div><!--end txt-->
+                <a href="/news/{{ item.id }}/" class="btn1">Подробнее</a> 
+            </div><!--end right-->
+        </div><!--end news-->
+	{% endfor %}
+{% endif %}

@@ -162,10 +162,11 @@ class __TwigTemplate_b659a687b65f0b2d70aae5f6bc026877209a98b370fbeb20b363fe83d28
 \t\t\t\t\t\t<br /><p style=\"color: #666;\">В данном разделе вы можете читать сообщения пользователей с сайта, настраивать электронный адрес для оповещений с сайта, и отвечать пользователям.</p>
 \t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/fb_contacts/\">Обратная связь</a>
 \t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/fb_otziv/\">Отзывы</a>
-\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/fb_order/\">Заказы</a>
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/fb_order1/\">Заявки</a>
+\t\t\t\t\t\t<a style=\"display: block;padding: 10px 0px;text-align: center;border-top: 1px solid #B8B8B8;\" href=\"/admin/fb_order2/\">Заказ замерщика</a>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"tab-pane ";
-        // line 69
+        // line 70
         if (isset($context["galleryactive"])) { $_galleryactive_ = $context["galleryactive"]; } else { $_galleryactive_ = null; }
         if ($_galleryactive_) {
             echo " active ";
@@ -174,7 +175,7 @@ class __TwigTemplate_b659a687b65f0b2d70aae5f6bc026877209a98b370fbeb20b363fe83d28
 \t\t\t\t\t\t<br /><p style=\"color: #666;\">В данном разделе вы можете редактировать медиа содержимое вашего сайта, создавать новые галереи, загружать изображения и управлять их отображением.</p><p style=\"color: #666;\">Для просмотра, уже загруженных, изображений перейдите в раздел <q>Посмотреть вложенные изображения</q> интересующей вас галереи.</p>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"tab-pane ";
-        // line 72
+        // line 73
         if (isset($context["moduleactive"])) { $_moduleactive_ = $context["moduleactive"]; } else { $_moduleactive_ = null; }
         if ($_moduleactive_) {
             echo " active ";
@@ -187,7 +188,7 @@ class __TwigTemplate_b659a687b65f0b2d70aae5f6bc026877209a98b370fbeb20b363fe83d28
 
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"tab-pane ";
-        // line 79
+        // line 80
         if (isset($context["optionactive"])) { $_optionactive_ = $context["optionactive"]; } else { $_optionactive_ = null; }
         if ($_optionactive_) {
             echo " active ";
@@ -232,6 +233,6 @@ class __TwigTemplate_b659a687b65f0b2d70aae5f6bc026877209a98b370fbeb20b363fe83d28
 
     public function getDebugInfo()
     {
-        return array (  219 => 33,  216 => 32,  191 => 79,  178 => 72,  169 => 69,  157 => 63,  146 => 58,  135 => 53,  126 => 50,  117 => 47,  108 => 44,  99 => 41,  91 => 35,  89 => 32,  77 => 24,  72 => 23,  67 => 22,  53 => 12,  48 => 11,  42 => 9,  37 => 8,  32 => 7,  27 => 6,  20 => 1,);
+        return array (  220 => 33,  217 => 32,  192 => 80,  179 => 73,  170 => 70,  157 => 63,  146 => 58,  135 => 53,  126 => 50,  117 => 47,  108 => 44,  99 => 41,  91 => 35,  89 => 32,  77 => 24,  72 => 23,  67 => 22,  53 => 12,  48 => 11,  42 => 9,  37 => 8,  32 => 7,  27 => 6,  20 => 1,  33 => 6,  30 => 5,  25 => 3,);
     }
 }

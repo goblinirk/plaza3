@@ -67,27 +67,36 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
         echo "    <h1>";
         echo $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "label");
         echo "</h1>
+    ";
+        // line 27
+        $context["qwert"] = $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "BreadCrumbs", 1 => array("rootId" => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "id")), 2 => true), "method");
+        // line 28
+        echo "    ";
+        echo (isset($context["qwert"]) ? $context["qwert"] : null);
+        echo "
+    <br />
+    <br />
     <div class=\"content\">
         <div class=\"b-about\">
             <div class=\"img\"><img alt=\"\" src=\"/images/";
-        // line 29
+        // line 33
         echo $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "thumb");
         echo "\"></div>
             ";
-        // line 30
+        // line 34
         echo $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "full_text");
         echo "
         </div><!--end b-about-->
     </div>
     <div class=\"bs-jobs\">
                 ";
-        // line 34
+        // line 38
         echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Gallery", 1 => array("rootId" => $this->getAttribute((isset($context["registry"]) ? $context["registry"] : null), "sg", array(0 => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "id")), "method"), "label" => "Наши работы", "showdesc" => false, "widget" => true), 2 => true), "method");
         echo "
             </div><!--end bs-jobs-->
             <div class=\"b-otziv\">
                 ";
-        // line 37
+        // line 41
         echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "Otziv", 1 => array("pageId" => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "id"), "visible" => $this->getAttribute((isset($context["registry"]) ? $context["registry"] : null), "fbs", array(0 => $this->getAttribute((isset($context["model"]) ? $context["model"] : null), "id")), "method")), 2 => true), "method");
         echo "
                 <div class=\"form\">
@@ -95,13 +104,13 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
                     <form method=\"post\" action=\"/feedback/sendorder2/\">
                     <table cellspacing=\"0\" cellpadding=\"0\">
                       <tr>
-                        <td><input name=\"Order[name]\" class=\"pole\" value=\"\" placeholder=\"Имя\" type=\"text\"></td>
+                        <td><input name=\"Order[name]\" class=\"pole name\" value=\"\" placeholder=\"Имя\" type=\"text\"></td>
                       </tr>
                       <tr>
-                        <td><input name=\"Order[email]\" class=\"pole\" value=\"\" placeholder=\"Электронная почта\" type=\"text\"></td>
+                        <td><input name=\"Order[email]\" class=\"pole email\" value=\"\" placeholder=\"Электронная почта\" type=\"text\"></td>
                       </tr>
                       <tr>
-                        <td><input name=\"Order[phone]\" class=\"pole\" value=\"\" placeholder=\"Номер телефона\" type=\"text\"></td>
+                        <td><input name=\"Order[phone]\" class=\"pole phone\" value=\"\" placeholder=\"Номер телефона\" type=\"text\"></td>
                       </tr>
                       <tr>
                         <td><textarea name=\"Order[message]\" cols=\"\" rows=\"\" placeholder=\"Сообщение\"></textarea></td>
@@ -134,6 +143,6 @@ class __TwigTemplate_4e9387551d05adb0934448a444bee4101dc7d0975753deefb089e7de644
 
     public function getDebugInfo()
     {
-        return array (  91 => 37,  85 => 34,  78 => 30,  74 => 29,  67 => 26,  64 => 25,  57 => 19,  53 => 18,  50 => 17,  47 => 16,  39 => 9,  35 => 8,  31 => 6,  28 => 5,);
+        return array (  100 => 41,  94 => 38,  87 => 34,  83 => 33,  74 => 28,  72 => 27,  67 => 26,  64 => 25,  57 => 19,  53 => 18,  50 => 17,  47 => 16,  39 => 9,  35 => 8,  31 => 6,  28 => 5,);
     }
 }

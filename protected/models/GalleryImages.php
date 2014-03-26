@@ -146,6 +146,7 @@ class GalleryImages extends CActiveRecord
 			$this->medium = $this->thumb;
 			$this->large = $this->thumb;
 			$this->link = $this->thumb;
+			$this->thumb = 'thumb_'.$this->thumb;
     		return true;
     	}else{
     		return false;

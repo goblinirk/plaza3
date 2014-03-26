@@ -24,6 +24,10 @@
 
 {% block innercontent %}
     <h1>{{ model.label | raw }}</h1>
+    {% set qwert = this.widget('BreadCrumbs', {'rootId':model.id}, true) %}
+    {{ qwert|raw }}
+    <br />
+    <br />
     <div class="content">
         <div class="b-about">
             <div class="img"><img alt="" src="/images/{{ model.thumb | raw }}"></div>
@@ -40,13 +44,13 @@
                     <form method="post" action="/feedback/sendorder2/">
                     <table cellspacing="0" cellpadding="0">
                       <tr>
-                        <td><input name="Order[name]" class="pole" value="" placeholder="Имя" type="text"></td>
+                        <td><input name="Order[name]" class="pole name" value="" placeholder="Имя" type="text"></td>
                       </tr>
                       <tr>
-                        <td><input name="Order[email]" class="pole" value="" placeholder="Электронная почта" type="text"></td>
+                        <td><input name="Order[email]" class="pole email" value="" placeholder="Электронная почта" type="text"></td>
                       </tr>
                       <tr>
-                        <td><input name="Order[phone]" class="pole" value="" placeholder="Номер телефона" type="text"></td>
+                        <td><input name="Order[phone]" class="pole phone" value="" placeholder="Номер телефона" type="text"></td>
                       </tr>
                       <tr>
                         <td><textarea name="Order[message]" cols="" rows="" placeholder="Сообщение"></textarea></td>

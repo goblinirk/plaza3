@@ -16,15 +16,16 @@ class __TwigTemplate_e1ce18862ea98b5e253bb61a2fe8c3a102c718c0bb2cb7d7a4eea83aeb5
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<div class=\"view\" style=\"clear: both;margin-bottom: 138px;\">
-
-\t";
-        // line 3
-        if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
-        echo $this->getAttribute($_this_, "widget", array(0 => "Gallery", 1 => array("rootId" => $this->getAttribute($_data_, "id")), 2 => true), "method");
-        echo "
-</div><br /><br />";
+        if (isset($context["curr"])) { $_curr_ = $context["curr"]; } else { $_curr_ = null; }
+        if ((($this->getAttribute($_data_, "owner_id") == $_curr_) || ($this->getAttribute($_data_, "id") == $_curr_))) {
+            // line 2
+            if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
+            if (isset($context["data"])) { $_data_ = $context["data"]; } else { $_data_ = null; }
+            echo $this->getAttribute($_this_, "widget", array(0 => "Gallery", 1 => array("rootId" => $this->getAttribute($_data_, "id")), 2 => true), "method");
+            echo "
+";
+        }
     }
 
     public function getTemplateName()
@@ -39,6 +40,6 @@ class __TwigTemplate_e1ce18862ea98b5e253bb61a2fe8c3a102c718c0bb2cb7d7a4eea83aeb5
 
     public function getDebugInfo()
     {
-        return array (  23 => 3,  19 => 1,  43 => 12,  40 => 11,  36 => 7,  31 => 4,  28 => 3,);
+        return array (  23 => 2,  19 => 1,  50 => 16,  47 => 15,  42 => 9,  37 => 6,  34 => 5,  31 => 4,  28 => 3,);
     }
 }

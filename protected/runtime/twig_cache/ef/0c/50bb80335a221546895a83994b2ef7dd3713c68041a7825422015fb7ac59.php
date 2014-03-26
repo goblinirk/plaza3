@@ -81,11 +81,11 @@ class __TwigTemplate_ef0c50bb80335a221546895a83994b2ef7dd3713c68041a7825422015fb
         // line 32
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
-        $context["qwert"] = $this->getAttribute($_this_, "widget", array(0 => "ext.JTreeTable.JTreeTable", 1 => array("id" => "galleries-grid", "dataProvider" => $this->getAttribute($_model_, "search"), "filter" => $_model_, "template" => "{pager} {items} {pager}", "itemsCssClass" => "table table-striped", "primaryColumn" => "id", "parentColumn" => "owner_id", "ajaxUpdate" => "false", "ajaxVar" => "false", "jstree_options" => array("initialState" => "expanded"), "columns" => array(0 => array("name" => "label", "type" => "raw", "value" => "CHtml::link(CHtml::encode(\$data->label.\" [ \".\$data->id.\" ]\"), \$data->editurl)"), 1 => array("name" => "create_date", "value" => "Yii::app()->dateFormatter->format(\"dd MMM y\",strtotime(\$data->create_date))", "filter" => false), 2 => array("class" => "CButtonColumn", "template" => "{top}{up}{down}{bottom}&nbsp;&nbsp;&nbsp;{update}{delete}", "buttons" => array("update" => array("url" => "\"/admin/edit_image/\".\$data->id"), "delete" => array("url" => "\"/admin/delete_image/\".\$data->id"), "top" => array("label" => "В начало списка", "imageUrl" => "/images/go-top.png", "url" => "\"#\"", "visible" => "true", "click" => "function(){alert(\"Lets go to top!\");return false;}"), "up" => array("label" => "На один уровень вверх", "url" => "\"#\"", "visible" => "true", "imageUrl" => "/images/go-up.png", "click" => "function(){alert(\"Lets go to up!\");return false;}"), "down" => array("label" => "На один уровень вниз", "imageUrl" => "/images/go-down.png", "url" => "\"#\"", "visible" => "true", "click" => "function(){alert(\"Lets go to down!\");return false;}"), "bottom" => array("label" => "В конец списка", "url" => "\"#\"", "visible" => "true", "imageUrl" => "/images/go-bottom.png", "click" => "function(){alert(\"Lets go to bottom!\");return false;}"))))), 2 => true), "method");
-        // line 98
+        $context["qwert"] = $this->getAttribute($_this_, "widget", array(0 => "ext.JTreeTable.JTreeTable", 1 => array("id" => "galleries-grid", "dataProvider" => $this->getAttribute($_model_, "search"), "filter" => $_model_, "template" => "{pager} {items} {pager}", "itemsCssClass" => "table table-striped", "primaryColumn" => "id", "parentColumn" => "owner_id", "ajaxUpdate" => "false", "ajaxVar" => "false", "jstree_options" => array("initialState" => "expanded"), "columns" => array(0 => array("name" => "label", "type" => "raw", "value" => "CHtml::link(CHtml::encode(\$data->label.\" [ \".\$data->id.\" ]\"), \$data->editurl)"), 1 => array("name" => "create_date", "value" => "Yii::app()->dateFormatter->format(\"dd MMM y\",strtotime(\$data->create_date))", "filter" => false), 2 => array("class" => "CButtonColumn", "template" => "{top}{up}{down}{bottom}&nbsp;&nbsp;&nbsp;{update}{delete}", "buttons" => array("update" => array("url" => "\"/admin/edit_image/\".\$data->id"), "delete" => array("url" => "\"/admin/delete_image/\".\$data->id"), "top" => array("label" => "В начало списка", "imageUrl" => "/images/go-top.png", "url" => "\"/galleries/moveimagetop/\".\$data->id", "visible" => "true"), "up" => array("label" => "На один уровень вверх", "url" => "\"/galleries/moveimageup/\".\$data->id", "visible" => "true", "imageUrl" => "/images/go-up.png"), "down" => array("label" => "На один уровень вниз", "imageUrl" => "/images/go-down.png", "url" => "\"/galleries/moveimagedown/\".\$data->id", "visible" => "true"), "bottom" => array("label" => "В конец списка", "url" => "\"/galleries/moveimagebottom/\".\$data->id", "visible" => "true", "imageUrl" => "/images/go-bottom.png"))))), 2 => true), "method");
+        // line 94
         echo "
 \t";
-        // line 99
+        // line 95
         if (isset($context["qwert"])) { $_qwert_ = $context["qwert"]; } else { $_qwert_ = null; }
         echo $_qwert_;
         echo "
@@ -105,6 +105,6 @@ class __TwigTemplate_ef0c50bb80335a221546895a83994b2ef7dd3713c68041a7825422015fb
 
     public function getDebugInfo()
     {
-        return array (  89 => 99,  86 => 98,  82 => 32,  78 => 30,  75 => 29,  69 => 27,  61 => 21,  47 => 10,  41 => 8,  36 => 7,  33 => 6,  30 => 5,  25 => 3,);
+        return array (  89 => 95,  86 => 94,  82 => 32,  78 => 30,  75 => 29,  69 => 27,  61 => 21,  47 => 10,  41 => 8,  36 => 7,  33 => 6,  30 => 5,  25 => 3,);
     }
 }

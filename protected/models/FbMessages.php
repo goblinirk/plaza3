@@ -34,9 +34,10 @@ class FbMessages extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('label, sender, message, send_date, status', 'required'),
+			array('label, sender, message', 'required'),
+			array('sender', 'email'),
 			array('status', 'numerical', 'integerOnly'=>true),
-			array('label, sender', 'length', 'max'=>128),
+			array('label', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, label, sender, message, send_date, status', 'safe', 'on'=>'search'),

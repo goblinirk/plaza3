@@ -40,7 +40,10 @@ class SysRegistry extends CWidget
                 foreach ($param as $key => $value) {
                     $model[$value->param] = $value->value;
                 }
-                echo '<div class="top-banner"><a target="_blank" href="'.$model['link'].'"><img alt="'.$model['label'].'" src="/images/'.$model['image'].'"></a></div>';
+                if(substr($model['link'], 0, 11) == 'javascript:')
+                    echo '<div class="top-banner"><a href="#" onclick="'.substr($model['link'], 11).'"><img alt="'.$model['label'].'" src="/images/'.$model['image'].'"></a></div>';
+                else
+                    echo '<div class="top-banner"><a href="'.$model['link'].'" target="_blank"><img alt="'.$model['label'].'" src="/images/'.$model['image'].'"></a></div>';
             break;
 
             

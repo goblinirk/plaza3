@@ -5199,3 +5199,1508 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2014/03/21 14:42:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/21 14:49:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/21 14:50:13 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleryImagesController.php (52)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 14:50:19 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleryImagesController.php (52)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 14:51:02 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleriesController.php (312)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 14:51:58 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Galleries".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleryImagesController.php (67)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 14:51:58 [warning] [application] Не удалось присвоить небезопасный атрибут "thumb" класса "Galleries".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleryImagesController.php (67)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 14:52:11 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Galleries".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleriesController.php (369)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 14:52:11 [warning] [application] Не удалось присвоить небезопасный атрибут "thumb" класса "Galleries".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleriesController.php (369)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 14:53:04 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleryImagesController.php (52)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 14:53:15 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleriesController.php (312)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 14:55:36 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleryImagesController.php (52)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 14:55:48 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleriesController.php (312)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 14:57:39 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleryImagesController.php (52)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 14:58:01 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleriesController.php (312)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 15:00:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/21 15:05:29 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleryImagesController.php (52)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 15:05:33 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleriesController.php (331)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 15:16:57 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Galleries".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleryImagesController.php (67)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 15:16:57 [warning] [application] Не удалось присвоить небезопасный атрибут "thumb" класса "Galleries".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/GalleryImagesController.php (67)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/21 15:49:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/21 16:20:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/btn2-a.png".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('images/btn2-a.p...')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/btn2-a.png
+HTTP_REFERER=http://samus.in-site.ru/page/41/
+---
+2014/03/21 16:21:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/btn2-a.png".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('images/btn2-a.p...')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/btn2-a.png
+HTTP_REFERER=http://samus.in-site.ru/page/41/
+---
+2014/03/21 16:21:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin
+---
+2014/03/21 16:21:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('admin')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/
+---
+2014/03/24 01:15:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'insite_samus'@'localhost' (using password: YES)' in /home/goblin/www/plaza3/public_html/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/goblin/www/plaza3/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /home/goblin/www/plaza3/public_html/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /home/goblin/www/plaza3/public_html/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /home/goblin/www/plaza3/public_html/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Pages))
+#7 /home/goblin/www/plaza3/public_html/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(417): CActiveRecord->__construct('search')
+#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionAdmin()
+#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#19 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/admin')
+#20 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/admin/pages/
+---
+2014/03/24 01:15:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'insite_samus'@'localhost' (using password: YES)' in /home/goblin/www/plaza3/public_html/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/goblin/www/plaza3/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /home/goblin/www/plaza3/public_html/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /home/goblin/www/plaza3/public_html/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /home/goblin/www/plaza3/public_html/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Pages))
+#7 /home/goblin/www/plaza3/public_html/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(417): CActiveRecord->__construct('search')
+#9 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionAdmin()
+#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('admin')
+#19 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/admin')
+#20 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/admin/pages/
+---
+2014/03/24 01:15:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/24 01:17:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/24 01:19:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/24 08:07:45 [error] [php] include(TinyMceFileManager.php): failed to open stream: No such file or directory (/home/goblin/www/plaza3/public_html/framework/YiiBase.php:427)
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/extensions/yii-elfinder/TinyMceElFinder.php(5): spl_autoload_call()
+#1 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(320): require()
+#2 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): import()
+#3 /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php(140): createComponent()
+#4 /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php(116): TinyMce->registerScripts()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(167): TinyMce->run()
+#6 unknown(0): PagesController->widget()
+#7 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(460): call_user_func_array()
+#8 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/0b/66/91688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b.php(103): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->getAttribute()
+#9 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->doDisplay()
+#10 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->displayWithErrorHandling()
+#11 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/e0/dc/9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101.php(38): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->display()
+#12 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(144): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->block_content()
+#13 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/d4/79/a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f.php(80): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->displayBlock()
+#14 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->doDisplay()
+#15 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->displayWithErrorHandling()
+#16 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/e0/dc/9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101.php(26): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->display()
+#17 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->doDisplay()
+#18 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->displayWithErrorHandling()
+#19 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(263): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->display()
+#20 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->render()
+#21 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile()
+#22 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): PagesController->renderFile()
+#23 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): PagesController->renderPartial()
+#24 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(380): PagesController->render()
+#25 unknown(0): PagesController->actionUpdate()
+#26 /home/goblin/www/plaza3/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#27 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#28 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#29 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): PagesController->runAction()
+#30 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#31 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#32 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): PagesController->filterAccessControl()
+#33 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#34 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#35 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): PagesController->runActionWithFilters()
+#36 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): PagesController->run()
+#37 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#38 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#39 /home/goblin/www/plaza3/public_html/index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/edit_page/1
+in /home/goblin/www/plaza3/public_html/protected/extensions/yii-elfinder/TinyMceElFinder.php (5)
+in /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php (140)
+in /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php (116)
+2014/03/24 08:07:51 [error] [php] include(TinyMceFileManager.php): failed to open stream: No such file or directory (/home/goblin/www/plaza3/public_html/framework/YiiBase.php:427)
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/extensions/yii-elfinder/TinyMceElFinder.php(5): spl_autoload_call()
+#1 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(320): require()
+#2 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): import()
+#3 /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php(140): createComponent()
+#4 /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php(116): TinyMce->registerScripts()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(167): TinyMce->run()
+#6 unknown(0): PagesController->widget()
+#7 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(460): call_user_func_array()
+#8 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/0b/66/91688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b.php(103): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->getAttribute()
+#9 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->doDisplay()
+#10 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->displayWithErrorHandling()
+#11 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/e0/dc/9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101.php(38): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->display()
+#12 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(144): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->block_content()
+#13 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/d4/79/a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f.php(80): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->displayBlock()
+#14 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->doDisplay()
+#15 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->displayWithErrorHandling()
+#16 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/e0/dc/9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101.php(26): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->display()
+#17 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->doDisplay()
+#18 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->displayWithErrorHandling()
+#19 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(263): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->display()
+#20 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->render()
+#21 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile()
+#22 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): PagesController->renderFile()
+#23 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): PagesController->renderPartial()
+#24 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(380): PagesController->render()
+#25 unknown(0): PagesController->actionUpdate()
+#26 /home/goblin/www/plaza3/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#27 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#28 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#29 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): PagesController->runAction()
+#30 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#31 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#32 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): PagesController->filterAccessControl()
+#33 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#34 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#35 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): PagesController->runActionWithFilters()
+#36 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): PagesController->run()
+#37 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#38 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#39 /home/goblin/www/plaza3/public_html/index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/edit_page/45
+in /home/goblin/www/plaza3/public_html/protected/extensions/yii-elfinder/TinyMceElFinder.php (5)
+in /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php (140)
+in /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php (116)
+2014/03/24 08:08:14 [error] [php] include(TinyMceFileManager.php): failed to open stream: No such file or directory (/home/goblin/www/plaza3/public_html/framework/YiiBase.php:427)
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/extensions/yii-elfinder/TinyMceElFinder.php(5): spl_autoload_call()
+#1 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(320): require()
+#2 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): import()
+#3 /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php(140): createComponent()
+#4 /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php(116): TinyMce->registerScripts()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(167): TinyMce->run()
+#6 unknown(0): PagesController->widget()
+#7 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(460): call_user_func_array()
+#8 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/0b/66/91688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b.php(103): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->getAttribute()
+#9 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->doDisplay()
+#10 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->displayWithErrorHandling()
+#11 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/e0/dc/9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101.php(38): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->display()
+#12 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(144): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->block_content()
+#13 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/d4/79/a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f.php(80): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->displayBlock()
+#14 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->doDisplay()
+#15 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->displayWithErrorHandling()
+#16 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/e0/dc/9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101.php(26): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->display()
+#17 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->doDisplay()
+#18 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->displayWithErrorHandling()
+#19 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(263): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->display()
+#20 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->render()
+#21 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile()
+#22 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): PagesController->renderFile()
+#23 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): PagesController->renderPartial()
+#24 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(380): PagesController->render()
+#25 unknown(0): PagesController->actionUpdate()
+#26 /home/goblin/www/plaza3/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#27 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#28 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#29 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): PagesController->runAction()
+#30 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#31 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#32 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): PagesController->filterAccessControl()
+#33 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#34 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#35 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): PagesController->runActionWithFilters()
+#36 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): PagesController->run()
+#37 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#38 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#39 /home/goblin/www/plaza3/public_html/index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/edit_page/45
+in /home/goblin/www/plaza3/public_html/protected/extensions/yii-elfinder/TinyMceElFinder.php (5)
+in /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php (140)
+in /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php (116)
+2014/03/24 08:08:16 [error] [php] include(TinyMceFileManager.php): failed to open stream: No such file or directory (/home/goblin/www/plaza3/public_html/framework/YiiBase.php:427)
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/extensions/yii-elfinder/TinyMceElFinder.php(5): spl_autoload_call()
+#1 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(320): require()
+#2 /home/goblin/www/plaza3/public_html/framework/YiiBase.php(196): import()
+#3 /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php(140): createComponent()
+#4 /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php(116): TinyMce->registerScripts()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(167): TinyMce->run()
+#6 unknown(0): PagesController->widget()
+#7 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(460): call_user_func_array()
+#8 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/0b/66/91688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b.php(103): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->getAttribute()
+#9 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->doDisplay()
+#10 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->displayWithErrorHandling()
+#11 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/e0/dc/9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101.php(38): __TwigTemplate_0b6691688ac48672542b96afc04f18316e5bed4db087547c84fe127ece035e0b->display()
+#12 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(144): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->block_content()
+#13 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/d4/79/a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f.php(80): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->displayBlock()
+#14 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->doDisplay()
+#15 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->displayWithErrorHandling()
+#16 /home/goblin/www/plaza3/public_html/protected/runtime/twig_cache/e0/dc/9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101.php(26): __TwigTemplate_d479a679a4c295f52238901e7c5fe36bc1450d473842c3c8d2a6f27e394ac97f->display()
+#17 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(278): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->doDisplay()
+#18 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(252): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->displayWithErrorHandling()
+#19 /home/goblin/www/plaza3/public_html/protected/vendor/Twig/Template.php(263): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->display()
+#20 /home/goblin/www/plaza3/public_html/protected/extensions/Twig/ETwigViewRenderer.php(150): __TwigTemplate_e0dc9c85f996b30c7c08e45ce1f0b4cd311562df4737fc7fc1c4d4fcbe76d101->render()
+#21 /home/goblin/www/plaza3/public_html/framework/web/CBaseController.php(93): ETwigViewRenderer->renderFile()
+#22 /home/goblin/www/plaza3/public_html/framework/web/CController.php(869): PagesController->renderFile()
+#23 /home/goblin/www/plaza3/public_html/framework/web/CController.php(782): PagesController->renderPartial()
+#24 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(380): PagesController->render()
+#25 unknown(0): PagesController->actionUpdate()
+#26 /home/goblin/www/plaza3/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#27 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#28 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#29 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): PagesController->runAction()
+#30 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#31 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#32 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): PagesController->filterAccessControl()
+#33 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#34 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#35 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): PagesController->runActionWithFilters()
+#36 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): PagesController->run()
+#37 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#38 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#39 /home/goblin/www/plaza3/public_html/index.php(16): CWebApplication->run()
+REQUEST_URI=/admin/edit_page/45
+in /home/goblin/www/plaza3/public_html/protected/extensions/yii-elfinder/TinyMceElFinder.php (5)
+in /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php (140)
+in /home/goblin/www/plaza3/public_html/protected/extensions/yii-tinymce/TinyMce.php (116)
+2014/03/24 08:08:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/24 22:34:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/24 22:34:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/24 22:34:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/24 23:07:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/24 23:07:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/24 23:07:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/25 00:46:05 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:46:05 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:46:05 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:46:05 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:46:05 [error] [php] Undefined variable: fileName (/home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php:85)
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): PagesController->runAction()
+#1 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): PagesController->filterAccessControl()
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): PagesController->runActionWithFilters()
+#7 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): PagesController->run()
+#8 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/goblin/www/plaza3/public_html/index.php(16): CWebApplication->run()
+REQUEST_URI=/pages/uploadThumb
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (85)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:47:39 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:47:39 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:47:39 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:47:39 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:47:39 [error] [php] Undefined variable: fileName (/home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php:85)
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): PagesController->runAction()
+#1 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): PagesController->filterAccessControl()
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): PagesController->runActionWithFilters()
+#7 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): PagesController->run()
+#8 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/goblin/www/plaza3/public_html/index.php(16): CWebApplication->run()
+REQUEST_URI=/pages/uploadThumb
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (85)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:48:10 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:48:10 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:48:10 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:48:10 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:50:49 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:50:49 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:50:49 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:50:49 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:50:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/<br /><b>Fatal error</b>:  Call to undefined method Image::saveAs() in <b>/home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php</b> on line <b>74</b><br />".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/<br /><b...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/%3Cbr%20/%3E%3Cb%3EFatal%20error%3C/b%3E:%20%20Call%20to%20undefined%20method%20Image::saveAs()%20in%20%3Cb%3E/home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php%3C/b%3E%20on%20line%20%3Cb%3E74%3C/b%3E%3Cbr%20/%3E
+HTTP_REFERER=http://plaza.lch/admin/edit_page/45
+---
+2014/03/25 00:52:38 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:52:38 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:52:38 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:52:38 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:52:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/<br /><b>Fatal error</b>:  Call to a member function getName() on a non-object in <b>/home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php</b> on line <b>86</b><br />".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/<br /><b...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/%3Cbr%20/%3E%3Cb%3EFatal%20error%3C/b%3E:%20%20Call%20to%20a%20member%20function%20getName()%20on%20a%20non-object%20in%20%3Cb%3E/home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php%3C/b%3E%20on%20line%20%3Cb%3E86%3C/b%3E%3Cbr%20/%3E
+HTTP_REFERER=http://plaza.lch/admin/edit_page/45
+---
+2014/03/25 00:52:44 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:52:44 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:52:44 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:52:44 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:52:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/<br /><b>Fatal error</b>:  Call to undefined method Image::saveAs() in <b>/home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php</b> on line <b>75</b><br />".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/<br /><b...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/%3Cbr%20/%3E%3Cb%3EFatal%20error%3C/b%3E:%20%20Call%20to%20undefined%20method%20Image::saveAs()%20in%20%3Cb%3E/home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php%3C/b%3E%20on%20line%20%3Cb%3E75%3C/b%3E%3Cbr%20/%3E
+HTTP_REFERER=http://plaza.lch/admin/edit_page/45
+---
+2014/03/25 00:54:47 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:54:47 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:54:47 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:54:47 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:54:47 [error] [exception.CException] exception 'CException' with message 'image file not found' in /home/goblin/www/plaza3/public_html/protected/extensions/image/Image.php:78
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/extensions/image/CImageComponent.php(41): Image->__construct('/home/goblin/ww...', Array)
+#1 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(75): CImageComponent->load('/home/goblin/ww...')
+#2 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionUploadThumb()
+#3 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('uploadThumb')
+#12 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/uploadThu...')
+#13 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#15 {main}
+REQUEST_URI=/pages/uploadThumb
+HTTP_REFERER=http://plaza.lch/admin/edit_page/45
+---
+2014/03/25 00:57:17 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:57:17 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:57:17 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 00:57:17 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:04:59 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Galleries".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleryImagesController.php (54)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:04:59 [warning] [application] Не удалось присвоить небезопасный атрибут "thumb" класса "Galleries".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleryImagesController.php (54)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:05:03 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Galleries".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleriesController.php (369)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:05:03 [warning] [application] Не удалось присвоить небезопасный атрибут "thumb" класса "Galleries".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleriesController.php (369)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:06:54 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Galleries".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleriesController.php (369)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:06:54 [warning] [application] Не удалось присвоить небезопасный атрибут "thumb" класса "Galleries".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleriesController.php (369)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:07:09 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleriesController.php (331)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:07:16 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleriesController.php (331)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:07:23 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleriesController.php (331)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/thumb_8463128460_1395121573_219097-1366x768.jpg".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/thumb_84...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/thumb_8463128460_1395121573_219097-1366x768.jpg
+HTTP_REFERER=http://plaza.lch/gallery/3/
+---
+2014/03/25 01:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/thumb_4784807078_1395122692_226242-1366x768.jpg".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/thumb_47...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/thumb_4784807078_1395122692_226242-1366x768.jpg
+HTTP_REFERER=http://plaza.lch/gallery/3/
+---
+2014/03/25 01:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/thumb_".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/thumb_')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/thumb_
+HTTP_REFERER=http://plaza.lch/gallery/3/
+---
+2014/03/25 01:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/thumb_".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/thumb_')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/thumb_
+HTTP_REFERER=http://plaza.lch/gallery/3/
+---
+2014/03/25 01:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/thumb_8463128460_1395121573_219097-1366x768.jpg".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/thumb_84...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/thumb_8463128460_1395121573_219097-1366x768.jpg
+HTTP_REFERER=http://plaza.lch/gallery/3/
+---
+2014/03/25 01:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/thumb_4784807078_1395122692_226242-1366x768.jpg".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/thumb_47...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/thumb_4784807078_1395122692_226242-1366x768.jpg
+HTTP_REFERER=http://plaza.lch/gallery/3/
+---
+2014/03/25 01:07:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/thumb_8463128460_1395121573_219097-1366x768.jpg".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/thumb_84...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/thumb_8463128460_1395121573_219097-1366x768.jpg
+HTTP_REFERER=http://plaza.lch/admin/edit_image/18
+---
+2014/03/25 01:08:01 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleryImagesController.php (50)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:08:07 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleriesController.php (331)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:08:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/thumb_4784807078_1395122692_226242-1366x768.jpg".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/thumb_47...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/thumb_4784807078_1395122692_226242-1366x768.jpg
+HTTP_REFERER=http://plaza.lch/admin/edit_image/19
+---
+2014/03/25 01:08:16 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleryImagesController.php (50)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:08:18 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleriesController.php (331)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:08:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/thumb_".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('images/thumb_')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/thumb_
+HTTP_REFERER=http://plaza.lch/admin/edit_image/20
+---
+2014/03/25 01:08:32 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleryImagesController.php (50)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:08:34 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "GalleryImages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/GalleriesController.php (331)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:10:50 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:10:50 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:10:50 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:10:50 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:10:54 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:10:54 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:10:54 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:10:54 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:11:40 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:11:40 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:11:40 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:11:40 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:12:14 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:12:14 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:12:14 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:12:14 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (63)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:12:17 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:12:17 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:12:17 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:12:17 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:13:55 [warning] [application] Не удалось присвоить небезопасный атрибут "ajaxthumb" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:13:55 [warning] [application] Не удалось присвоить небезопасный атрибут "short_text" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:13:55 [warning] [application] Не удалось присвоить небезопасный атрибут "show_in_nav" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 01:13:55 [warning] [application] Не удалось присвоить небезопасный атрибут "nav_label" класса "Pages".
+in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php (328)
+in /home/goblin/www/plaza3/public_html/index.php (16)
+2014/03/25 08:07:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/25 08:07:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/25 15:33:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/insite/data/www/samus.in-site.ru/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/insite/data/www/samus.in-site.ru/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/insite/data/www/samus.in-site.ru/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /home/insite/data/www/samus.in-site.ru/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /home/insite/data/www/samus.in-site.ru/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /home/insite/data/www/samus.in-site.ru/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Registry))
+#7 /home/insite/data/www/samus.in-site.ru/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /home/insite/data/www/samus.in-site.ru/protected/controllers/PagesController.php(218): CActiveRecord->__construct()
+#9 /home/insite/data/www/samus.in-site.ru/protected/controllers/PagesController.php(412): PagesController->actionView()
+#10 /home/insite/data/www/samus.in-site.ru/framework/web/actions/CInlineAction.php(49): PagesController->actionIndex()
+#11 /home/insite/data/www/samus.in-site.ru/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/insite/data/www/samus.in-site.ru/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/insite/data/www/samus.in-site.ru/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/insite/data/www/samus.in-site.ru/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/insite/data/www/samus.in-site.ru/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/insite/data/www/samus.in-site.ru/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/insite/data/www/samus.in-site.ru/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/insite/data/www/samus.in-site.ru/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(282): CController->run('')
+#20 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#21 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://samus.in-site.ru/
+---
+2014/03/25 15:37:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/insite/data/www/samus.in-site.ru/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/insite/data/www/samus.in-site.ru/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/insite/data/www/samus.in-site.ru/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /home/insite/data/www/samus.in-site.ru/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /home/insite/data/www/samus.in-site.ru/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /home/insite/data/www/samus.in-site.ru/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Registry))
+#7 /home/insite/data/www/samus.in-site.ru/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /home/insite/data/www/samus.in-site.ru/protected/controllers/PagesController.php(218): CActiveRecord->__construct()
+#9 /home/insite/data/www/samus.in-site.ru/protected/controllers/PagesController.php(412): PagesController->actionView()
+#10 /home/insite/data/www/samus.in-site.ru/framework/web/actions/CInlineAction.php(49): PagesController->actionIndex()
+#11 /home/insite/data/www/samus.in-site.ru/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/insite/data/www/samus.in-site.ru/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/insite/data/www/samus.in-site.ru/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/insite/data/www/samus.in-site.ru/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/insite/data/www/samus.in-site.ru/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/insite/data/www/samus.in-site.ru/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/insite/data/www/samus.in-site.ru/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/insite/data/www/samus.in-site.ru/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(282): CController->run('')
+#20 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#21 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://samus.in-site.ru/
+---
+2014/03/25 15:39:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "galleriesju".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('galleriesju')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/galleriesju
+---
+2014/03/25 15:40:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/btn2-a.png".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('images/btn2-a.p...')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/btn2-a.png
+HTTP_REFERER=http://samus.in-site.ru/page/41/
+---
+2014/03/25 15:41:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/25 16:38:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 06:02:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "robots.txt".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('robots.txt')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/robots.txt
+---
+2014/03/26 10:37:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 10:39:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 12:04:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/btn2-a.png".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('images/btn2-a.p...')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/btn2-a.png
+HTTP_REFERER=http://samus.in-site.ru/page/41/
+---
+2014/03/26 12:05:12 [warning] [application] Не удалось присвоить небезопасный атрибут "send_date" класса "FbMessages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/FbMessagesController.php (89)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/26 12:05:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/btn2-a.png".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('images/btn2-a.p...')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/btn2-a.png
+HTTP_REFERER=http://samus.in-site.ru/page/41/
+---
+2014/03/26 12:05:18 [warning] [application] Не удалось присвоить небезопасный атрибут "send_date" класса "FbMessages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/FbMessagesController.php (89)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/26 12:14:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/btn2-a.png".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('images/btn2-a.p...')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/btn2-a.png
+HTTP_REFERER=http://samus.in-site.ru/page/41/
+---
+2014/03/26 12:14:31 [warning] [application] Не удалось присвоить небезопасный атрибут "send_date" класса "FbMessages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/FbMessagesController.php (89)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/26 12:14:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/btn2-a.png".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('images/btn2-a.p...')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/btn2-a.png
+HTTP_REFERER=http://samus.in-site.ru/page/41/
+---
+2014/03/26 12:14:46 [warning] [application] Не удалось присвоить небезопасный атрибут "send_date" класса "FbMessages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/FbMessagesController.php (89)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/26 12:56:31 [warning] [application] Не удалось присвоить небезопасный атрибут "send_date" класса "FbMessages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/FbMessagesController.php (161)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/26 13:05:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 13:05:28 [warning] [application] Не удалось присвоить небезопасный атрибут "send_date" класса "FbMessages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/FbMessagesController.php (161)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/26 13:05:37 [warning] [application] Не удалось присвоить небезопасный атрибут "send_date" класса "FbMessages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/FbMessagesController.php (161)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/26 13:08:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 13:09:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 13:09:49 [warning] [application] Не удалось присвоить небезопасный атрибут "send_date" класса "FbMessages".
+in /home/insite/data/www/samus.in-site.ru/protected/controllers/FbMessagesController.php (161)
+in /home/insite/data/www/samus.in-site.ru/index.php (16)
+2014/03/26 13:11:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/btn2-a.png".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('images/btn2-a.p...')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/btn2-a.png
+HTTP_REFERER=http://samus.in-site.ru/page/41/
+---
+2014/03/26 14:16:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 14:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 14:26:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 14:27:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/insite/data/www/samus.in-site.ru/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/insite/data/www/samus.in-site.ru/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/insite/data/www/samus.in-site.ru/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 14:59:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'insite_samus'@'localhost' (using password: YES)' in /home/goblin/www/plaza3/public_html/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/goblin/www/plaza3/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/goblin/www/plaza3/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /home/goblin/www/plaza3/public_html/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /home/goblin/www/plaza3/public_html/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /home/goblin/www/plaza3/public_html/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Registry))
+#7 /home/goblin/www/plaza3/public_html/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(218): CActiveRecord->__construct()
+#9 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(412): PagesController->actionView()
+#10 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionIndex()
+#11 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#20 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#21 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#23 {main}
+REQUEST_URI=/
+---
+2014/03/26 14:59:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 15:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/jquery.fancybox.css".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/jquery.f...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/jquery.fancybox.css?v=2.1.5
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/jquery.fancybox.js".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/jquery.f...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/jquery.fancybox.js?v=2.1.5
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/helpers/jquery.fancybox-thumbs.js".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/helpers/...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/helpers/jquery.fancybox-thumbs.css".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/helpers/...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/helpers/jquery.fancybox-buttons.css".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/helpers/...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/helpers/jquery.fancybox-buttons.css?v=1.0.5
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/helpers/jquery.fancybox-buttons.js".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/helpers/...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/helpers/jquery.fancybox-buttons.js?v=1.0.5
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/helpers/jquery.fancybox-media.js".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/helpers/...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/helpers/jquery.fancybox-media.js?v=1.0.6
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:23:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/helpers/jquery.fancybox-buttons.js".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/helpers/...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/helpers/jquery.fancybox-buttons.js?v=1.0.5
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:23:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/helpers/jquery.fancybox-media.js".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/helpers/...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/helpers/jquery.fancybox-media.js?v=1.0.6
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:23:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/helpers/jquery.fancybox-thumbs.js".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/helpers/...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:23:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/helpers/jquery.fancybox-buttons.css".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/helpers/...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/helpers/jquery.fancybox-buttons.css?v=1.0.5
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:23:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/helpers/jquery.fancybox-thumbs.css".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/helpers/...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:23:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/jquery.fancybox.css".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/jquery.f...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/jquery.fancybox.css?v=2.1.5
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:23:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/jquery.fancybox.js".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/jquery.f...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/jquery.fancybox.js?v=2.1.5
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:23:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/jquery.fancybox.js".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/jquery.f...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/jquery.fancybox.js?v=2.1.5
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:23:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/jquery.fancybox.css".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/jquery.f...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/jquery.fancybox.css?v=2.1.5
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:23:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/helpers/jquery.fancybox-media.js".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/helpers/...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/helpers/jquery.fancybox-media.js?v=1.0.6
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:23:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "source/helpers/jquery.fancybox-buttons.js".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('source/helpers/...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/source/helpers/jquery.fancybox-buttons.js?v=1.0.5
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:26:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "add-ons/img/close.png".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('add-ons/img/clo...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/add-ons/img/close.png
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:26:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "add-ons/img/arrs2.png".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('add-ons/img/arr...')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/add-ons/img/arrs2.png
+HTTP_REFERER=http://plaza.lch/galleries
+---
+2014/03/26 15:27:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 15:29:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 15:31:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/03/26 15:31:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php:470
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(219): PagesController->loadModel()
+#1 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionView()
+#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/view')
+#12 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/page/uslugi/img/gall.png
+HTTP_REFERER=http://plaza.lch/page/uslugi/
+---
+2014/03/26 15:31:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php:470
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(219): PagesController->loadModel()
+#1 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionView()
+#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/view')
+#12 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/page/uslugi/images/big-img.png
+HTTP_REFERER=http://plaza.lch/page/uslugi/
+---
+2014/03/26 15:31:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php:470
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(219): PagesController->loadModel()
+#1 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionView()
+#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/view')
+#12 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/page/uslugi/img/gall.png
+HTTP_REFERER=http://plaza.lch/page/uslugi/
+---
+2014/03/26 15:33:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php:470
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(219): PagesController->loadModel()
+#1 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionView()
+#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/view')
+#12 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/page/uslugi/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7
+HTTP_REFERER=http://plaza.lch/page/uslugi/
+---
+2014/03/26 15:33:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php:470
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(219): PagesController->loadModel()
+#1 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionView()
+#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/view')
+#12 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/page/uslugi/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7
+HTTP_REFERER=http://plaza.lch/page/uslugi/
+---
+2014/03/26 15:33:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php:470
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(219): PagesController->loadModel()
+#1 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionView()
+#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/view')
+#12 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/page/uslugi/source/helpers/jquery.fancybox-buttons.css?v=1.0.5
+HTTP_REFERER=http://plaza.lch/page/uslugi/
+---
+2014/03/26 15:33:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php:470
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(219): PagesController->loadModel()
+#1 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionView()
+#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/view')
+#12 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/page/uslugi/source/jquery.fancybox.js?v=2.1.5
+HTTP_REFERER=http://plaza.lch/page/uslugi/
+---
+2014/03/26 15:33:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php:470
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(219): PagesController->loadModel()
+#1 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionView()
+#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/view')
+#12 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/page/uslugi/source/jquery.fancybox.css?v=2.1.5
+HTTP_REFERER=http://plaza.lch/page/uslugi/
+---
+2014/03/26 15:33:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php:470
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(219): PagesController->loadModel()
+#1 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionView()
+#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/view')
+#12 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/page/uslugi/source/helpers/jquery.fancybox-media.js?v=1.0.6
+HTTP_REFERER=http://plaza.lch/page/uslugi/
+---
+2014/03/26 15:33:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php:470
+Stack trace:
+#0 /home/goblin/www/plaza3/public_html/protected/controllers/PagesController.php(219): PagesController->loadModel()
+#1 /home/goblin/www/plaza3/public_html/framework/web/actions/CInlineAction.php(49): PagesController->actionView()
+#2 /home/goblin/www/plaza3/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/goblin/www/plaza3/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /home/goblin/www/plaza3/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/goblin/www/plaza3/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/goblin/www/plaza3/public_html/framework/web/CController.php(291): CFilterChain->run()
+#9 /home/goblin/www/plaza3/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#11 /home/goblin/www/plaza3/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('pages/view')
+#12 /home/goblin/www/plaza3/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /home/goblin/www/plaza3/public_html/index.php(16): CApplication->run()
+#14 {main}
+REQUEST_URI=/page/uslugi/source/helpers/jquery.fancybox-buttons.js?v=1.0.5
+HTTP_REFERER=http://plaza.lch/page/uslugi/
+---

@@ -30,7 +30,7 @@ class FbMessagesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create','create_otz'),
+				'actions'=>array('index','view','create','create_otz', 'create_order'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -131,16 +131,8 @@ class FbMessagesController extends Controller
 			
 			if($model->save()){
 				$this->redirect('/page/'.$_POST['Otziv']['page_id'].'/#send');
-				$this->render('message',array(
-					'message'=>'Ваш отзыв успешно отправлен. В скором времени он появиться на наше сайте.',
-					'type'=>'success',
-				));
 			} else {
 				$this->redirect('/page/'.$_POST['Otziv']['page_id'].'/#sendform');
-				$this->render('message',array(
-					'message'=>'При отправке сообщения возникли проблемы. Пожалуйста попробуйте еще раз через некоторое время.',
-					'type'=>'error',
-				));
 			}
 		} else throw new CHttpException(404,'Указанная запись не найдена');
 	}
@@ -177,6 +169,7 @@ class FbMessagesController extends Controller
 					'message'=>'Ваше сообщение успешно отправленно. Наши менеджеры скоро с Вами свяжуться.',
 					'type'=>'success',
 				));
+
 			} else {
 				$this->render('message',array(
 					'message'=>'При отправке сообщения возникли проблемы. Пожалуйста попробуйте еще раз через некоторое время.',

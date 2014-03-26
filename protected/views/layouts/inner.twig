@@ -11,6 +11,27 @@
 	
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="{{ App.baseUrl }}/scripts/slides.min.jquery.js"></script>
+  <script type="text/javascript" src="/add-ons/source/jquery.fancybox.js?v=2.1.5"></script>
+  <link rel="stylesheet" type="text/css" href="/add-ons/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+  <!-- Add Button helper (this is optional) -->
+  <link rel="stylesheet" type="text/css" href="/add-ons/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+  <script type="text/javascript" src="/add-ons/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+  <!-- Add Thumbnail helper (this is optional) -->
+  <link rel="stylesheet" type="text/css" href="/add-ons/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+  <script type="text/javascript" src="/add-ons/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+  <!-- Add Media helper (this is optional) -->
+  <script type="text/javascript" src="/add-ons/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("a[rel=example_group]").fancybox({
+      'padding' : 5
+      
+      });
+    });
+  </script>
 	<script type="text/javascript">
 		$(function(){
 			if($('#slides') != undefined){
@@ -22,6 +43,60 @@
             hoverPause: true
           });
       }
+      jQuery('.pole.name').blur(function(){
+        if(jQuery(this).val().length < 2){
+          jQuery('.form_err_msg').remove();
+          jQuery(this).addClass('err_pole').after('<span class="form_err_msg">Не верно заполнено поле. Пример: Александр</span>');
+        } else {
+          jQuery(this).removeClass('err_pole');
+          jQuery('.form_err_msg').remove();
+        }
+      });
+      jQuery('.pole.email').blur(function(){
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;  
+        if((jQuery(this).val().length < 2) || (!re.test(jQuery(this).val()))) {
+          jQuery('.form_err_msg').remove();
+          jQuery(this).addClass('err_pole').after('<span class="form_err_msg">Не верно заполнено поле. Пример: mail@mail.ru</span>');
+        } else {
+          jQuery(this).removeClass('err_pole');
+          jQuery('.form_err_msg').remove();
+        }
+      });
+      jQuery('.pole.phone').blur(function(){
+        var re = /^\+?\d+$/;  
+        if((jQuery(this).val().length < 2) || (!re.test(jQuery(this).val()))) {
+          jQuery('.form_err_msg').remove();
+          jQuery(this).addClass('err_pole').after('<span class="form_err_msg">Не верно заполнено поле. Пример: +79501234567</span>');
+        } else {
+          jQuery(this).removeClass('err_pole');
+          jQuery('.form_err_msg').remove();
+        }
+      });
+      jQuery('input[type=submit]').click(function(){
+        var send = true;
+
+        form = jQuery(this).parents('form');
+        
+        jQuery('input.pole', form).each(function(){
+          console.log(jQuery(this));
+          if(jQuery(this).val().length == 0){
+            jQuery(this).addClass('err_pole').after('<span class="form_err_msg">Не верно заполнено поле.</span>');
+          }
+        })
+
+        if(jQuery('input.err_pole', form).length > 0){
+          send = false;
+          console.log();
+        }
+        
+        if(send === false){
+          alert('Некоторые поля заполненны не верно.');
+          return false;
+        }
+      });
+
+
+
 		});
 	</script>
 </head>
@@ -47,13 +122,13 @@
             <form method="post" action="/feedback/sendorder1/">
             <table cellspacing="0" cellpadding="0">
               <tr>
-                <td><input name="Order[name]" class="pole" value="" placeholder="Имя" type="text"></td>
+                <td><input name="Order[name]" class="pole name" value="" placeholder="Имя" type="text"></td>
               </tr>
               <tr>
-                <td><input name="Order[email]" class="pole" value="" placeholder="Электронная почта" type="text"></td>
+                <td><input name="Order[email]" class="pole email" value="" placeholder="Электронная почта" type="text"></td>
               </tr>
               <tr>
-                <td><input name="Order[phone]" class="pole" value="" placeholder="Номер телефона" type="text"></td>
+                <td><input name="Order[phone]" class="pole phone" value="" placeholder="Номер телефона" type="text"></td>
               </tr>
               <tr>
                 <td><textarea name="Order[message]" cols="" rows="" placeholder="Сообщение"></textarea></td>
@@ -79,7 +154,7 @@
         <div class="tel">{{ this.widget('SysRegistry', {'param':'phone'}, true) | raw }}</div>
         <div class="mail">{{ this.widget('SysRegistry', {'param':'email', 'maillink':true}, true) | raw }}</div>
         <div class="addr">{{ this.widget('SysRegistry', {'param':'address'}, true) | raw }}</div>
-        <div class="design">Разработчик:<a href="#">In-Site</a></div>
+        <div class="design">Разработчик: <a href="http://in-site.ru" target="_blank" >In-Site</a></div>
     </footer>
 </div><!--end all-->
 </body>

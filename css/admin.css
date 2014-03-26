@@ -157,7 +157,7 @@ th#pages-grid_c1,th#galleries-grid_c1 { width: 120px;}
 tr.filters td input { width: 200px !important;}
 #pages-grid table tbody tr td:nth-child(1){ text-align: left; }
 .grid-view .button-column {text-align: right;width: 220px !important;}
-.row {margin-left: 20px !important;}
+.row {margin-left: 20px !important;max-width: 540px;}
 .row input[type=text] {width: 487px !important;}
 .row textarea {width: 500px !important;}
 .row select {width: 500px !important;}

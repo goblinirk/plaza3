@@ -50,13 +50,14 @@ class TinyMce extends CInputWidget
 
     private static $defaultSettings = array(
         'language' => 'ru',
+        'menubar'=>false,
         'plugins' => array(
             "advlist autolink lists link image charmap print preview hr anchor pagebreak",
             "searchreplace visualblocks visualchars code fullscreen",
             "insertdatetime media nonbreaking save table contextmenu directionality",
             "template paste textcolor"
         ),
-        'toolbar' => "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media | forecolor backcolor",
+        'toolbar' => "fullscreen code | cut copy paste | insertfile undo redo | bullist numlist outdent indent | hr charmap link anchor image media | table | alignleft aligncenter alignright alignjustify | fontselect fontsizeselect | bold italic underline | forecolor backcolor | emoticons",
 
 
         'toolbar_items_size' => 'small',
@@ -119,7 +120,7 @@ class TinyMce extends CInputWidget
     private function registerScripts($id)
     {
         $cs = Yii::app()->getClientScript();
-        $cs->registerCoreScript('jquery');
+        //$cs->registerCoreScript('jquery');
         if ($this->compressorRoute === false) {
             $cs->registerScriptFile($this->assetsDir . '/js/tinymce/tinymce.min.js');
             $cs->registerScriptFile($this->assetsDir . '/js/tinymce/jquery.tinymce.min.js');

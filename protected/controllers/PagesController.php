@@ -63,15 +63,22 @@ class PagesController extends Controller
 	        $model->attributes=$_POST['Pages'];
 	        $rnd = rand(0123456789, 9876543210);
 	    	$timeStamp = time();
-	        $uploadedFile = CUploadedFile::getInstance($model, 'ajaxthumb');
-	        if ($uploadedFile != null) {
-		        $fileName = "{$rnd}_{$timeStamp}_{$uploadedFile}";
-		    }
+	        $model->thumb = CUploadedFile::getInstance($model, 'ajaxthumb');
+	        if( is_object($model->thumb) )
+			{
+			    $name = Yii::app()->basePath . '/../images/'.$model->thumb->getName();
+			    $model->thumb->saveAs($name);
 
-	        if (!empty($uploadedFile)) {
-	            $uploadedFile->saveAs(Yii::app()->basePath . '/../images/' . $fileName);
-	        }
-	        echo $fileName;
+			    $name2 = Yii::app()->basePath . '/../images/thumb_'.$model->thumb->getName();
+			    //$model->thumb->saveAs($name);
+
+			    $image = Yii::app()->image->load($name);
+			    $image->resize(380, 380);
+			    //$image->resize(175, 140);
+			    $image->save($name2);
+			}
+
+	        echo $model->thumb->getName();
 		}//*/
 	}
 

@@ -1,0 +1,15 @@
+{% set items = this.getMainMenu() %}
+{% if items.owner_id == 0 %}
+	<a style="font-style: italic" href="/index.php">Главная</a>
+	&raquo; 
+	<a style="font-style: italic" href="/page/{{ items.seo.alias ? items.seo.alias : items.id }}/">
+		{{ items.nav_label ? items.nav_label : items.label }}
+	</a>
+{% else %}
+	{% set qwert = this.widget('BreadCrumbs', {'rootId':items.owner_id}, true) %}
+	{{ qwert|raw }}
+	&raquo;
+	<a style="font-style: italic" href="/page/{{ items.seo.alias ? items.seo.alias : items.id }}/">
+		{{ items.nav_label ? items.nav_label : items.label }}
+	</a>
+{% endif %}

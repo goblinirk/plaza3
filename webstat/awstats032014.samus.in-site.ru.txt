@@ -1,0 +1,421 @@
+AWSTATS DATA FILE 6.95 (build 1.943)
+# If you remove this file, all statistics for date 201403 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.samus.in-site.ru.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1962                
+POS_TIME 2646                
+POS_VISITOR 8220                
+POS_DAY 8576                
+POS_DOMAIN 3330                
+POS_LOGIN 3564                
+POS_ROBOT 3719                
+POS_WORMS 3885                
+POS_EMAILSENDER 4016                
+POS_EMAILRECEIVER 4159                
+POS_SESSION 9047                
+POS_SIDER 9253                
+POS_FILETYPES 4294                
+POS_OS 4546                
+POS_BROWSER 4629                
+POS_SCREENSIZE 4840                
+POS_UNKNOWNREFERER 4914                
+POS_UNKNOWNREFERERBROWSER 5001                
+POS_ORIGIN 5083                
+POS_SEREFERRALS 5223                
+POS_PAGEREFS 5367                
+POS_SEARCHWORDS 5549                
+POS_KEYWORDS 5701                
+POS_MISC 2310                
+POS_ERRORS 5760                
+POS_CLUSTER 3420                
+POS_SIDER_404 5914                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20140325164350 1473 361081 13492913524971
+FirstTime 20140304092642
+LastTime 20140325164350
+LastUpdate 20140326003606 847 0 847 0 0
+TotalVisits 43                  
+TotalUnique 6                   
+MonthHostsKnown 0                   
+MonthHostsUnknown 6                   
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 7 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 25 181 1921290 5 7 2475
+1 20 28 678003 1 1 491
+2 0 0 0 0 0 0
+3 0 0 0 0 0 0
+4 0 0 0 0 0 0
+5 0 0 0 0 0 0
+6 0 0 0 2 2 11443
+7 0 0 0 0 0 0
+8 40 248 3443534 11 13 13855
+9 49 338 1746839 7 10 29144
+10 157 935 11982105 14 44 59597
+11 144 872 10373890 21 48 56310
+12 35 190 3114471 3 7 1739
+13 162 824 4889689 20 47 44663
+14 372 2521 38448165 62 95 85478
+15 255 1587 32213525 65 92 541347
+16 120 729 5378373 29 50 72467
+17 94 477 4145631 16 24 46847
+18 3 36 635150 4 5 39134
+19 20 58 1745778 1 1 425
+20 0 0 0 0 0 0
+21 0 0 0 0 0 0
+22 0 0 0 0 0 0
+23 1 1 2784 0 1 0
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 1497 9025 120719227
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 1
+mail\.ru 2 22206 20140325130735 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 10
+css 1332 1110780 0 0
+png 3969 37606509 0 0
+woff 15 77791 0 0
+php 405 12156982 0 0
+html 816 2590009 0 0
+js 1724 4067545 0 0
+jpg 356 62128110 0 0
+jpeg 1 77295 0 0
+Unknown 261 800833 0 0
+gif 146 103373 0 0
+END_FILETYPES
+
+# OS ID - Hits
+BEGIN_OS 4
+macosx 58
+winxp 2848
+linux 5222
+win2008 897
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 8
+chrome33.0.1750.154 517
+firefox18.0 1
+chrome33.0.1750.146 113
+mozilla 58
+chrome31.0.1650.63 5385
+chrome33.0.1750.117 132
+firefox27.0 2806
+chrome32.0.1700.107 13
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 0
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 143 156
+From1 0 0
+From2 0 0
+From3 6 6
+From4 1348 8863
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 1
+http://e.mail.ru/cgi-bin/link 6 6
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 6
+403 48 18766
+302 124 57047
+206 3 522026
+500 36 231104
+301 8 3680
+404 142 53854
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 41
+/news/48 1 -
+/8463128460_1395121573_219097-1366x768.jpg 6 http://samus.in-site.ru/galleries
+/robots.txt 2 -
+/admin/edit_page/css/content.css 31 -
+/admin/fb_order1/ 1 http://samus.in-site.ru/admin/feedback/
+/page/36/ 1 http://samus.in-site.ru/
+/images/btn2-a.png 10 http://samus.in-site.ru/page/41/
+/bootstrap/css/bootstrap.css 5 http://samus.in-site.ru/site/login
+/4784807078_1395122692_226242-1366x768.jpg 4 http://samus.in-site.ru/galleries
+/images//img/img-e.jpg 1 http://samus.in-site.ru/page/25/
+/gallery/3/ 1 http://samus.in-site.ru/galleries
+/images/slide4.png 3 http://samus.in-site.ru/
+/admin/help/ 2 http://samus.in-site.ru/admin/mod_circles/
+/images//images/img.png 1 http://samus.in-site.ru/admin/edit_news/42
+/admin/galleries_config/ 2 http://samus.in-site.ru/admin/fb_contacts/
+/images//img/img-a.png 1 http://samus.in-site.ru/page/35/
+/galleriesju 1 -
+/images/3557057216_1395325744_9421643818_1395325553_gall.png 1 http://samus.in-site.ru/galleries
+/admin/add_page/css/content.css 3 -
+/bootstrap/js/bootstrap.js 5 http://samus.in-site.ru/site/login
+/admin/ogin 1 -
+/slide.png 3 http://samus.in-site.ru/galleries
+/images/slide3.png 3 http://samus.in-site.ru/
+/admin/edit_news/css/content.css 2 -
+/admin/feedback/ 2 http://samus.in-site.ru/admin/modules/
+/bootstrap/css/bootstrap-responsive.css 5 http://samus.in-site.ru/site/login
+/admin 3 -
+/slide3.jpg 3 http://samus.in-site.ru/galleries
+/myadin 1 -
+/images//img/img-b.jpg 1 http://samus.in-site.ru/page/36/
+/slide2.jpg 3 http://samus.in-site.ru/galleries
+/slide4.jpg 3 http://samus.in-site.ru/galleries
+/adin 1 -
+/admin/edit_gallery/1 2 http://samus.in-site.ru/admin/galleries/
+/page/fotogalereya/ 3 http://samus.in-site.ru/
+/admin/mod_circles/ 1 http://samus.in-site.ru/admin/modules/
+/assets/a7ab52f7/jquery.ba-bbq.js 1 http://samus.in-site.ru/admin/pages
+/scripts/slides.min.jquery.js 4 http://samus.in-site.ru/
+/admin/ 3 -
+/page/uslugi/ 14 http://samus.in-site.ru/
+/admin/fb_order2/ 1 http://samus.in-site.ru/admin/feedback/
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 6
+109.194.20.117 1310 8060 107795203 20140325164350 20140325152641 /
+90.188.236.123 113 763 7193696 20140325090323
+5.165.109.24 31 100 3130451 20140311121109
+178.184.160.132 21 69 2001123 20140317102834
+178.184.252.178 21 32 595970 20140304092842
+217.69.133.169 1 1 2784 20140307231518
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 16
+20140304 88 386 4307320 4
+20140305 205 817 9841061 2
+20140306 119 398 4107061 3
+20140307 1 1 2784 1
+20140309 20 58 1745778 1
+20140311 45 107 1479599 2
+20140312 1 13 2859 1
+20140313 94 591 7045398 2
+20140314 132 370 2372672 3
+20140317 29 117 2436003 3
+20140318 307 2955 21558266 3
+20140319 10 118 1578364 2
+20140320 107 646 3346991 3
+20140321 189 1069 46175444 5
+20140324 59 589 7970660 5
+20140325 91 790 6748967 3
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 8
+5mn-15mn 5
+2mn-5mn 5
+15mn-30mn 5
+30s-2mn 4
+0s-30s 11
+30mn-1h 4
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 108
+/ 150 420452 23 14
+/admin/pages/ 77 420963 0 0
+/admin/galleries/ 72 299881 1 2
+/myadmin/index.php 67 218698 1 2
+/page/dopolnitelnie_uslugi/ 66 182615 1 1
+/myadmin/js/get_scripts.js.php 62 5375834 0 1
+/galleries 59 146568 1 1
+/myadmin/js/messages.php 42 1049750 0 1
+/page/35/ 41 117099 1 2
+/myadmin/phpmyadmin.css.php 38 652916 0 0
+/admin/edit_image/10 1 3171 0 0
+/myadmin/server_sql.php 1 8249 0 0
+/page/36/ 21 57804 0 0
+/assets/79eb19b7/js/tinymce/skins/lightgray/fonts/tinymce.woff 1 8651 0 0
+/admin/fb_contacts/ 5 19156 0 0
+/feedback/send/ 8 18225 0 0
+/myadmin/import.php 12 200850 0 0
+/admin/fbshow/13 1 2415 0 0
+/page/33/ 10 28716 0 0
+/myadmin/js/get_image.js.php 19 40185 0 0
+/admin/gallery_images/1 8 34046 0 0
+/admin/galleries 19 80910 0 1
+/myadmin/tbl_replace.php 4 92404 0 0
+/myadmin/export.php 6 357270 0 2
+/myadmin/version_check.php 15 5716 0 0
+/assets/1c063246/plugins/filemanager/dialog.php 26 71321 0 1
+/news/44/ 2 4889 0 0
+/admin/add_gallery/ 2 5687 0 0
+/page/1 1 3029 0 0
+/page/o_kompanii/ 31 91169 1 1
+/news/42 2 4889 0 0
+/admin/login 34 59451 3 1
+/admin/edit_news/43 1 5230 0 0
+/admin/edit_page/34 5 23221 0 1
+/assets/79eb19b7/js/tinymce/skins/lightgray/fonts/tinymce-small.woff 1 8583 0 0
+/myadmin/db_structure.php 34 1078391 1 0
+/myadmin/db_export.php 6 274928 0 0
+/page/32/ 1 2997 0 0
+/admin/add_page/ 2 8977 0 0
+/admin/edit_image/22 2 6272 0 0
+/page/27/ 1 2847 0 0
+/page/21/ 1 2825 0 0
+/admin/gallery_images/2 10 42471 1 0
+/admin/feedback/ 22 49587 0 0
+/page/29/ 4 11021 0 0
+/admin/gallery_images/3 12 46639 0 1
+/myadmin/ 15 61586 2 0
+/admin/news/ 4 18401 0 0
+/news/44 2 4626 0 0
+/assets/1c063246/skins/lightgray/fonts/tinymce.woff 13 60557 0 0
+/feedback/sendorder2/ 2 4940 0 0
+/admin/edit_gallery/1 7 19333 0 0
+/admin/fb_otziv/ 3 11957 0 0
+/admin/edit_image/16 1 3100 0 0
+/admin/fb_order2/ 2 7772 0 0
+/admin/edit_page/33 1 4272 0 0
+/admin/fb_order1/ 2 7770 0 0
+/page/landshaftnii__dizain/ 2 5672 0 0
+/admin/edit_image/1 1 3171 0 0
+/page/26/ 1 2825 0 0
+/page/25/ 7 20196 0 0
+/gallery/3/ 11 30836 2 1
+/myadmin/tbl_change.php 3 166156 0 0
+/myadmin/navigation.php 22 185756 0 1
+/page/30/ 2 5807 0 0
+/myadmin/db_sql.php 7 63651 0 0
+/page/22/ 2 5434 0 0
+/myadmin/tbl_structure.php 4 316746 0 0
+/page/38/ 18 49440 0 0
+/admin/options/ 4 8285 0 0
+/admin/edit_page/28 4 18800 0 0
+/assets/1c063246/plugins/filemanager/upload.php 1 605 0 0
+/page/39/ 9 25498 1 0
+/feedback/sendorder1/ 2 4942 0 0
+/admin/mod_slider/ 6 13723 0 0
+/page/41/ 32 73448 0 1
+/galleries/ 6 13938 0 0
+/admin/edit_page/1 5 24301 0 0
+/admin/options 3 6358 0 0
+/admin/edit_page/45 13 66510 0 0
+/myadmin/sql.php 23 1397140 0 0
+/admin/modules/ 32 68114 1 1
+/admin/pages 11 61206 1 0
+/page/remont__otdelka_pomeschenii/ 12 34508 0 0
+/admin/elfinder/connector 20 61914 0 1
+/admin/edit_news/42 1 5294 0 0
+/admin/fb_order/ 4 15271 0 0
+/admin/edit_gallery/3 6 17033 0 0
+/admin/edit_gallery/2 10 28670 0 0
+/page/18/ 7 20194 0 0
+/news/42/ 4 10049 0 0
+/myadmin/tbl_addfield.php 7 209262 0 0
+/admin/mod_banners/ 4 10580 0 0
+/site/login 4 8094 0 0
+/page/aboutqwe/ 23 65882 2 2
+/galleryImages/uploadThumb 16 6751 0 0
+/page/1/ 1 3106 0 0
+/admin/edit_image/14 1 3088 0 0
+/news/43/ 2 5570 0 0
+/admin/mod_circles/ 4 12099 0 0
+/page/40/ 20 55639 0 0
+/news/ 7 17288 0 0
+/myadmin/tbl_sql.php 1 10963 0 0
+/myadmin/tbl_row_action.php 5 380191 0 0
+/page/uslugi/ 11 38182 0 2
+/admin/add_image/ 28 84556 0 0
+/page/19/ 1 2854 0 0
+/page/28/ 10 28737 0 1
+END_SIDER

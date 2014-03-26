@@ -104,7 +104,7 @@
 	width: 36px;
 	height: 34px;
 	cursor: pointer;
-	background:url(../img/close.png) no-repeat;
+	background:url(../../img/close.png) no-repeat;
 	z-index: 8040;
 }
 
@@ -141,12 +141,12 @@
 
 .fancybox-prev span {
 	left: -5px;
-	background:url(../img/arrs2.png) 0 0 no-repeat;
+	background:url(../../img/arrs2.png) 0 0 no-repeat;
 }
 
 .fancybox-next span {
 	right: -5px;
-	background:url(../img/arrs2.png) 0 100% no-repeat;
+	background:url(../../img/arrs2.png) 0 100% no-repeat;
 }
 
 .fancybox-nav:hover span {

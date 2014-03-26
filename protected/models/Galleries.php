@@ -162,6 +162,7 @@ class Galleries extends CActiveRecord
 	protected function beforeSave()
     {
     	if(parent::beforeSave()){
+    		$this->thumb = 'thumb_'.$this->thumb;
     		unset($_POST['ajaxthumb']);
     		return true;
     	}else{

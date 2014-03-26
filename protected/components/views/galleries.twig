@@ -14,11 +14,7 @@
 				{% endif %}
 				<div></div><br />
 				{% for img in item.images %}
-					{{ this.widget('ext.lyiightbox.LyiightBox2', {
-		                'thumbnail' : '/images/'~img.thumb,
-		                'image' : '/images/'~img.large,
-		                'title' : '/images/'~img.description
-		            }, true) | raw }}
+					<a class="gall" rel="example_group" href="/images/{{ img.large }}"><img alt="" src="/images/{{ img.thumb }}"><span class="txt">{{ img.description }}</span></a>
 				{% endfor %}
 			</div>
 		</div>

@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "/www/samus.in-site.ru/webstat"
+AuthUserFile /home/insite/data/etc/54002153.passwd
+DirectoryIndex index.html
+<Limit GET POST>
+	require valid-user
+</Limit>

@@ -17,8 +17,8 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
-	    'ext.yii-tinymce.*',
-	    'ext.yii-elfinder.*',
+		'ext.yii-elfinder.*',
+		'ext.yii-tinymce.*',
 	),
 
 	'modules'=>array(
@@ -39,6 +39,10 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+		),
+		'image'=>array(     
+			'class'=>'application.extensions.image.CImageComponent',            
+			'driver'=>'GD', 
 		),
 		'viewRenderer' => array(
 		    'class' => 'ext.Twig.ETwigViewRenderer',
@@ -102,6 +106,7 @@ return array(
 
 				'admin/options/'					=>'site/admin_options',
 				'admin/login/'						=>'site/login',
+				'admin/'							=>'pages/admin',
 
 				'admin/pages/'						=>'pages/admin',
 				'admin/add_page/'					=>'pages/create',

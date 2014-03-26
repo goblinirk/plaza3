@@ -185,6 +185,22 @@ class Pages extends CActiveRecord
 		    'params'=>array(':oid'=>$rid,':sin'=>1),
 		));
 	}
+	public function genBreadCrumbs($rid){
+		return $this->find(array(
+		    'condition'=>'id=:oid and show_in_nav=:sin and module="pages"',
+		    'order'=>'sort',
+		    'limit'=>1,
+		    'params'=>array(':oid'=>$rid,':sin'=>1),
+		));
+	}
+	public function genNewsWidget($count){
+		return $this->findAll(array(
+		    'condition'=>'module="news"',
+		    'order'=>'id DESC',
+		    'limit'=>$count,
+		));
+	}
+
 	protected function afterDelete() {
 	    parent::afterDelete();
 	    Pages::model()->updateAll(array('owner_id'=>$this->owner_id),'owner_id="'.$this->id.'"');
@@ -203,8 +219,11 @@ class Pages extends CActiveRecord
 			    $this->sort = ++$somevariable;
 			    $this->create_date = $this->last_update_date = time();
 			    $this->author = Yii::app()->user->id;
-			} else
+			    $this->thumb = 'thumb_'.$this->thumb;
+			} else {
 				$this->last_update_date = time();
+				$this->thumb = 'thumb_'.$this->thumb;
+			}
 
 		    return true;
 	    } else

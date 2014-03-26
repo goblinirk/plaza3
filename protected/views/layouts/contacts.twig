@@ -22,6 +22,58 @@
             hoverPause: true
           });
         }
+
+        jQuery('.pole.name').blur(function(){
+        if(jQuery(this).val().length < 2){
+          jQuery('.form_err_msg').remove();
+          jQuery(this).addClass('err_pole').after('<span class="form_err_msg">Не верно заполнено поле. Пример: Александр</span>');
+        } else {
+          jQuery(this).removeClass('err_pole');
+          jQuery('.form_err_msg').remove();
+        }
+      });
+      jQuery('.pole.email').blur(function(){
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;  
+        if((jQuery(this).val().length < 2) || (!re.test(jQuery(this).val()))) {
+          jQuery('.form_err_msg').remove();
+          jQuery(this).addClass('err_pole').after('<span class="form_err_msg">Не верно заполнено поле. Пример: mail@mail.ru</span>');
+        } else {
+          jQuery(this).removeClass('err_pole');
+          jQuery('.form_err_msg').remove();
+        }
+      });
+      jQuery('.pole.phone').blur(function(){
+        var re = /^\+?\d+$/;  
+        if((jQuery(this).val().length < 2) || (!re.test(jQuery(this).val()))) {
+          jQuery('.form_err_msg').remove();
+          jQuery(this).addClass('err_pole').after('<span class="form_err_msg">Не верно заполнено поле. Пример: +79501234567</span>');
+        } else {
+          jQuery(this).removeClass('err_pole');
+          jQuery('.form_err_msg').remove();
+        }
+      });
+      jQuery('input[type=submit]').click(function(){
+        var send = true;
+
+        form = jQuery(this).parents('form');
+        
+        jQuery('input.pole', form).each(function(){
+          console.log(jQuery(this));
+          if(jQuery(this).val().length == 0){
+            jQuery(this).addClass('err_pole').after('<span class="form_err_msg">Не верно заполнено поле.</span>');
+          }
+        })
+
+        if(jQuery('input.err_pole', form).length > 0){
+          send = false;
+          console.log();
+        }
+        
+        if(send === false){
+          alert('Некоторые поля заполненны не верно.');
+          return false;
+        }
+      });
 		});
 	</script>
 </head>
@@ -46,13 +98,13 @@
             <form method="post" action="/feedback/sendorder1/">
             <table cellspacing="0" cellpadding="0">
               <tr>
-                <td><input name="Order[name]" class="pole" value="" placeholder="Имя" type="text"></td>
+                <td><input name="Order[name]" class="pole name" value="" placeholder="Имя" type="text"></td>
               </tr>
               <tr>
-                <td><input name="Order[email]" class="pole" value="" placeholder="Электронная почта" type="text"></td>
+                <td><input name="Order[email]" class="pole email" value="" placeholder="Электронная почта" type="text"></td>
               </tr>
               <tr>
-                <td><input name="Order[phone]" class="pole" value="" placeholder="Номер телефона" type="text"></td>
+                <td><input name="Order[phone]" class="pole phone" value="" placeholder="Номер телефона" type="text"></td>
               </tr>
               <tr>
                 <td><textarea name="Order[message]" cols="" rows="" placeholder="Сообщение"></textarea></td>
@@ -71,15 +123,15 @@
             <table cellspacing="0" cellpadding="0">
               <tr>
                 <th scope="row">Ваше имя</th>
-                <td><input class="pole" name="FbMessages[sndr_name]" type="text"></td>
+                <td><input class="pole name" name="FbMessages[sndr_name]" type="text"></td>
               </tr>
               <tr>
                 <th scope="row">Телефон</th>
-                <td><input class="pole" name="FbMessages[sndr_phone]" type="text"></td>
+                <td><input class="pole phone" name="FbMessages[sndr_phone]" type="text"></td>
               </tr>
               <tr>
                 <th scope="row">Электропочта</th>
-                <td><input class="pole" name="FbMessages[sndr_email]" type="text"></td>
+                <td><input class="pole email" name="FbMessages[sndr_email]" type="text"></td>
               </tr>
               <tr>
                 <th scope="row">Сообщение</th>
@@ -108,7 +160,7 @@
 		<div class="tel">{{ this.widget('SysRegistry', {'param':'phone'}, true) | raw }}</div>
         <div class="mail">{{ this.widget('SysRegistry', {'param':'email', 'maillink':true}, true) | raw }}</div>
         <div class="addr">{{ this.widget('SysRegistry', {'param':'address'}, true) | raw }}</div>
-        <div class="design">Разработчик:<a href="#">In-Site</a></div>
+        <div class="design">Разработчик: <a href="http://in-site.ru" target="_blank" >In-Site</a></div>
     
     </footer>
 </div><!--end all-->

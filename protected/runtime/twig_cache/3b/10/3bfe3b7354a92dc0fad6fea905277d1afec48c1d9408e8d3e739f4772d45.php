@@ -72,15 +72,27 @@ class __TwigTemplate_3b103bfe3b7354a92dc0fad6fea905277d1afec48c1d9408e8d3e739f47
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_model_, "label");
         echo "</h1>
+    ";
+        // line 27
+        if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
+        if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
+        $context["qwert"] = $this->getAttribute($_this_, "widget", array(0 => "BreadCrumbs", 1 => array("rootId" => $this->getAttribute($_model_, "id")), 2 => true), "method");
+        // line 28
+        echo "    ";
+        if (isset($context["qwert"])) { $_qwert_ = $context["qwert"]; } else { $_qwert_ = null; }
+        echo $_qwert_;
+        echo "
+    <br />
+    <br />
     <div class=\"content\">
         <div class=\"b-about\">
             <div class=\"img\"><img alt=\"\" src=\"/images/";
-        // line 29
+        // line 33
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_model_, "thumb");
         echo "\"></div>
             ";
-        // line 30
+        // line 34
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         echo $this->getAttribute($_model_, "full_text");
         echo "
@@ -88,16 +100,16 @@ class __TwigTemplate_3b103bfe3b7354a92dc0fad6fea905277d1afec48c1d9408e8d3e739f47
     </div>
     <div class=\"bs-jobs\">
                 ";
-        // line 34
+        // line 38
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         if (isset($context["registry"])) { $_registry_ = $context["registry"]; } else { $_registry_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
-        echo $this->getAttribute($_this_, "widget", array(0 => "Gallery", 1 => array("rootId" => $this->getAttribute($_registry_, "sg", array(0 => $this->getAttribute($_model_, "id")), "method"), "label" => "Наши работы", "showdesc" => false), 2 => true), "method");
+        echo $this->getAttribute($_this_, "widget", array(0 => "Gallery", 1 => array("rootId" => $this->getAttribute($_registry_, "sg", array(0 => $this->getAttribute($_model_, "id")), "method"), "label" => "Наши работы", "showdesc" => false, "widget" => true), 2 => true), "method");
         echo "
             </div><!--end bs-jobs-->
             <div class=\"b-otziv\">
                 ";
-        // line 37
+        // line 41
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
         if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
         if (isset($context["registry"])) { $_registry_ = $context["registry"]; } else { $_registry_ = null; }
@@ -105,23 +117,25 @@ class __TwigTemplate_3b103bfe3b7354a92dc0fad6fea905277d1afec48c1d9408e8d3e739f47
         echo "
                 <div class=\"form\">
                     <h2>Оставить заявку</h2>
+                    <form method=\"post\" action=\"/feedback/sendorder2/\">
                     <table cellspacing=\"0\" cellpadding=\"0\">
                       <tr>
-                        <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Имя\" type=\"text\"></td>
+                        <td><input name=\"Order[name]\" class=\"pole name\" value=\"\" placeholder=\"Имя\" type=\"text\"></td>
                       </tr>
                       <tr>
-                        <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Электронная почта\" type=\"text\"></td>
+                        <td><input name=\"Order[email]\" class=\"pole email\" value=\"\" placeholder=\"Электронная почта\" type=\"text\"></td>
                       </tr>
                       <tr>
-                        <td><input name=\"\" class=\"pole\" value=\"\" placeholder=\"Номер телефона\" type=\"text\"></td>
+                        <td><input name=\"Order[phone]\" class=\"pole phone\" value=\"\" placeholder=\"Номер телефона\" type=\"text\"></td>
                       </tr>
                       <tr>
-                        <td><textarea name=\"\" cols=\"\" rows=\"\" placeholder=\"Сообщение\"></textarea></td>
+                        <td><textarea name=\"Order[message]\" cols=\"\" rows=\"\" placeholder=\"Сообщение\"></textarea></td>
                       </tr>
                       <tr>
-                        <!-- <td><input class=\"btn1\" name=\"\" type=\"submit\" value=\"Отправить\"></td> -->
+                        <td><input class=\"btn1\" name=\"\" type=\"submit\" value=\"Отправить\"></td>
                       </tr>
                     </table>
+                    </form>
                 </div><!--end form-->
             </div><!--end b-otziv-->
             <div class=\"big-tel\">
@@ -145,6 +159,6 @@ class __TwigTemplate_3b103bfe3b7354a92dc0fad6fea905277d1afec48c1d9408e8d3e739f47
 
     public function getDebugInfo()
     {
-        return array (  101 => 37,  92 => 34,  84 => 30,  79 => 29,  71 => 26,  68 => 25,  60 => 19,  55 => 18,  52 => 17,  49 => 16,  40 => 9,  35 => 8,  31 => 6,  28 => 5,);
+        return array (  113 => 41,  104 => 38,  96 => 34,  91 => 33,  81 => 28,  77 => 27,  71 => 26,  68 => 25,  60 => 19,  55 => 18,  52 => 17,  49 => 16,  40 => 9,  35 => 8,  31 => 6,  28 => 5,);
     }
 }

@@ -45,38 +45,33 @@ class GalleryImagesController extends Controller
 		);
 	}
 	public function actionUploadThumb() {
-        
-        //echo print_r($_POST,true);
 	    if(isset($_POST['GalleryImages'], $_FILES['GalleryImages'])) {
 	    	$model = new GalleryImages;
 	        $model->attributes=$_POST['GalleryImages'];
-	        $rnd = rand(0123456789, 9876543210);
-	    	$timeStamp = time();
-	        $uploadedFile = CUploadedFile::getInstance($model, 'ajaxthumb');
-	        if ($uploadedFile != null) {
-		        $fileName = "{$rnd}_{$timeStamp}_{$uploadedFile}";
-		    }
-
-	        if (!empty($uploadedFile)) {
-	            $uploadedFile->saveAs(Yii::app()->basePath . '/../images/' . $fileName);
-	        }
-	        echo $fileName;
 		}//*/
 		if(isset($_POST['Galleries'], $_FILES['Galleries'])) {
 			$model = new Galleries;
 	        $model->attributes=$_POST['Galleries'];
-	        $rnd = rand(0123456789, 9876543210);
-	    	$timeStamp = time();
-	        $uploadedFile = CUploadedFile::getInstance($model, 'ajaxthumb');
-	        if ($uploadedFile != null) {
-		        $fileName = "{$rnd}_{$timeStamp}_{$uploadedFile}";
-		    }
-
-	        if (!empty($uploadedFile)) {
-	            $uploadedFile->saveAs(Yii::app()->basePath . '/../images/' . $fileName);
-	        }
-	        echo $fileName;
+	        
 		}//*/
+		$rnd = rand(0123456789, 9876543210);
+    	$timeStamp = time();
+        $model->thumb = CUploadedFile::getInstance($model, 'ajaxthumb');
+        if( is_object($model->thumb) )
+		{
+		    $name = Yii::app()->basePath . '/../images/'.$model->thumb->getName();
+		    $model->thumb->saveAs($name);
+
+		    $name2 = Yii::app()->basePath . '/../images/thumb_'.$model->thumb->getName();
+		    //$model->thumb->saveAs($name);
+
+		    $image = Yii::app()->image->load($name);
+		    //$image->resize(380, 380);
+		    $image->resize(175, 140);
+		    $image->save($name2);
+		}
+
+        echo $model->thumb->getName();
 
 	}
 

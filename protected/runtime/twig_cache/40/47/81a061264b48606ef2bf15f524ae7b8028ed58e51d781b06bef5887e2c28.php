@@ -78,16 +78,19 @@ class __TwigTemplate_404781a061264b48606ef2bf15f524ae7b8028ed58e51d781b06bef5887
                 $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["item"]) ? $context["item"] : null), "images"));
                 foreach ($context['_seq'] as $context["_key"] => $context["img"]) {
                     // line 17
-                    echo "\t\t\t\t\t";
-                    echo $this->getAttribute((isset($context["this"]) ? $context["this"] : null), "widget", array(0 => "ext.lyiightbox.LyiightBox2", 1 => array("thumbnail" => ("/images/" . $this->getAttribute((isset($context["img"]) ? $context["img"] : null), "thumb")), "image" => ("/images/" . $this->getAttribute((isset($context["img"]) ? $context["img"] : null), "large")), "title" => ("/images/" . $this->getAttribute((isset($context["img"]) ? $context["img"] : null), "description"))), 2 => true), "method");
-                    // line 21
-                    echo "
+                    echo "\t\t\t\t\t<a class=\"gall\" rel=\"example_group\" href=\"/images/";
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["img"]) ? $context["img"] : null), "large"), "html", null, true);
+                    echo "\"><img alt=\"\" src=\"/images/";
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["img"]) ? $context["img"] : null), "thumb"), "html", null, true);
+                    echo "\"><span class=\"txt\">";
+                    echo twig_escape_filter($this->env, $this->getAttribute((isset($context["img"]) ? $context["img"] : null), "description"), "html", null, true);
+                    echo "</span></a>
 \t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['img'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 23
+                // line 19
                 echo "\t\t\t</div>
 \t\t</div>
 \t";
@@ -110,6 +113,6 @@ class __TwigTemplate_404781a061264b48606ef2bf15f524ae7b8028ed58e51d781b06bef5887
 
     public function getDebugInfo()
     {
-        return array (  84 => 21,  81 => 17,  77 => 16,  71 => 14,  61 => 12,  54 => 11,  49 => 10,  46 => 9,  44 => 8,  41 => 7,  23 => 3,  21 => 2,  19 => 1,  91 => 23,  85 => 34,  78 => 30,  74 => 15,  67 => 26,  64 => 25,  57 => 19,  53 => 18,  50 => 17,  47 => 16,  39 => 9,  35 => 6,  31 => 5,  28 => 4,);
+        return array (  94 => 19,  81 => 17,  77 => 16,  74 => 15,  71 => 14,  61 => 12,  54 => 11,  49 => 10,  46 => 9,  44 => 8,  41 => 7,  35 => 6,  31 => 5,  28 => 4,  23 => 3,  21 => 2,  19 => 1,);
     }
 }
